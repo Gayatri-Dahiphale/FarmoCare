@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-forest: #174A2A;
+  --color-farm: #287A3E;
+  --color-leaf: #56A94F;
+  --color-sage: #A5D6A0;
+  --color-sprout: #E1F0DF;
+  --color-pale: #F1F8EE;
+  --color-olive: #A5AD45;
+  --color-charcoal: #183522;
+  --color-border: #DCE6DA;
+}
+
+@layer base {
+  body {
+    @apply bg-pale text-charcoal font-sans antialiased;
+    color: #183522;
+    background-color: #F1F8EE;
+    background-image: linear-gradient(180deg, #EBF5E9 0%, #F5FAF3 35%, #EDF7EC 100%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-forest;
+    font-family: 'Manrope', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Green Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-farm text-white font-medium shadow-sm hover:bg-forest focus:outline-none focus:ring-2 focus:ring-farm focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Secondary Green Button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-charcoal-border text-forest font-medium shadow-sm hover:bg-sprout focus:outline-none focus:ring-2 focus:ring-farm focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Deep Forest Button */
+  .btn-forest {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-forest text-white font-medium shadow-sm hover:bg-forest-dark focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Clean White Card */
+  .card-farm {
+    @apply bg-white border border-charcoal-border rounded-xl shadow-[0_4px_16px_-2px_rgba(24,53,34,0.05)];
+  }
+
+  .card-farm-hover {
+    @apply bg-white border border-charcoal-border rounded-xl shadow-[0_4px_16px_-2px_rgba(24,53,34,0.05)] hover:border-farm;
+  }
+
+  /* Modern Input */
+  .input-farm {
+    @apply w-full px-4 py-2.5 rounded-lg bg-white border border-charcoal-border text-charcoal text-sm placeholder:text-charcoal-muted focus:outline-none focus:border-farm focus:ring-2 focus:ring-farm/20 disabled:bg-gray-100 disabled:cursor-not-allowed;
+  }
+
+  /* Status Badges */
+  .badge-submitted {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200;
+  }
+
+  .badge-assigned {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-200;
+  }
+
+  .badge-under-review {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-800 border border-purple-200;
+  }
+
+  .badge-awaiting-info {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-50 text-rose-800 border border-rose-200;
+  }
+
+  .badge-response-provided {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200;
+  }
+
+  .badge-resolved {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sprout text-forest border border-leaf/30;
+  }
+
+  .badge-reopened {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-50 text-orange-800 border border-orange-200;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F8EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #A5D6A0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #56A94F;
+}
+
+/* ==========================================================================
+   GLOBAL ZERO-ANIMATION RESET
+   Completely removes all animations, transitions, and motion across the UI
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition: none !important;
+  transition-duration: 0s !important;
+  scroll-behavior: auto !important;
+}
+
+/* Retain only functional circular loading indicator */
+.animate-spin {
+  animation: spin 1s linear infinite !important;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+

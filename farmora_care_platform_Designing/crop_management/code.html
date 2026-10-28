@@ -1,0 +1,778 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#dcdbcb", "on-background": "#1b1c12", "on-primary": "#ffffff", "surface-container-highest": "#e4e3d3", "on-secondary-fixed-variant": "#524524", "on-surface-variant": "#424841", "secondary": "#6b5d3a", "on-tertiary-fixed": "#1e1d00", "border-subtle": "#E5E4DC", "on-tertiary-fixed-variant": "#4b4900", "surface-container-lowest": "#ffffff", "secondary-container": "#f4e1b4", "primary-container": "#5c7d5c", "error-container": "#ffdad6", "tertiary": "#646100", "on-error": "#ffffff", "surface-container-low": "#f6f4e4", "on-primary-container": "#f7fff2", "on-tertiary": "#ffffff", "canvas-bg": "#FBFBFB", "tertiary-fixed-dim": "#cfcb59", "on-secondary-container": "#71633f", "on-primary-fixed-variant": "#2f4e31", "outline": "#737970", "secondary-fixed": "#f4e1b4", "primary-fixed-dim": "#acd0aa", "on-surface": "#1b1c12", "outline-variant": "#c2c8be", "inverse-surface": "#303126", "tertiary-fixed": "#ece772", "surface-container-high": "#eae9d8", "inverse-primary": "#acd0aa", "on-secondary": "#ffffff", "accent-beige": "#D7CE93", "on-secondary-fixed": "#241a01", "error": "#ba1a1a", "tertiary-container": "#b3af41", "surface-container": "#f0efde", "inverse-on-surface": "#f3f1e1", "surface-muted": "#F3F2EB", "background": "#fcfae9", "primary-fixed": "#c8ecc5", "on-error-container": "#93000a", "surface-tint": "#466647", "surface-variant": "#e4e3d3", "surface-bright": "#fcfae9", "on-tertiary-container": "#434100", "surface": "#fcfae9", "secondary-fixed-dim": "#d7c59a", "on-primary-fixed": "#032109", "primary": "#446345" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.75rem", "space-md": "1rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xs": "0.5rem", "gutter-mobile": "1rem", "margin-tablet": "2rem" }, "fontFamily": { "headline-lg-mobile": [ "Manrope" ], "title-md": [ "Manrope" ], "body-md": [ "Manrope" ], "display": [ "Manrope" ], "label-sm": [ "Manrope" ], "headline-md": [ "Manrope" ], "headline-sm": [ "Manrope" ], "display-mobile": [ "Manrope" ], "headline-lg": [ "Manrope" ], "body-sm": [ "Manrope" ], "body-lg": [ "Manrope" ], "label-md": [ "Manrope" ] }, "fontSize": { "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "display": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-canvas-bg font-body-md text-on-surface antialiased" style="background-color: rgb(241, 248, 238); color: rgb(24, 53, 34);"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]" style="background-color: rgb(232, 245, 233); border-right: 1px solid rgb(200, 230, 201);"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Farmora Care</span></div></div><div class="px-space-md py-space-xs"><div class="bg-surface-muted/60 rounded-xl px-space-sm py-space-xs flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Node Scope</span><span class="font-body-sm text-body-sm font-title-md text-on-surface truncate max-w-[170px]">National Hub</span></div><span class="material-symbols-outlined text-outline text-[16px]">shield</span></div></div><div class="px-space-md mt-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="all-reports" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">All Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="triage-and-assignment" href="#"><span class="material-symbols-outlined text-[20px]">low_priority</span><span class="font-body-md text-body-md">Triage &amp; Assignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="directory" href="#"><span class="material-symbols-outlined text-[20px]">contacts</span><span class="font-body-md text-body-md">Directory</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="agronomy-catalog" href="#" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);"><span class="material-symbols-outlined text-[20px]">psychiatry</span><span class="font-body-md text-body-md">Agronomy Catalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Analytics &amp; Telemetry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="system-and-audit" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">System &amp; Audit</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-muted/50 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Grid Telemetry Sync</span></div><span class="font-label-sm text-label-sm text-outline">Latency 28ms • All Nodes Green</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-label-md">National Directorate / Admin Console</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-muted text-on-surface cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px] text-outline">near_me</span><span class="font-body-sm text-body-sm">All Zones / Maharashtra Central</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-muted text-outline focus-within:ring-2 focus-within:ring-primary/20 focus-within:text-on-surface"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-56" placeholder="Search telemetry, ledger or crops..." type="text"><div class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">⌘K</div></div><button class="relative p-2 rounded-full hover:bg-surface-muted text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-canvas-bg min-h-screen" style="background-color: rgb(241, 248, 238);"><div class="flex flex-col w-full">
+<div class="px-space-lg lg:px-margin py-space-lg flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Top Meta Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="">Taxonomic Ledger • Ref AGRO-IND-2025/V4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" style="color: rgb(24, 53, 34);">Crop &amp; Botanical Species Registry</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Standardized agronomic taxonomy of 48 registered commercial crops, growth stages, and vulnerability baselines across agro-climatic zones.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+<span class="">Import ICAR Profiles</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+<span class="">Export Schema</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md transition-all shadow-sm" id="addCropBtn" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);"><span class="material-symbols-outlined text-[18px]">add_circle</span><span class="">+ Add Crop Variety</span></button>
+</div>
+</div>
+<!-- Top Stat Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Registered Species</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">48</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">12 Families</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">potted_plant</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tracked Hybrids &amp; Cultivars</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">312</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">96% Geotagged</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">grain</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Phenological Stages Defined</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">264</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">BBCH Scale</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">hourglass_top</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Pest Matrices</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">180</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold">14 High Alert</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">pest_control</span>
+</div>
+</div>
+</div>
+<!-- Filter & Search Console -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="flex-1 flex items-center gap-space-xs bg-surface-muted px-space-md py-2 rounded-xl">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-0 outline-none w-full font-body-sm text-on-surface placeholder:text-outline" id="searchInput" placeholder="Search by common name, scientific binominal, or hybrid (e.g. Cotton, Gossypium, Bhagwa)..." type="text">
+<span class="font-label-sm text-outline uppercase tracking-wider hidden sm:inline">Active Registry</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="flex items-center gap-1.5 bg-surface-muted px-space-sm py-1.5 rounded-lg text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-[16px] text-outline">wb_sunny</span>
+<select class="bg-transparent border-0 outline-none cursor-pointer text-on-surface font-label-md" id="seasonFilter">
+<option value="all">Season: All Seasons</option>
+<option value="Kharif">Kharif (Monsoon)</option>
+<option value="Rabi">Rabi (Winter)</option>
+<option value="Zaid">Zaid (Summer)</option>
+<option value="Perennial">Perennial / Bahar</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-muted px-space-sm py-1.5 rounded-lg text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-[16px] text-outline">category</span>
+<select class="bg-transparent border-0 outline-none cursor-pointer text-on-surface font-label-md" id="categoryFilter">
+<option value="all">Category: All Types</option>
+<option value="Cash Crops">Cash Crops</option>
+<option value="Horticulture">Horticulture</option>
+<option value="Polyhouse Vegetables">Polyhouse Vegetables</option>
+<option value="Cereals">Cereals</option>
+<option value="Pulses">Pulses</option>
+<option value="Oilseeds">Oilseeds</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-muted px-space-sm py-1.5 rounded-lg text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-[16px] text-outline">water_drop</span>
+<select class="bg-transparent border-0 outline-none cursor-pointer text-on-surface font-label-md" id="waterFilter">
+<option value="all">Water: Any Requirement</option>
+<option value="Low">Low (&lt;450mm)</option>
+<option value="Moderate">Moderate (450-800mm)</option>
+<option value="High">High (&gt;800mm)</option>
+</select>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-muted font-label-md transition-colors" id="resetFilters">
+          Reset
+        </button>
+</div>
+</div>
+<!-- Main Dynamic Layout: Split View / Grid + Drawer -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Catalog Column (8 cols when drawer is open, or dynamic) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md" id="catalogCardsContainer">
+<!-- Crop 1: Cotton -->
+<div class="crop-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all cursor-pointer group" data-category="Cash Crops" data-crop="cotton" data-season="Kharif" data-water="Moderate" style="background-color: rgb(255, 255, 255); border: 1.5px solid rgb(165, 214, 160); border-radius: 0.75rem;">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-muted overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close-up botanical macro shot of a fluffy cotton boll on Gossypium hirsutum plant during sunny golden hour in Maharashtra agricultural field, soft natural lighting and earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3SsXIfc2AC7XCUqEpC6za5PldEzRbTWu0rPGYD52XVWCQ1ZWRHgbOnBjxuue7ayF4NYQNO1eVDQKJ5YqzmFpvtOlKjq-ovn2cX3fPYTWIohoQe_WmB7qc3BldGmkQ7cvcYcWPJmQjN2qCuBsF_HsqKuCKC5atocx5ACkFfwqc23QO6O1YfbgcOPEWQusFi-nNDLKMbTd7EufDgKxj3DQEezlEQUCHQa8ypZa1FglkG1u4OPX9Xnok">
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface font-bold">BT-2</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cotton</h3>
+<span class="italic text-on-surface-variant font-body-sm">(Gossypium hirsutum)</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); font-weight: 600;">Malvaceae</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_month</span> Kharif</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">landscape</span> Deep Black Cotton (Vertisols)</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span> Moderate (550-700mm)</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-1 flex-shrink-0">
+<div class="text-right">
+<span class="font-label-sm text-outline uppercase tracking-wider block">Impact Dossiers</span>
+<span class="font-title-md text-title-md text-on-surface">3,420 Farmers <span class="text-primary text-[13px] font-normal font-label-sm">(42 Dossiers)</span></span>
+</div>
+<button class="view-drawer-trigger mt-1 text-primary hover:text-primary-container font-label-md flex items-center gap-0.5" data-crop="cotton">
+                Inspect Spec →
+              </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-muted/50 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-outline uppercase tracking-wider mr-2">Tracked Hybrids:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Bt-II BG-II</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">RCH-659</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Ajit-155</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-outline font-label-sm">+18 Registered</span>
+</div>
+</div>
+<!-- Phenological stages mini tracker -->
+<div class="mt-space-sm">
+<span class="font-label-sm text-outline uppercase tracking-wider mb-1 block">Active Phenological Stages (BBCH)</span>
+<div class="grid grid-cols-5 gap-1.5 text-center">
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">1. Sowing</div>
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">2. Square Form.</div>
+<div class="bg-primary-container text-on-primary-container py-1 px-1 rounded font-label-sm truncate font-bold">3. Peak Flower</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">4. Boll Dev.</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">5. Maturity</div>
+</div>
+</div>
+<!-- Pathogen Threats -->
+<div class="mt-space-sm flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-error uppercase tracking-wider flex items-center gap-1 mr-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Vulnerabilities:
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Pink Bollworm (Pectinophora)</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Fall Armyworm</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm">Bacterial Blight</span>
+</div>
+<!-- Card Action Footer -->
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">ICAR Package of Practices 2024 Verified</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Edit Stages</button>
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Pest Matrix</button>
+<button class="px-3 py-1 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-label-sm transition-colors">Prescriptions</button>
+</div>
+</div>
+</div>
+<!-- Crop 2: Pomegranate -->
+<div class="crop-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all cursor-pointer group" data-category="Horticulture" data-crop="pomegranate" data-season="Perennial" data-water="Low" style="background-color: rgb(255, 255, 255); border: 1.5px solid rgb(165, 214, 160); border-radius: 0.75rem;">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-muted overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Lush ripe ruby-red pomegranate on tree branch with dark green foliage in orchard Solapur Maharashtra, ambient natural warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPgAyKyaCXI4eJP8h3QXs5d2vhFMd5tPy6xcu-lVsXWNmyPazQzB2yuTn3yiZ7RzIobB2MY-aeepfnen3i5WWDuScNFGCm5O3leb0oU_gbiDWNfO6D_SmNcX-xBYebRuws8J7PAUecEyHDAqaHjTQ3mYPdt8rJXzzVN9SGxMkJddXelmMNXJkrJiDo9lTALuopTXAkbpcxfzd0N2fZMkkrGAscZlSslFwhGm8LG9SMSlXnQ10LccuP">
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface font-bold">GI TAG</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pomegranate</h3>
+<span class="italic text-on-surface-variant font-body-sm">(Punica granatum)</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); font-weight: 600;">Lythraceae</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_month</span> Perennial (Ambe/Mrig/Hasta)</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">landscape</span> Light well-drained loams (pH 6.5-8.0)</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span> Low (Drip 350-500mm)</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-1 flex-shrink-0">
+<div class="text-right">
+<span class="font-label-sm text-outline uppercase tracking-wider block">Impact Dossiers</span>
+<span class="font-title-md text-title-md text-on-surface">1,890 Farmers <span class="text-primary text-[13px] font-normal font-label-sm">(28 Dossiers)</span></span>
+</div>
+<button class="view-drawer-trigger mt-1 text-primary hover:text-primary-container font-label-md flex items-center gap-0.5" data-crop="pomegranate">
+                Inspect Spec →
+              </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-muted/50 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-outline uppercase tracking-wider mr-2">Tracked Cultivars:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Bhagwa (Super)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Arakta</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Ganesh</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-label-sm text-outline uppercase tracking-wider mb-1 block">Active Phenological Stages</span>
+<div class="grid grid-cols-5 gap-1.5 text-center">
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Defoliation</div>
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Flower Bud</div>
+<div class="bg-primary-container text-on-primary-container py-1 px-1 rounded font-label-sm truncate font-bold">Fruit Set</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">Development</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">Harvest</div>
+</div>
+</div>
+<div class="mt-space-sm flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-error uppercase tracking-wider flex items-center gap-1 mr-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Critical Pathogens:
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Bacterial Blight (Xanthomonas axonopodis)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm">Cercospora Leaf Spot</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm">Fruit Borer</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">ICAR-NRCP Solapur Standard Monitored</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Edit Stages</button>
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Pest Matrix</button>
+<button class="px-3 py-1 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-label-sm transition-colors">Prescriptions</button>
+</div>
+</div>
+</div>
+<!-- Crop 3: Table Grapes -->
+<div class="crop-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all cursor-pointer group" data-category="Horticulture" data-crop="grapes" data-season="Perennial" data-water="Moderate" style="background-color: rgb(255, 255, 255); border: 1.5px solid rgb(165, 214, 160); border-radius: 0.75rem;">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-muted overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Dense clusters of premium Thompson Seedless green grapes hanging under canopy trellis in Nashik vineyard with filtered morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV_KiDZ0zzGA9vN5_tQJj4Sl5V3NLXVOnP8MEMauhpPYHea6GNHn4LedZ_p70MJ5PYCpikaBGOTWHiEiCuy8o3W9eqMtIqN6loafBo5VlWnub2HYD5fvinyWCM6yVONZK9IaISbgqnv0hFGzCytththjYFoph5g9nGjeJ2oGm1DZj5EJVlcceFNHn9zzMDUCmzItAncstABhy9KYE8x59RqVvfsyTg-l8P4SGCzfGlWStrUihW4wku">
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface font-bold">EXPORT</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Table Grapes</h3>
+<span class="italic text-on-surface-variant font-body-sm">(Vitis vinifera)</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); font-weight: 600;">Vitaceae</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_month</span> Perennial (Double Pruning)</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">landscape</span> Well-drained sandy loam / sub-saline</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span> Controlled Drip (400-600mm)</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-1 flex-shrink-0">
+<div class="text-right">
+<span class="font-label-sm text-outline uppercase tracking-wider block">Impact Dossiers</span>
+<span class="font-title-md text-title-md text-on-surface">1,240 Farmers <span class="text-primary text-[13px] font-normal font-label-sm">(19 Dossiers)</span></span>
+</div>
+<button class="view-drawer-trigger mt-1 text-primary hover:text-primary-container font-label-md flex items-center gap-0.5" data-crop="grapes">
+                Inspect Spec →
+              </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-muted/50 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-outline uppercase tracking-wider mr-2">Tracked Cultivars:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Thompson Seedless</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Sonaka</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Sharad Seedless</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Super Sonaka</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-label-sm text-outline uppercase tracking-wider mb-1 block">Active Phenological Stages</span>
+<div class="grid grid-cols-5 gap-1.5 text-center">
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Foundation Prun.</div>
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Bud Sprout</div>
+<div class="bg-primary-container text-on-primary-container py-1 px-1 rounded font-label-sm truncate font-bold">Berry Elongation</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">Veraison</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">Harvest</div>
+</div>
+</div>
+<div class="mt-space-sm flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-error uppercase tracking-wider flex items-center gap-1 mr-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Critical Pathogens:
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Downy Mildew (Plasmopara)</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Powdery Mildew</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm">Anthracnose</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm">Mealybug</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">ICAR-NRC Grapes Protocol Synchronized</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Edit Stages</button>
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Pest Matrix</button>
+<button class="px-3 py-1 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-label-sm transition-colors">Prescriptions</button>
+</div>
+</div>
+</div>
+<!-- Crop 4: Tomato -->
+<div class="crop-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all cursor-pointer group" data-category="Polyhouse Vegetables" data-crop="tomato" data-season="Rabi" data-water="High" style="background-color: rgb(255, 255, 255); border: 1.5px solid rgb(165, 214, 160); border-radius: 0.75rem;">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-muted overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Vibrant healthy organic red vine tomatoes growing in a modern aerated polyhouse greenhouse with automated drip tubes in western India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNlcyEbiiNPLgi8Glfun1KPlw3vujwuH-SUNKm0SzFEMarN_spk9SjC1TBiCcNcBMDfqz5qVE5wW-hO52oZIpRC3G8OAp3YzmkktfiOKLn2TDynlXo1Ahu-2gIVGrUGQ4Zsy9PenM_ni6Iw-8tuoQNWye2TiGbMWZ0aOcxsxqzEdsNW1ECpQFxmm7SP6MPa74PhnF3SgqA2hYIJoB8sND8xHc8Ni1LC105ngIKDGTfumdaK9vMWz3y">
+<span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 font-label-sm text-[10px] text-on-surface font-bold">HYBRID</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tomato</h3>
+<span class="italic text-on-surface-variant font-body-sm">(Solanum lycopersicum)</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); font-weight: 600;">Solanaceae</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 text-on-surface-variant font-body-sm flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">calendar_month</span> Rabi / Year-round Polyhouse</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">landscape</span> Deep loamy soil with rich organic humus</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">water_drop</span> High Frequency (600-800mm)</span>
+</div>
+</div>
+</div>
+<div class="flex sm:flex-col items-center sm:items-end justify-between gap-1 flex-shrink-0">
+<div class="text-right">
+<span class="font-label-sm text-outline uppercase tracking-wider block">Impact Dossiers</span>
+<span class="font-title-md text-title-md text-on-surface">980 Farmers <span class="text-primary text-[13px] font-normal font-label-sm">(14 Dossiers)</span></span>
+</div>
+<button class="view-drawer-trigger mt-1 text-primary hover:text-primary-container font-label-md flex items-center gap-0.5" data-crop="tomato">
+                Inspect Spec →
+              </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-muted/50 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-outline uppercase tracking-wider mr-2">Tracked Hybrids:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Abhinav (Seminis)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">US-440</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">To-1057</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm">Saaho-3251</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<span class="font-label-sm text-outline uppercase tracking-wider mb-1 block">Active Phenological Stages</span>
+<div class="grid grid-cols-5 gap-1.5 text-center">
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Nursery</div>
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Transplant</div>
+<div class="bg-surface-container-low py-1 px-1 rounded text-on-surface font-label-sm truncate">Vegetative</div>
+<div class="bg-primary-container text-on-primary-container py-1 px-1 rounded font-label-sm truncate font-bold">Fruit Breaker</div>
+<div class="bg-surface-container py-1 px-1 rounded text-on-surface font-label-sm truncate">Ripening</div>
+</div>
+</div>
+<div class="mt-space-sm flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-error uppercase tracking-wider flex items-center gap-1 mr-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Critical Pathogens:
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Tomato Leaf Curl Virus (ToLCV)</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Tuta absoluta</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm">Early / Late Blight</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">CIB&amp;RC Minimum Residue Limit Calibrated</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Edit Stages</button>
+<button class="px-3 py-1 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-sm transition-colors">Pest Matrix</button>
+<button class="px-3 py-1 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-label-sm transition-colors">Prescriptions</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Side Panel / Botanical Spec Sheet (5 cols sticky) -->
+<div class="xl:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm sticky top-20 flex flex-col gap-space-md" id="cropDetailDrawer" style="background-color: rgb(255, 255, 255); border: 1.5px solid rgb(165, 214, 160); color: rgb(24, 53, 34);">
+<!-- Header of Detail Sheet -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-primary/15 text-primary font-label-sm uppercase tracking-wider font-bold">Standard Spec Sheet</span>
+<span class="font-label-sm text-outline">GDD Model #492-B</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-muted text-outline hover:text-on-surface transition-colors" title="Print agronomic profile">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-muted text-outline hover:text-on-surface transition-colors" title="Download technical monograph">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface" id="drawerTitle">Cotton</h2>
+<span class="italic text-on-surface-variant font-body-md" id="drawerScientific">(Gossypium hirsutum)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="drawerDescription">
+            Indeterminate annual sub-shrub cultivated as commercial fiber. Highly sensitive to atmospheric vapor pressure deficits and subsurface salinity during the squaring and boll enlargement period.
+          </p>
+</div>
+<!-- Phenological Growth Stage Timeline -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-on-surface uppercase tracking-wider font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">timeline</span> Phenological Timeline (BBCH)
+            </span>
+<span class="font-label-sm text-outline">160–180 Days Cycle</span>
+</div>
+<div class="relative pl-6 flex flex-col gap-space-sm mt-2">
+<!-- Timeline vertical line -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container-highest"></div>
+<!-- Phase 1 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Phase 0-1: Emergence &amp; Seedling</span>
+<span class="font-label-sm text-outline">0 - 15 DAP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Radicle emergence, cotyledon unfolding. Base temp threshold: 15.5°C.</p>
+</div>
+<!-- Phase 2 -->
+<div class="relative flex flex-col gap-0.5 group">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Phase 2: Monopodial &amp; Sympodial Vegetative</span>
+<span class="font-label-sm text-outline">16 - 45 DAP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rapid stem elongation. Main stem nodes 5 through 9 establish fruiting branches.</p>
+</div>
+<!-- Phase 3 (Active highlighted) -->
+<div class="relative flex flex-col gap-0.5 p-space-xs rounded-lg bg-surface-muted/70">
+<span class="absolute -left-6 top-2.5 w-3 h-3 rounded-full bg-primary ring-4 ring-primary-fixed"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Phase 5-6: Squaring &amp; Peak Flowering</span>
+<span class="font-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold">CURRENT REGION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Formation of pinhead squares (flower buds). Critical pollen viability susceptible to temp &gt;36°C.</p>
+</div>
+<!-- Phase 4 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Phase 7: Boll Development &amp; Fiber Filling</span>
+<span class="font-label-sm text-outline">80 - 130 DAP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cellulose deposition inside boll locules. Highest potassium requirement window.</p>
+</div>
+<!-- Phase 5 -->
+<div class="relative flex flex-col gap-0.5">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Phase 8-9: Boll Dehiscence &amp; Harvest</span>
+<span class="font-label-sm text-outline">135 - 170 DAP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Carpel splitting, lint drying. Zero precipitation needed for clean lint picking.</p>
+</div>
+</div>
+</div>
+<!-- Critical Thermal & Moisture Thresholds (Visual gauges) -->
+<div class="bg-surface-muted/60 p-space-md rounded-xl flex flex-col gap-space-sm">
+<span class="font-label-sm text-on-surface uppercase tracking-wider font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">thermostat</span> Agronomic Bio-Thresholds
+          </span>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-outline">Optimal Canopy Temp</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">21°C – 30°C</span>
+<span class="font-label-sm text-error mt-0.5">Lethal &gt;38°C (Abscission)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-outline">Base Temp (Tb) / GDD</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">15.5°C / 2,150 GDD</span>
+<span class="font-label-sm text-primary mt-0.5">Heat Unit Accumulation</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<div class="flex justify-between font-label-sm">
+<span class="text-on-surface-variant">Moisture Stress Sensitivity Window</span>
+<span class="font-bold text-error">Severe (Squaring to Boll Set)</span>
+</div>
+<!-- Moisture Sensitivity Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden">
+<div class="w-[20%] bg-surface-variant"></div>
+<div class="w-[50%] bg-tertiary-container"></div>
+<div class="w-[30%] bg-surface-variant"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline">
+<span class="">Low (Early)</span>
+<span class="text-center font-bold text-secondary">Maximum Irrigation Window</span>
+<span class="text-right">Taper Off (Maturity)</span>
+</div>
+</div>
+</div>
+<!-- Mandatory CIB&RC Spray Waiting Periods (PHI restrictions) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-on-surface uppercase tracking-wider font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span> CIB&amp;RC Pre-Harvest Intervals (PHI)
+            </span>
+<span class="font-label-sm text-outline">Regulatory Gazette 2024</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-muted text-on-surface font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-error"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md leading-tight">Emamectin Benzoate 5% SG</span>
+<span class="font-label-sm text-outline">Target: Bollworm complex</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-error">9 Days</span>
+<span class="font-label-sm text-outline block leading-none">PHI Mandatory</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-muted text-on-surface font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-tertiary-container"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md leading-tight">Spinetoram 11.7% SC</span>
+<span class="font-label-sm text-outline">Target: Thrips, Spodoptera</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-secondary">7 Days</span>
+<span class="font-label-sm text-outline block leading-none">PHI Mandatory</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-muted text-on-surface font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 rounded-full bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md leading-tight">Copper Oxychloride 50% WP</span>
+<span class="font-label-sm text-outline">Target: Bacterial Angular Leaf Spot</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title-md text-title-md font-bold text-primary">3 Days</span>
+<span class="font-label-sm text-outline block leading-none">PHI Mandatory</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-end gap-space-xs">
+<button class="px-space-md py-2 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-md transition-colors">
+            Audit Ledger
+          </button>
+<button class="px-space-md py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md transition-all shadow-sm" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255); opacity: 0;">Update Agronomic Thresholds</button>
+</div>
+</div>
+</div>
+<!-- Supplementary Agronomic Knowledge Card Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm uppercase tracking-wider font-bold">Phenology Sync</span>
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">BBCH Monograph Status</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          All 264 phenological stages conform to the international standard decimal code for growth stages of mono- and dicotyledonous plant species.
+        </p>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-primary">
+<span class="">View cross-index matrices</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-primary">
+<span class="font-label-sm uppercase tracking-wider font-bold">CIB&amp;RC Compliance</span>
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Export MRL Alignment</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          EU and Codex maximum residue limits are actively mapped to every stage-based advisory, suppressing prescription of restricted chemistries before harvest.
+        </p>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-primary">
+<span class="">Inspect residue databases</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm uppercase tracking-wider font-bold">Zone Adaptations</span>
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Agro-Climatic Zones</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Varietal thermal constants calibrated specifically for Zone VII (Eastern Plateau) and Zone IX (Western Dry/Plateau) sub-districts.
+        </p>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-primary">
+<span class="">Explore climate overlays</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for filtering & dynamic side-panel loading -->
+<script>
+    (function initBotanicalDirectory() {
+      const searchInput = document.getElementById('searchInput');
+      const seasonFilter = document.getElementById('seasonFilter');
+      const categoryFilter = document.getElementById('categoryFilter');
+      const waterFilter = document.getElementById('waterFilter');
+      const resetFilters = document.getElementById('resetFilters');
+      const cards = document.querySelectorAll('.crop-card');
+
+      const cropDetails = {
+        cotton: {
+          title: "Cotton",
+          scientific: "(Gossypium hirsutum)",
+          description: "Indeterminate annual sub-shrub cultivated as commercial fiber. Highly sensitive to atmospheric vapor pressure deficits and subsurface salinity during the squaring and boll enlargement period.",
+          optimalTemp: "21°C – 30°C",
+          gdd: "15.5°C / 2,150 GDD",
+          activeStage: "Phase 5-6: Squaring & Peak Flowering",
+          phi: [
+            { chem: "Emamectin Benzoate 5% SG", target: "Bollworm complex", days: "9 Days", status: "error" },
+            { chem: "Spinetoram 11.7% SC", target: "Thrips, Spodoptera", days: "7 Days", status: "secondary" },
+            { chem: "Copper Oxychloride 50% WP", target: "Bacterial Angular Leaf Spot", days: "3 Days", status: "primary" }
+          ]
+        },
+        pomegranate: {
+          title: "Pomegranate",
+          scientific: "(Punica granatum)",
+          description: "Deciduous shrub/small tree with high economic endurance in arid tracts. Requires strict Bahar regulation (water withholding followed by root exposure) to synchronize flowering for optimal market windows.",
+          optimalTemp: "25°C – 35°C",
+          gdd: "12.0°C / 2,800 GDD",
+          activeStage: "Fruit Set & Calyx Closure",
+          phi: [
+            { chem: "Streptocycline 90:10", target: "Xanthomonas Bacterial Canker", days: "14 Days", status: "error" },
+            { chem: "Difenoconazole 25% EC", target: "Cercospora spot", days: "10 Days", status: "secondary" },
+            { chem: "Neem Oil 10,000 PPM", target: "Sucking pests baseline", days: "1 Day", status: "primary" }
+          ]
+        },
+        grapes: {
+          title: "Table Grapes",
+          scientific: "(Vitis vinifera)",
+          description: "Perennial woody vine governed by the unique tropical double-pruning and single-cropping system. Extreme surveillance mandated against Downy Mildew whenever leaf wetness exceeds 2 hours at 18-24°C.",
+          optimalTemp: "18°C – 32°C",
+          gdd: "10.0°C / 1,950 GDD",
+          activeStage: "Berry Elongation (4-6mm stage)",
+          phi: [
+            { chem: "Dimethomorph 50% WP", target: "Downy Mildew post-flowering", days: "28 Days", status: "error" },
+            { chem: "Azoxystrobin 23% SC", target: "Anthracnose & Powdery", days: "15 Days", status: "secondary" },
+            { chem: "Potassium Phosphonate", target: "Systemic resistance inducer", days: "0 Days", status: "primary" }
+          ]
+        },
+        tomato: {
+          title: "Tomato",
+          scientific: "(Solanum lycopersicum)",
+          description: "Indeterminate/determinate solanaceous fruit crop with high nutrient withdrawal curve. Polyhouse and net-house regimes demand careful monitoring of whitefly vectors causing destructive Leaf Curl viral outbreaks.",
+          optimalTemp: "18°C – 26°C",
+          gdd: "10.0°C / 1,350 GDD",
+          activeStage: "Fruit Breaker to Early Color Turn",
+          phi: [
+            { chem: "Chlorantraniliprole 18.5% SC", target: "Tuta absoluta / Helicoverpa", days: "3 Days", status: "secondary" },
+            { chem: "Cyantraniliprole 10.26% OD", target: "Whitefly vector (ToLCV)", days: "5 Days", status: "error" },
+            { chem: "Mancozeb 75% WP", target: "Alternaria Early Blight", days: "5 Days", status: "secondary" }
+          ]
+        }
+      };
+
+      function applyFilter() {
+        const query = searchInput.value.toLowerCase().trim();
+        const season = seasonFilter.value;
+        const category = categoryFilter.value;
+        const water = waterFilter.value;
+
+        cards.forEach(card => {
+          const cardText = card.innerText.toLowerCase();
+          const cardSeason = card.getAttribute('data-season');
+          const cardCategory = card.getAttribute('data-category');
+          const cardWater = card.getAttribute('data-water');
+
+          const matchesQuery = !query || cardText.includes(query);
+          const matchesSeason = (season === 'all') || (cardSeason === season);
+          const matchesCategory = (category === 'all') || (cardCategory === category);
+          const matchesWater = (water === 'all') || (cardWater === water);
+
+          if (matchesQuery && matchesSeason && matchesCategory && matchesWater) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      searchInput.addEventListener('input', applyFilter);
+      seasonFilter.addEventListener('change', applyFilter);
+      categoryFilter.addEventListener('change', applyFilter);
+      waterFilter.addEventListener('change', applyFilter);
+
+      resetFilters.addEventListener('click', () => {
+        searchInput.value = '';
+        seasonFilter.value = 'all';
+        categoryFilter.value = 'all';
+        waterFilter.value = 'all';
+        applyFilter();
+      });
+
+      // Side panel inspector update
+      function loadCropSpec(cropKey) {
+        const data = cropDetails[cropKey];
+        if (!data) return;
+
+        document.getElementById('drawerTitle').textContent = data.title;
+        document.getElementById('drawerScientific').textContent = data.scientific;
+        document.getElementById('drawerDescription').textContent = data.description;
+      }
+
+      document.querySelectorAll('.view-drawer-trigger').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const crop = btn.getAttribute('data-crop');
+          loadCropSpec(crop);
+        });
+      });
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          const crop = card.getAttribute('data-crop');
+          loadCropSpec(crop);
+        });
+      });
+
+      // Add crop modal trigger demo
+      document.getElementById('addCropBtn').addEventListener('click', () => {
+        alert("Standardized Cultivar Registration Drawer will initialize ICAR Botanical taxonomy mapper.");
+      });
+    })();
+  </script>
+</div></main></div>
+
+</body></html>

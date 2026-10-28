@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#acd0aa", "on-secondary": "#ffffff", "accent-beige": "#D7CE93", "on-secondary-container": "#71633f", "inverse-surface": "#303126", "canvas-bg": "#FBFBFB", "surface-container-low": "#f6f4e4", "error": "#ba1a1a", "on-error-container": "#93000a", "surface-dim": "#dcdbcb", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "secondary": "#6b5d3a", "tertiary-fixed": "#ece772", "on-secondary-fixed": "#241a01", "on-error": "#ffffff", "tertiary": "#646100", "inverse-primary": "#acd0aa", "secondary-fixed-dim": "#d7c59a", "surface-variant": "#e4e3d3", "on-background": "#1b1c12", "outline-variant": "#c2c8be", "surface-muted": "#F3F2EB", "tertiary-container": "#b3af41", "secondary-container": "#f4e1b4", "surface-container-highest": "#e4e3d3", "surface-container-high": "#eae9d8", "on-secondary-fixed-variant": "#524524", "on-tertiary-fixed-variant": "#4b4900", "primary-container": "#5c7d5c", "surface-container": "#f0efde", "primary-fixed": "#c8ecc5", "on-primary-fixed-variant": "#2f4e31", "on-primary-fixed": "#032109", "surface-tint": "#466647", "inverse-on-surface": "#f3f1e1", "on-tertiary-fixed": "#1e1d00", "background": "#fcfae9", "on-primary-container": "#f7fff2", "outline": "#737970", "primary": "#446345", "surface-container-lowest": "#ffffff", "on-surface-variant": "#424841", "error-container": "#ffdad6", "surface": "#fcfae9", "on-primary": "#ffffff", "tertiary-fixed-dim": "#cfcb59", "on-surface": "#1b1c12", "surface-bright": "#fcfae9", "secondary-fixed": "#f4e1b4", "border-subtle": "#E5E4DC" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.75rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-tablet": "2rem", "gutter": "1.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "display-mobile": ["Manrope"], "body-lg": ["Manrope"], "headline-sm": ["Manrope"], "body-sm": ["Manrope"], "headline-md": ["Manrope"], "display": ["Manrope"], "headline-lg-mobile": ["Manrope"], "title-md": ["Manrope"], "body-md": ["Manrope"], "label-sm": ["Manrope"], "label-md": ["Manrope"], "headline-lg": ["Manrope"] }, "fontSize": { "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }] } } } };</script></head><body class="bg-canvas-bg font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-lg"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">psychiatry</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight">Farmora Care</span><span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Agronomy Core</span></div></div><div class="px-space-md"><div class="bg-surface-muted rounded-xl p-space-xs flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary">eco</span><span class="font-label-md text-label-md text-on-surface">Field Ops Hub</span></div><span class="w-2 h-2 rounded-full bg-primary"></span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="formulary" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="font-label-md text-label-md">Formulary</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="triage" href="#"><span class="material-symbols-outlined text-[20px]">health_and_safety</span><span class="font-label-md text-label-md">Triage</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="cases" href="#"><span class="material-symbols-outlined text-[20px]">folder_managed</span><span class="font-label-md text-label-md">Cases</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="telemetry" href="#"><span class="material-symbols-outlined text-[20px]">sensors</span><span class="font-label-md text-label-md">Telemetry</span></a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">Soil Health Index</span><span class="font-title-md text-title-md text-primary">88.4 pH-Opt</span></div><span class="material-symbols-outlined text-primary text-[22px]">nest_clock_farsight_analog</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface placeholder-on-surface-variant pl-9 pr-4 py-2 rounded-xl border-0 focus:outline-none focus:ring-1 focus:ring-primary font-body-sm text-body-sm" placeholder="Search active ingredients, pathogens, CAS numbers..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-full"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">badge</span><select class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer pr-1"><option>Agronomist Lead</option><option>Senior Soil Chemist</option><option>Field Specialist</option><option>Compliance Auditor</option></select></div><button class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-canvas-bg min-h-screen px-space-lg py-space-md"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Context & Action Banner -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">CIB&amp;RC Regulatory Ledger v2024.2</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Live Database Active
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Agronomic Formulary &amp; Chemical Database</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+        Clinical bio-chemical compendium of registered crop formulations, active ingredient synergies, pre-harvest safety intervals (PHI), and residue toxicity thresholds.
+      </p>
+</div>
+<!-- Quick Utilities -->
+<div class="flex items-center gap-space-xs">
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-md py-2.5 rounded-full flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Ledger PDF
+      </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-2.5 rounded-full flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+        Register Compound
+      </button>
+</div>
+</section>
+<!-- KPI Metrics Ribbon -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Certified Formulations</span>
+<span class="font-display-mobile text-display-mobile text-on-surface mt-0.5 font-bold">1,420</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Central Board Approved
+        </span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">science</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Organic Bio-Alternatives</span>
+<span class="font-display-mobile text-display-mobile text-primary mt-0.5 font-bold">84</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-primary">eco</span> Zero PHI Botanicals
+        </span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">nature</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Banned / Red-Label</span>
+<span class="font-display-mobile text-display-mobile text-error mt-0.5 font-bold">12</span>
+<span class="font-label-sm text-label-sm text-error flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Gazette Prohibited
+        </span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[26px]">block</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Regulatory Ledger Sync</span>
+<span class="font-display-mobile text-display-mobile text-on-surface mt-0.5 font-bold">99.8%</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">sync</span> Last polled 2 hrs ago
+        </span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">rule</span>
+</div>
+</div>
+</section>
+<!-- Main Workstation Layout: 12-Column Grid -->
+<div class="grid grid-cols-12 gap-space-lg">
+<!-- Left 8.5 Columns: Search, Filters & Ledger Table -->
+<div class="col-span-12 xl:col-span-8 flex flex-col gap-space-md">
+<!-- Search and Filter Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">filter_alt</span>
+<input class="w-full bg-surface-container-low text-on-surface placeholder-on-surface-variant pl-11 pr-4 py-2.5 rounded-xl border-0 focus:outline-none focus:ring-1 focus:ring-primary font-body-sm text-body-sm" id="ledger-search" placeholder="Search active ingredient, commercial brand (e.g. Coragen, Emamectin, Blitox), pathogen taxon..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none" id="category-pills">
+<button class="filter-pill bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-1.5 rounded-full whitespace-nowrap transition-all shadow-sm" data-cat="all">
+            All Categories (1,420)
+          </button>
+<button class="filter-pill bg-surface-muted hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-sm py-1.5 rounded-full whitespace-nowrap transition-all" data-cat="insecticide">
+            Insecticides (CIB&amp;RC)
+          </button>
+<button class="filter-pill bg-surface-muted hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-sm py-1.5 rounded-full whitespace-nowrap transition-all" data-cat="fungicide">
+            Fungicides &amp; Bactericides
+          </button>
+<button class="filter-pill bg-surface-muted hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-sm py-1.5 rounded-full whitespace-nowrap transition-all" data-cat="biostimulant">
+            Bio-Stimulants &amp; Microbials
+          </button>
+<button class="filter-pill bg-surface-muted hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-space-sm py-1.5 rounded-full whitespace-nowrap transition-all" data-cat="organic">
+            Botanical &amp; ICAR Certified
+          </button>
+<button class="filter-pill bg-surface-muted hover:bg-surface-container text-error font-label-sm text-label-sm px-space-sm py-1.5 rounded-full whitespace-nowrap transition-all flex items-center gap-1" data-cat="restricted">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+            Restricted / Red Label
+          </button>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-muted flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">clinical_notes</span>
+<span class="font-title-md text-title-md text-on-surface">Registered Active Formulation Ledger</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 5 of 1,420 Entries</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="formulary-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Active Molecule &amp; Trade Name</th>
+<th class="py-3 px-space-md">Target Crop &amp; Pathogen</th>
+<th class="py-3 px-space-md">Dilution Dosage</th>
+<th class="py-3 px-space-md">PHI &amp; MRL Limit</th>
+<th class="py-3 px-space-md">Toxicity Band</th>
+<th class="py-3 px-space-md text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Item 1: Emamectin Benzoate -->
+<tr class="hover:bg-surface-muted transition-colors compound-row" data-category="insecticide">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Emamectin Benzoate 5% SG</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Trade: Proclaim, Emamex, Strike</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Cotton, Tomato, Okra</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Bollworm, Fruit Borer (Helicoverpa)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium bg-surface-container-low px-2 py-1 rounded-md text-on-surface">0.4 g/L</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">PHI: 14 Days</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">MRL: 0.05 mg/kg</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5" title="Slightly Toxic - Green Triangle">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">change_history</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Green Label</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+                  </span>
+</td>
+</tr>
+<!-- Item 2: Chlorantraniliprole -->
+<tr class="hover:bg-surface-muted transition-colors compound-row" data-category="insecticide">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Chlorantraniliprole 18.5% SC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Trade: Coragen, Vesticor</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Paddy Rice, Sugarcane, Maize</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Stem Borer, Leaf Folder, Fall Armyworm</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium bg-surface-container-low px-2 py-1 rounded-md text-on-surface">0.3 ml/L</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">PHI: 21 Days</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">MRL: 0.02 mg/kg</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5" title="Slightly Toxic - Green Triangle">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">change_history</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Green Label</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+                  </span>
+</td>
+</tr>
+<!-- Item 3: Copper Oxychloride -->
+<tr class="hover:bg-surface-muted transition-colors compound-row" data-category="fungicide">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Copper Oxychloride 50% WP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Trade: Blitox, Blue Copper, Cuprina</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Pomegranate, Citrus, Grapes</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Bacterial Blight, Downy Mildew, Canker</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium bg-surface-container-low px-2 py-1 rounded-md text-on-surface">2.5 g/L</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">PHI: 7 Days</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">MRL: 20.0 mg/kg</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5" title="Moderately Toxic - Blue Triangle">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">change_history</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Blue Label</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Approved
+                  </span>
+</td>
+</tr>
+<!-- Item 4: Azadirachtin Botanical -->
+<tr class="hover:bg-surface-muted transition-colors compound-row" data-category="organic">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Azadirachtin 10,000 ppm (1% EC)</span>
+<span class="font-label-sm text-label-sm text-primary mt-0.5">Neem Seed Kernel Extract | NPOP ICAR</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Polyhouse Capsicum, Tomato, Floriculture</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Whitefly, Aphids, Mites, Foliar Thrips</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium bg-surface-container-low px-2 py-1 rounded-md text-on-surface">2.0 ml/L</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-primary">PHI: 0 Days</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">MRL: Exempt (Organic)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5" title="Organic Biopesticide">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Organic Bio</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">compost</span> Certified
+                  </span>
+</td>
+</tr>
+<!-- Item 5: Monocrotophos BANNED -->
+<tr class="hover:bg-surface-muted transition-colors compound-row bg-error-container/10" data-category="restricted">
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-error line-through">Monocrotophos 36% SL</span>
+<span class="font-label-sm text-label-sm text-error mt-0.5 font-medium">Banned for use on all edible crops</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-error">Vegetables &amp; Fruit Orchards</span>
+<span class="text-error font-label-sm text-label-sm">Strictly Prohibited under Gazette S.O. 4504</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-medium bg-error-container/30 px-2 py-1 rounded-md text-on-error-container">RESTRICTED</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-error">PHI: Indefinite</span>
+<span class="text-error font-label-sm text-label-sm">Zero Tolerance Allowed</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5" title="Extremely Toxic - Red Triangle">
+<span class="material-symbols-outlined text-[16px] text-error" style="font-variation-settings: 'FILL' 1;">change_history</span>
+<span class="font-label-sm text-label-sm text-error font-bold">Red Label</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-error text-on-error font-semibold">
+<span class="material-symbols-outlined text-[14px]">gavel</span> BANNED
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Footer Pagination & Guide -->
+<div class="p-space-md bg-surface-muted flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">change_history</span> Green: Slightly Toxic
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary" style="font-variation-settings: 'FILL' 1;">change_history</span> Blue: Moderately Toxic
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">change_history</span> Yellow: Highly Toxic
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error" style="font-variation-settings: 'FILL' 1;">change_history</span> Red: Prohibited
+            </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 font-medium text-on-surface">Page 1 of 284</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Biochemical Visual Reference: Pre-Harvest Residue Decay Chart -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">ssid_chart</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Foliar Residue Half-Life Decay Dynamics</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Simulated active degradation comparing synthetic vs biological agents over 21-day timeline</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-space-xs py-1 rounded-md text-on-surface-variant">MRL Safe Threshold: 0.05 mg/kg</span>
+</div>
+<!-- Inline Decay Curve SVG -->
+<div class="w-full bg-surface-muted rounded-xl p-space-md flex flex-col">
+<div class="w-full h-44">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 600 140">
+<!-- Grid horizontal markers -->
+<line stroke="#E5E4DC" stroke-dasharray="3,3" x1="40" x2="580" y1="20" y2="20"></line>
+<line stroke="#E5E4DC" stroke-dasharray="3,3" x1="40" x2="580" y1="60" y2="60"></line>
+<line stroke="#E5E4DC" stroke-dasharray="3,3" x1="40" x2="580" y1="100" y2="100"></line>
+<!-- MRL Critical Limit Line -->
+<line stroke="#ba1a1a" stroke-dasharray="4,4" stroke-width="1.5" x1="40" x2="580" y1="105" y2="105"></line>
+<text class="text-[10px] fill-error font-medium" x="500" y="100">MRL Export Limit (0.05 mg/kg)</text>
+<!-- Chlorantraniliprole Curve (Green line - slow degradation) -->
+<path d="M 40,22 Q 180,35 300,75 T 580,118" fill="none" stroke="#446345" stroke-width="2.5"></path>
+<!-- Copper Oxychloride (Secondary - medium curve) -->
+<path d="M 40,35 Q 160,80 320,108 T 580,128" fill="none" stroke="#6b5d3a" stroke-width="2"></path>
+<!-- Azadirachtin / Bio-Neem (Rapid photolysis decay) -->
+<path d="M 40,30 Q 80,110 140,128 T 580,135" fill="none" stroke="#b3af41" stroke-dasharray="2,2" stroke-width="2"></path>
+<!-- X-Axis Labels -->
+<text class="text-[10px] fill-outline" x="40" y="138">Day 0</text>
+<text class="text-[10px] fill-outline" x="140" y="138">Day 3</text>
+<text class="text-[10px] fill-outline" x="260" y="138">Day 7</text>
+<text class="text-[10px] fill-outline" x="400" y="138">Day 14 (PHI)</text>
+<text class="text-[10px] fill-outline" x="540" y="138">Day 21</text>
+</svg>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mt-2 pt-2 border-t border-border-subtle">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-0.5 bg-primary inline-block"></span> Chlorantraniliprole 18.5% (T½ = 16.2d)
+              </span>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-3 h-0.5 bg-secondary inline-block"></span> Copper Oxychloride 50% (T½ = 5.8d)
+              </span>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-tertiary">
+<span class="w-3 h-0.5 bg-tertiary-container inline-block"></span> Neem Azadirachtin (T½ = 0.9d)
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">Ref: FAO/WHO Codex Alimentarius 2024</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Columns: Interactive Tank-Mix Engine & Dosage Dilution Tool -->
+<div class="col-span-12 xl:col-span-4 flex flex-col gap-space-md">
+<!-- 1. Tank-Mix Compatibility Calculator -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-border-subtle">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Tank-Mix Compatibility</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jar-Test Risk Assessment</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">verified_user</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Predict physical flocculation, chemical precipitation, and foliar burn hazard prior to field spray mixing.
+        </p>
+<!-- Select Active Compound A -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Chemical Tank Component A</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl py-2 px-3 focus:outline-none focus:ring-1 focus:ring-primary appearance-none pr-8" id="mix-comp-a">
+<option value="coc">Copper Oxychloride 50% WP (Fungicide)</option>
+<option value="emamectin">Emamectin Benzoate 5% SG (Insecticide)</option>
+<option value="streptocycline">Streptocycline 90:10 (Bactericide)</option>
+<option value="organophosphate">Monocrotophos / Chlorpyrifos (OP)</option>
+<option value="sulphur">Wettable Sulphur 80% WDG</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Mixing Indicator Icon -->
+<div class="flex justify-center -my-1">
+<button class="w-7 h-7 rounded-full bg-surface-container-high hover:bg-surface-variant flex items-center justify-center text-on-surface-variant transition-colors shadow-sm" id="swap-mix">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+</button>
+</div>
+<!-- Select Active Compound B -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Chemical Tank Component B</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl py-2 px-3 focus:outline-none focus:ring-1 focus:ring-primary appearance-none pr-8" id="mix-comp-b">
+<option value="streptocycline">Streptocycline 90:10 (Bactericide)</option>
+<option value="sulphur">Wettable Sulphur 80% WDG</option>
+<option value="coc">Copper Oxychloride 50% WP</option>
+<option value="emamectin">Emamectin Benzoate 5% SG</option>
+<option value="organophosphate">Alkaline Liquid Foliar Fertilizer</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Real-Time Evaluation Result Box -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1 transition-all" id="mix-result-box">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-primary flex items-center gap-1.5" id="mix-status-title">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+              Chemically Synergistic
+            </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed" id="mix-risk-tag">Safe Mix</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="mix-explanation">
+            Copper Oxychloride + Streptocycline is standard gold-practice for bacterial blast and canker control. No antagonism or crystallization observed at pH 5.5 - 7.0.
+          </p>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md py-2.5 rounded-full transition-colors flex items-center justify-center gap-2" id="verify-mix-btn">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+          Recalculate Molecular Chelation
+        </button>
+</div>
+<!-- 2. Dosage Dilution Calculator for Field Sprayers -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-border-subtle">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Sprayer Dilution Engine</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Calibrated Calibration Ratios</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Standard ISO</span>
+</div>
+<!-- Sprayer Rig Presets -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Select Application Rig</label>
+<div class="grid grid-cols-2 gap-space-xs" id="rig-selector">
+<button class="rig-btn active bg-primary text-on-primary rounded-xl p-2.5 flex flex-col items-center gap-0.5 text-center transition-all" data-volume="15">
+<span class="font-title-md text-title-md font-bold">15 Liters</span>
+<span class="font-label-sm text-label-sm opacity-90">Knapsack Battery</span>
+</button>
+<button class="rig-btn bg-surface-container-low text-on-surface hover:bg-surface-container rounded-xl p-2.5 flex flex-col items-center gap-0.5 text-center transition-all" data-volume="200">
+<span class="font-title-md text-title-md font-bold">200 Liters</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tractor Boom Barrel</span>
+</button>
+</div>
+</div>
+<!-- Concentration Requirement -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Formulation Dosage</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl py-2 px-3 pr-9 focus:outline-none focus:ring-1 focus:ring-primary" id="unit-rate" step="0.1" type="number" value="0.4"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-sm text-label-sm">g or ml</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Target Acreage</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-xl py-2 px-3 pr-9 focus:outline-none focus:ring-1 focus:ring-primary" id="acreage-rate" step="0.5" type="number" value="1.0"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant font-label-sm text-label-sm">Acres</span>
+</div>
+</div>
+</div>
+<!-- Dilution Result -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>Per-Tank Required Quantity:</span>
+<span class="font-semibold text-primary" id="tank-vol-label">15 L Knapsack Tank</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-primary font-bold tracking-tight" id="calc-total-qty">6.0</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold" id="calc-unit-label">grams / tank</span>
+</div>
+<div class="pt-2 border-t border-border-subtle flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant">
+<span>Water Solution Requirement:</span>
+<span class="font-medium text-on-surface" id="calc-water-qty">150 Liters total (10 Tanks)</span>
+</div>
+</div>
+</div>
+<!-- Quick Regulatory Advisory Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Export Consignment Notice</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            EU &amp; APEDA mandates mandatory multi-residue screening on Table Grapes &amp; Basmati Rice for Chlorpyrifos and Tricyclazole. Ensure strict adherence to 21-day PHI.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Filter Pills Handling
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const tableRows = document.querySelectorAll('.compound-row');
+  const searchInput = document.getElementById('ledger-search');
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        p.classList.add('bg-surface-muted', 'text-on-surface-variant');
+      });
+      pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      pill.classList.remove('bg-surface-muted', 'text-on-surface-variant');
+
+      const cat = pill.getAttribute('data-cat');
+      applyFilters(cat, searchInput.value.toLowerCase());
+    });
+  });
+
+  // Search Input Handling
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const activePill = document.querySelector('.filter-pill.bg-primary');
+      const cat = activePill ? activePill.getAttribute('data-cat') : 'all';
+      applyFilters(cat, e.target.value.toLowerCase());
+    });
+  }
+
+  function applyFilters(category, query) {
+    tableRows.forEach(row => {
+      const rowCat = row.getAttribute('data-category');
+      const textContent = row.textContent.toLowerCase();
+      const matchCat = (category === 'all' || rowCat === category);
+      const matchQuery = !query || textContent.includes(query);
+
+      if (matchCat && matchQuery) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Tank-Mix Compatibility Calculator Interactivity
+  const compA = document.getElementById('mix-comp-a');
+  const compB = document.getElementById('mix-comp-b');
+  const resultBox = document.getElementById('mix-result-box');
+  const statusTitle = document.getElementById('mix-status-title');
+  const riskTag = document.getElementById('mix-risk-tag');
+  const explanation = document.getElementById('mix-explanation');
+  const verifyBtn = document.getElementById('verify-mix-btn');
+  const swapBtn = document.getElementById('swap-mix');
+
+  function calculateCompatibility() {
+    const valA = compA.value;
+    const valB = compB.value;
+
+    if (valA === valB) {
+      statusTitle.className = 'font-label-md text-label-md font-semibold text-secondary flex items-center gap-1.5';
+      statusTitle.innerHTML = '<span class="material-symbols-outlined text-[18px]">info</span> Redundant Duplication';
+      riskTag.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant';
+      riskTag.textContent = 'Duplicate';
+      explanation.textContent = 'Selected identical active compound. No chemical hazard, but provides zero synergistic spectrum benefit and increases resistance pressure.';
+      return;
+    }
+
+    const isIncompatible = 
+      (valA === 'organophosphate' && valB === 'sulphur') ||
+      (valA === 'sulphur' && valB === 'organophosphate') ||
+      (valA === 'coc' && valB === 'organophosphate') ||
+      (valA === 'organophosphate' && valB === 'coc');
+
+    if (isIncompatible) {
+      statusTitle.className = 'font-label-md text-label-md font-semibold text-error flex items-center gap-1.5';
+      statusTitle.innerHTML = '<span class="material-symbols-outlined text-[18px]">dangerous</span> High Incompatibility Hazard';
+      riskTag.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded bg-error text-on-error font-semibold';
+      riskTag.textContent = 'Severe Burn';
+      explanation.textContent = 'Dangerous Tank-Mix! Alkaline or sulphur components catalyze rapid hydrolysis of organophosphates, generating extreme phytotoxic foliar scorch and heavy precipitate.';
+    } else {
+      statusTitle.className = 'font-label-md text-label-md font-semibold text-primary flex items-center gap-1.5';
+      statusTitle.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> Chemically Compatible';
+      riskTag.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed';
+      riskTag.textContent = 'Field Proven';
+      explanation.textContent = 'Safe tank partner combination. Maintains stable suspension without phase separation, residue clustering, or biological antagonism across normal spray water pH (5.8 - 6.8).';
+    }
+  }
+
+  if (compA && compB) {
+    compA.addEventListener('change', calculateCompatibility);
+    compB.addEventListener('change', calculateCompatibility);
+  }
+  if (verifyBtn) {
+    verifyBtn.addEventListener('click', calculateCompatibility);
+  }
+  if (swapBtn) {
+    swapBtn.addEventListener('click', () => {
+      const temp = compA.value;
+      compA.value = compB.value;
+      compB.value = temp;
+      calculateCompatibility();
+    });
+  }
+
+  // Sprayer Dilution Engine
+  let activeTankVolume = 15;
+  const rigButtons = document.querySelectorAll('.rig-btn');
+  const unitRateInput = document.getElementById('unit-rate');
+  const acreageRateInput = document.getElementById('acreage-rate');
+  const totalQtyDisplay = document.getElementById('calc-total-qty');
+  const tankVolLabel = document.getElementById('tank-vol-label');
+  const calcWaterQty = document.getElementById('calc-water-qty');
+
+  function updateDosage() {
+    const rate = parseFloat(unitRateInput.value) || 0;
+    const acres = parseFloat(acreageRateInput.value) || 1;
+    const totalTankDose = (rate * activeTankVolume).toFixed(1);
+    
+    totalQtyDisplay.textContent = totalTankDose;
+    tankVolLabel.textContent = activeTankVolume + ' L Sprayer Tank';
+    
+    // Standard estimation: ~150-200 L total spray mix per acre
+    const totalWaterPerAcre = activeTankVolume === 15 ? (acres * 150) : (acres * 200);
+    const totalTanks = Math.ceil(totalWaterPerAcre / activeTankVolume);
+    calcWaterQty.textContent = totalWaterPerAcre + ' Liters (' + totalTanks + ' Tanks for ' + acres + ' Ac)';
+  }
+
+  rigButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      rigButtons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary');
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+      activeTankVolume = parseFloat(btn.getAttribute('data-volume'));
+      updateDosage();
+    });
+  });
+
+  if (unitRateInput) unitRateInput.addEventListener('input', updateDosage);
+  if (acreageRateInput) acreageRateInput.addEventListener('input', updateDosage);
+</script></main></div></body></html>

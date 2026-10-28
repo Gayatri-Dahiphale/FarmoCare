@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>Farmora Care</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#acd0aa", "on-secondary": "#ffffff", "accent-beige": "#D7CE93", "on-secondary-container": "#71633f", "inverse-surface": "#303126", "canvas-bg": "#FBFBFB", "surface-container-low": "#f6f4e4", "error": "#ba1a1a", "on-error-container": "#93000a", "surface-dim": "#dcdbcb", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "secondary": "#6b5d3a", "tertiary-fixed": "#ece772", "on-secondary-fixed": "#241a01", "on-error": "#ffffff", "tertiary": "#646100", "inverse-primary": "#acd0aa", "secondary-fixed-dim": "#d7c59a", "surface-variant": "#e4e3d3", "on-background": "#1b1c12", "outline-variant": "#c2c8be", "surface-muted": "#F3F2EB", "tertiary-container": "#b3af41", "secondary-container": "#f4e1b4", "surface-container-highest": "#e4e3d3", "surface-container-high": "#eae9d8", "on-secondary-fixed-variant": "#524524", "on-tertiary-fixed-variant": "#4b4900", "primary-container": "#5c7d5c", "surface-container": "#f0efde", "primary-fixed": "#c8ecc5", "on-primary-fixed-variant": "#2f4e31", "on-primary-fixed": "#032109", "surface-tint": "#466647", "inverse-on-surface": "#f3f1e1", "on-tertiary-fixed": "#1e1d00", "background": "#fcfae9", "on-primary-container": "#f7fff2", "outline": "#737970", "primary": "#446345", "surface-container-lowest": "#ffffff", "on-surface-variant": "#424841", "error-container": "#ffdad6", "surface": "#fcfae9", "on-primary": "#ffffff", "tertiary-fixed-dim": "#cfcb59", "on-surface": "#1b1c12", "surface-bright": "#fcfae9", "secondary-fixed": "#f4e1b4", "border-subtle": "#E5E4DC" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.75rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-tablet": "2rem", "gutter": "1.5rem", "gutter-mobile": "1rem" }, fontFamily: { "display-mobile": ["Manrope"], "body-lg": ["Manrope"], "headline-sm": ["Manrope"], "body-sm": ["Manrope"], "headline-md": ["Manrope"], "display": ["Manrope"], "headline-lg-mobile": ["Manrope"], "title-md": ["Manrope"], "body-md": ["Manrope"], "label-sm": ["Manrope"], "label-md": ["Manrope"], "headline-lg": ["Manrope"] }, fontSize: { "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "500" }], "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(12,13,5,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-title-md text-title-md text-on-surface tracking-tight truncate max-w-[210px]">Incident Triage Detail</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Top Accreditation & Verification Ribbon -->
+<div class="px-gutter-mobile pt-3 pb-2">
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-wider truncate">Govt. Accredited Rx</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">CIB&amp;RC Protocol Compliant</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container px-2 py-0.5 rounded-full">#FC-9482</span>
+<button aria-label="View QR verification badge" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" id="qrModalBtn" type="button">
+<span class="material-symbols-outlined text-[19px]">qr_code_2</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hero Status / Visual Snapshot -->
+<div class="px-gutter-mobile my-2">
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-4 shadow-sm">
+<div class="flex items-start justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="inline-flex items-center gap-1 bg-surface-container-lowest text-primary px-2.5 py-1 rounded-full shadow-sm mb-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm">Active Field Prescription</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface truncate">Cotton Bt-II Advisory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validated on 12 Oct • 08:45 AM</p>
+</div>
+<div class="w-16 h-16 rounded-xl overflow-hidden shadow-sm shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close-up macro photo of a green cotton plant boll with flowering petals showing early agricultural pest scouting markers in natural morning field sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6xw7dvVgfxZV2jpcLirBkp8tzl8WDjg78rkwvzlzUkT6Lr3TcUyf26H8fRJC7RE4M7NDfenrhdyUGaRWw4bWqTsj1aKD6mWetCrMNKHjZkIeqmKSsd6vmEKueiNTx3PsspcpumBjML7ln4FC7mOI-3RhyLhjls3ShFI05-gtEjsmo6eFDvJa3l5tC7Rf3thL3LKQ8YaotljH0r7Hv4Z4e6mvbvXH_td7tahPONbhzCazvd3HWKcK5"/>
+<div class="absolute bottom-0 inset-x-0 bg-primary/80 py-0.5 text-center">
+<span class="font-label-sm text-label-sm text-on-primary">Flowering</span>
+</div>
+</div>
+</div>
+<!-- Farmer & Field Micro Grid -->
+<div class="mt-3.5 pt-3 bg-surface-container-lowest/80 rounded-lg p-3">
+<div class="grid grid-cols-2 gap-3 text-left">
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Grower</p>
+<p class="font-title-md text-title-md text-on-surface truncate font-semibold">Rajesh Patil</p>
+<p class="font-body-sm text-body-sm text-secondary truncate">Nashik Cluster</p>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Plot</p>
+<p class="font-title-md text-title-md text-on-surface truncate font-semibold">B-4 Riverbed</p>
+<p class="font-body-sm text-body-sm text-secondary truncate">3.5 Acres • Terraces</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Clinical Pest Diagnosis Section -->
+<div class="px-gutter-mobile my-2">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[20px]">pest_control</span>
+<h3 class="font-title-md text-title-md text-on-surface">Target Pathogen Diagnosis</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded-full">Severity: High</span>
+</div>
+<div class="flex gap-3 bg-surface-container-low rounded-xl p-3">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 shadow-sm relative">
+<img class="w-full h-full object-cover" data-alt="Entomological photographic specimen of Helicoverpa armigera American bollworm caterpillar pest resting on green cotton foliage under agricultural diagnostic magnifying lens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnK9SvnFDmYBPQsE_4zzSNKiRcPiBHybYa6Wb7qVHHQ9k1riUVqbitZDRQG9JOoPg1QLBGYHeRhZg-vEOT1os4ZfPKUDXW39VTX-hXwXUBAzySzxAnTyGkMe9DbmjHnefYaDyFwfXlv-Gpy3MSV-gTuDIF-IURpbOz9EKwhbygSRyayauvJauiDy80DBAqTrWERgCRmRidQgx9UxTU3aM0sRA2UM_mhwc0yYbDidHxlkQR1q9OnoCd"/>
+<div class="absolute top-1 left-1 bg-surface-container-highest/90 px-1 py-0.2 rounded text-[10px] font-label-sm text-on-surface">AI 98.4%</div>
+</div>
+<div class="flex flex-col justify-center min-w-0 flex-1">
+<h4 class="font-title-md text-title-md text-on-surface truncate italic">Helicoverpa armigera</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">American Bollworm (4th Instar)</p>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">psychology</span>
+<span class="font-label-sm text-label-sm text-primary">Computer Vision Verified</span>
+</div>
+</div>
+</div>
+<div class="mt-3 bg-surface-muted rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          Bore-holes detected across square bolls. Immediate application advised before larval migration to inner locules.
+        </p>
+</div>
+</div>
+</div>
+<!-- Chemical & Biological Treatment Schedule -->
+<div class="px-gutter-mobile my-2">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">vaccines</span>
+<h3 class="font-title-md text-title-md text-on-surface">Prescription Protocol</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed-variant px-2.5 py-0.5 rounded-full font-semibold">Rx Official</span>
+</div>
+<!-- Treatment Primary Card -->
+<div class="bg-surface-container-low rounded-xl p-3.5 mb-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Formulation</span>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-2 py-0.5 rounded-full">Primary</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface mt-1 font-bold">Emamectin Benzoate 5% SG</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Class: Avermectin semi-synthetic insecticide</p>
+</div>
+<!-- Calibration Specifications -->
+<div class="grid grid-cols-2 gap-2.5 mb-3">
+<div class="bg-surface-container p-3 rounded-xl">
+<div class="flex items-center gap-1 text-on-surface-variant mb-1">
+<span class="material-symbols-outlined text-[16px]">scale</span>
+<span class="font-label-sm text-label-sm">Dosage Ratio</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">0.4 g / Litre</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">200 L water / acre</p>
+</div>
+<div class="bg-surface-container p-3 rounded-xl">
+<div class="flex items-center gap-1 text-on-surface-variant mb-1">
+<span class="material-symbols-outlined text-[16px]">wb_twilight</span>
+<span class="font-label-sm text-label-sm">Spray Window</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">06:30 - 10:00 AM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calm ambient winds</p>
+</div>
+</div>
+<!-- Safety & Pre-Harvest Interval -->
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-muted">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">timelapse</span>
+<span class="font-body-sm text-body-sm text-on-surface">Pre-Harvest Interval (PHI)</span>
+</div>
+<span class="font-title-md text-title-md text-secondary font-bold">14 Days</span>
+</div>
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-muted">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">masks</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface">Mandatory Farm PPE</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nitrile gloves, vapor mask, and eye shield during pneumatic tank preparation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 72-Hour Verification Gate & Timer -->
+<div class="px-gutter-mobile my-2">
+<div class="bg-surface-container-low rounded-xl p-4 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+<h3 class="font-title-md text-title-md text-on-surface">72-Hour Audit Gate</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Step 2 of 3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+        Post-spray leaf canopy photograph mandatory for certificate closure &amp; APMC harvest clearance.
+      </p>
+<!-- Countdown Visual Card -->
+<div class="bg-surface-container-lowest rounded-xl p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px]">hourglass_top</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Deadline Window</p>
+<p class="font-title-md text-title-md text-on-surface font-bold tracking-tight" id="countdownTimer">17h 58m 22s</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-3.5 py-2 rounded-full font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Upload</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Agronomist Digital Signature & Licensure -->
+<div class="px-gutter-mobile my-2">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+<div class="flex items-start justify-between gap-3">
+<div class="min-w-0">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-primary text-[16px]">policy</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Authorized Certification</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Dr. M. Kulkarni</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chief Agronomist &amp; Entomologist</p>
+<p class="font-body-sm text-body-sm text-secondary">Krishi Vigyan Kendra (KVK Niphad)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">Licensure: <span class="font-semibold text-on-surface">#AGR-884920 (ICAR)</span></p>
+</div>
+<!-- Seal Artifact -->
+<div class="shrink-0 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-surface-container flex flex-col items-center justify-center p-1 text-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">workspace_premium</span>
+<span class="font-label-sm text-label-sm text-primary scale-75 uppercase font-bold -mt-1">KVK SEAL</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">DigiSigned</span>
+</div>
+</div>
+</div>
+</div>
+<!-- QR Verification Modal Backdrop (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-6" id="qrModal">
+<div class="bg-surface-container-lowest rounded-xl p-6 w-full max-w-xs shadow-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant mb-3">
+<span class="material-symbols-outlined text-[28px]">qr_code_scanner</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Scout Field QR</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-4">Case #FC-9482 • Government CIB&amp;RC Ledger</p>
+<!-- Interactive SVG QR Mockup -->
+<div class="bg-surface p-3 rounded-lg shadow-inner mb-4">
+<svg class="w-36 h-36" fill="currentColor" viewbox="0 0 100 100">
+<!-- Stylized QR Grid pattern in palette color -->
+<rect fill="#f0efde" height="100" width="100"></rect>
+<path d="M10 10h24v24H10zm4 4v16h16V14zm4 4h8v8h-8zM66 10h24v24H66zm4 4v16h16V14zm4 4h8v8h-8zM10 66h24v24H10zm4 4v16h16V74zm4 4h8v8h-8zM42 10h8v8h-8zm12 0h6v8h-6zm-12 14h14v6H42zm18 0h6v6h-6zm-18 12h8v16h-8zm12 0h12v6H54zm16 0h8v8h-8zm-4 12h6v12h-6zm16-4h10v6H82zm-28 8h10v6H54zm-12 8h8v12h-8zm12 8h6v8h-6zm20-8h10v6H74zm10 10h6v10h-6zm-36 6h12v6H48zm18 4h10v6H66z" fill="#446345"></path>
+</svg>
+</div>
+<button class="w-full bg-surface-container hover:bg-surface-container-high py-2.5 rounded-full font-label-md text-label-md text-on-surface" id="closeModalBtn" type="button">
+        Close Window
+      </button>
+</div>
+</div>
+<!-- Sticky Farmer Action Bar (Optimized for One-Hand Reach) -->
+<div class="fixed bottom-0 inset-x-0 bg-surface/95 backdrop-blur-md px-gutter-mobile py-3 shadow-[0_-4px_20px_rgba(12,13,5,0.06)] z-40 pb-safe">
+<div class="flex flex-col gap-2 max-w-md mx-auto">
+<!-- Primary One-Tap Farmer CTA -->
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary py-3 px-4 rounded-full font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all" id="shareBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">share</span>
+<span>Share via WhatsApp with Audio Note</span>
+</button>
+<!-- Secondary Utility Row -->
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface py-2.5 px-3 rounded-full font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all" id="pdfBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="truncate">Save Official PDF</span>
+</button>
+<a class="bg-surface-container hover:bg-surface-container-high text-on-surface py-2.5 px-3 rounded-full font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all" href="tel:+919420018821">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+<span class="truncate">Call Agronomist</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions & live countdown timer
+  (function() {
+    // Modal toggle
+    const qrBtn = document.getElementById('qrModalBtn');
+    const modal = document.getElementById('qrModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    if (qrBtn && modal && closeBtn) {
+      qrBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      });
+    }
+
+    // Dynamic timer ticker
+    let totalSeconds = 17 * 3600 + 58 * 60 + 22;
+    const timerDisplay = document.getElementById('countdownTimer');
+
+    if (timerDisplay) {
+      setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          const hrs = Math.floor(totalSeconds / 3600);
+          const mins = Math.floor((totalSeconds % 3600) / 60);
+          const secs = totalSeconds % 60;
+          timerDisplay.textContent = `${hrs}h ${mins < 10 ? '0' : ''}${mins}m ${secs < 10 ? '0' : ''}${secs}s`;
+        }
+      }, 1000);
+    }
+
+    // Share toast micro-interaction
+    const shareBtn = document.getElementById('shareBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        const originalContent = shareBtn.innerHTML;
+        shareBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Preparing Audio Prescription...</span>';
+        setTimeout(() => {
+          shareBtn.innerHTML = originalContent;
+        }, 1800);
+      });
+    }
+  })();
+</script></main></body></html>

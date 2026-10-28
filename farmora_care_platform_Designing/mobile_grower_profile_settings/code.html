@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#1b1c12", "surface": "#fcfae9", "primary-container": "#5c7d5c", "primary-fixed": "#c8ecc5", "surface-bright": "#fcfae9", "on-background": "#1b1c12", "secondary-container": "#f4e1b4", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#d7c59a", "tertiary-fixed-dim": "#cfcb59", "background": "#fcfae9", "on-primary": "#ffffff", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "outline": "#737970", "on-primary-container": "#f7fff2", "tertiary-container": "#b3af41", "inverse-surface": "#303126", "on-secondary-fixed-variant": "#524524", "on-primary-fixed": "#032109", "on-secondary": "#ffffff", "primary-fixed-dim": "#acd0aa", "surface-dim": "#dcdbcb", "inverse-on-surface": "#f3f1e1", "error-container": "#ffdad6", "on-tertiary-fixed": "#1e1d00", "secondary-fixed": "#f4e1b4", "on-error": "#ffffff", "on-primary-fixed-variant": "#2f4e31", "on-secondary-container": "#71633f", "inverse-primary": "#acd0aa", "primary": "#446345", "tertiary": "#646100", "on-tertiary-fixed-variant": "#4b4900", "on-secondary-fixed": "#241a01", "canvas-bg": "#FBFBFB", "surface-muted": "#F3F2EB", "accent-beige": "#D7CE93", "surface-container": "#f0efde", "surface-container-high": "#eae9d8", "surface-container-highest": "#e4e3d3", "surface-variant": "#e4e3d3", "on-surface-variant": "#424841", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "surface-tint": "#466647", "secondary": "#6b5d3a", "border-subtle": "#E5E4DC", "tertiary-fixed": "#ece772" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-tablet": "2rem" }, fontFamily: { "headline-sm": ["Manrope"], "headline-lg": ["Manrope"], "display": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "title-md": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Manrope"], "display-mobile": ["Manrope"] }, fontSize: { "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }], "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">potted_plant</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Farmora Care</span><h1 class="font-title-md text-title-md text-on-surface leading-tight">Grower Profile</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-20 pb-safe"><div class="flex flex-col w-full pb-6 px-margin-mobile">
+<!-- Top App Bar / Section Title -->
+<div class="flex items-center justify-between py-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">nature_people</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Grower Profile &amp; Plots</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+      Active Season
+    </span>
+</div>
+<!-- Farmer Identity Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md shadow-sm mb-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-full object-cover shadow-sm" data-alt="A dignified close-up portrait of Rajesh Patil, an Indian male farmer in his late forties wearing a clean traditional white kurta and folded pagdi, warm golden hour ambient farm lighting, friendly gentle smile, lush green Maharashtra grapevine foliage in the soft blurred background, cinematic documentary portrait style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_kMrLeENm4AciDumRTJj9cq7QlTqmXb-ORaEk5ElujVeV-CT3dY_9lheqQnkGSYDMK-gy6fyBMhhOz10BtQX-WR0FQKo_c1_Gt_4_Ecwow2gFDzzYjX0U40oQCjEPg8SpsdL3sCo78YGS3VU6o2uUASJGoX6CKImUPRur65iKsLetWYjgzpJQ69qf9eBTWnman7JgTzuaJjg7pkXxAEzMygty4O-LGo9iP1NjCXQxE4fvheY5VNFK"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm" title="Verified Producer">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Rajesh Patil</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Nashik Agro-Cluster • Maharashtra</p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">badge</span>
+<span class="font-label-sm text-label-sm tracking-wide text-on-surface font-semibold">#KCC-MH-NSK-84920</span>
+</div>
+</div>
+</div>
+<!-- Quick Stats Grid -->
+<div class="grid grid-cols-3 gap-2 mt-4 pt-3 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Land</span>
+<span class="font-title-md text-title-md text-on-surface">5.5 Ac</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Crops</span>
+<span class="font-title-md text-title-md text-on-surface">Pomegranate</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Advisory Tier</span>
+<span class="font-title-md text-title-md text-primary">Kisan Pro</span>
+</div>
+</div>
+</div>
+<!-- Offline Cache & Telemetry Sync Banner -->
+<div class="rounded-xl bg-surface-container-low p-space-sm mb-space-md shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">cloud_sync</span>
+<span class="font-label-md text-label-md text-on-surface">Offline Resilience Mode</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Field Ready</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+        18 Diagnostic Models Cached
+      </span>
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+        4 Pending Field Syncs
+      </span>
+</div>
+<div class="mt-2.5 w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Registered Plots Section Header -->
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<h3 class="font-title-md text-title-md text-on-surface">Registered Plots</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2 Demarcated</span>
+</div>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_location_alt</span>
+      Map New Plot
+    </button>
+</div>
+<!-- Plot Cards List -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<!-- Plot B-4 Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Plot B-4</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">Sensor Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Riverbed Terraces • Section North-East</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3 mb-3">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">square_foot</span>
+            Demarcated Area
+          </span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">3.5 Acres</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">layers</span>
+            Pedology
+          </span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">Vertisol Black</span>
+</div>
+</div>
+<!-- Realtime IoT Telemetry Capsule -->
+<div class="rounded-lg bg-surface-container p-space-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">sensors</span>
+<span class="font-label-md text-label-md text-on-surface">IoT Probe #B2</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Live (3 min ago)
+          </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volumetric Water Content (VWC)</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">34.2%</span>
+</div>
+<!-- Sparkline Indicator SVG -->
+<svg class="w-24 h-8 text-primary" fill="none" viewbox="0 0 100 30" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 24C15 22 25 28 40 18C55 8 70 14 85 6L100 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Plot A-2 Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Plot A-2</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Manual Scouting</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">North Plateau • Contour Slope</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-3">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">square_foot</span>
+            Demarcated Area
+          </span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">2.0 Acres</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">layers</span>
+            Pedology
+          </span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">Loam Soil</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">warning</span>
+          Requires Soil Nitrogen Assay
+        </span>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline" type="button">
+          Request Test
+        </button>
+</div>
+</div>
+</div>
+<!-- Farm Settings & Preferences -->
+<div class="rounded-xl bg-surface-container-low p-space-md mb-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h3 class="font-title-md text-title-md text-on-surface">Advisory &amp; Language Settings</h3>
+</div>
+<!-- Language Selector Pill Group -->
+<div class="mb-4">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Preferred Advisory Language</label>
+<div class="grid grid-cols-3 gap-2" id="lang-selector-group">
+<button class="lang-btn py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex flex-col items-center justify-center shadow-sm transition-all" data-lang="mr" type="button">
+<span>मराठी</span>
+<span class="text-[10px] opacity-80">Marathi (Active)</span>
+</button>
+<button class="lang-btn py-2.5 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex flex-col items-center justify-center hover:bg-surface-container shadow-sm transition-all" data-lang="en" type="button">
+<span>English</span>
+<span class="text-[10px] text-on-surface-variant">Global</span>
+</button>
+<button class="lang-btn py-2.5 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex flex-col items-center justify-center hover:bg-surface-container shadow-sm transition-all" data-lang="hi" type="button">
+<span>हिन्दी</span>
+<span class="text-[10px] text-on-surface-variant">Hindi</span>
+</button>
+</div>
+</div>
+<!-- Toggle Preferences -->
+<div class="flex flex-col gap-3 pt-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface">Voice Advisory Prompts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spoken audio summaries for weather alerts</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-primary transition-colors focus:outline-none" id="toggle-voice" role="switch" type="button">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-sm ring-0 transition duration-200 ease-in-out mt-0.5"></span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface">Direct Agronomist Field Dispatch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Allow auto-scheduling for priority disease spread</span>
+</div>
+<button aria-checked="true" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-primary transition-colors focus:outline-none" id="toggle-dispatch" role="switch" type="button">
+<span class="translate-x-5 inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-sm ring-0 transition duration-200 ease-in-out mt-0.5"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Account Stewardship & Legal Footer Mini-strip -->
+<div class="flex items-center justify-between px-2 py-3 mb-20 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+<span>Farmora AgriOS v3.8.4</span>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline" href="#">Privacy &amp; Data Rights</a>
+</div>
+<!-- Emergency Kisan Agronomy Helpline Quick-Dial Floating Contact Button -->
+<aside aria-label="Emergency Agronomy Support" class="fixed right-4 bottom-20 z-40">
+<a class="group flex items-center gap-2.5 pl-3.5 pr-4 py-3 rounded-full bg-secondary-container text-on-secondary-container shadow-lg hover:shadow-xl active:scale-95 transition-all" href="tel:18001801551">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-secondary-container/80">Kisan Agronomy 24x7</span>
+<span class="font-title-md text-title-md font-bold leading-none">Emergency Helpline</span>
+</div>
+</a>
+</aside>
+</div>
+<script>
+  (function() {
+    // Interactive Language Selection Switcher
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        langButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+          const sub = b.querySelector('span:last-child');
+          if (sub && sub.innerText.includes('(Active)')) {
+            sub.innerText = sub.innerText.replace(' (Active)', '');
+          }
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        const activeSub = btn.querySelector('span:last-child');
+        if (activeSub && !activeSub.innerText.includes('(Active)')) {
+          activeSub.innerText += ' (Active)';
+        }
+      });
+    });
+
+    // Toggle Buttons Interactive Micro-state
+    function setupToggle(id) {
+      const toggle = document.getElementById(id);
+      if (!toggle) return;
+      toggle.addEventListener('click', () => {
+        const isChecked = toggle.getAttribute('aria-checked') === 'true';
+        const knob = toggle.querySelector('span');
+        if (isChecked) {
+          toggle.setAttribute('aria-checked', 'false');
+          toggle.classList.remove('bg-primary');
+          toggle.classList.add('bg-surface-container-highest');
+          knob.classList.remove('translate-x-5');
+          knob.classList.add('translate-x-0.5');
+        } else {
+          toggle.setAttribute('aria-checked', 'true');
+          toggle.classList.add('bg-primary');
+          toggle.classList.remove('bg-surface-container-highest');
+          knob.classList.add('translate-x-5');
+          knob.classList.remove('translate-x-0.5');
+        }
+      });
+    }
+
+    setupToggle('toggle-voice');
+    setupToggle('toggle-dispatch');
+
+    // Sync Bottom Navigation state highlight for Profile tab
+    try {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'grower-profile') {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary', 'font-semibold');
+        }
+      });
+    } catch(e) {}
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">space_dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="submit-report" href="#"><span class="material-symbols-outlined text-[22px]">add_circle</span><span class="font-label-sm text-label-sm mt-0.5">Report</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-cases" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm mt-0.5">Cases</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="advisory-alerts" href="#"><span class="material-symbols-outlined text-[22px]">warning_amber</span><span class="font-label-sm text-label-sm mt-0.5">Alerts</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-full transition-colors text-primary font-semibold" data-path="grower-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>

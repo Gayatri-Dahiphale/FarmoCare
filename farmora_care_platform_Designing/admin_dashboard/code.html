@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#434100", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e4e3d3", "accent-beige": "#D7CE93", "on-primary-fixed-variant": "#2f4e31", "outline": "#737970", "primary-fixed": "#c8ecc5", "primary-container": "#5c7d5c", "on-tertiary": "#ffffff", "on-background": "#1b1c12", "canvas-bg": "#FBFBFB", "border-subtle": "#E5E4DC", "surface-variant": "#e4e3d3", "on-secondary-fixed-variant": "#524524", "on-surface-variant": "#424841", "surface-dim": "#dcdbcb", "surface": "#fcfae9", "on-tertiary-fixed": "#1e1d00", "surface-container-high": "#eae9d8", "inverse-surface": "#303126", "on-primary-container": "#f7fff2", "on-secondary": "#ffffff", "background": "#fcfae9", "primary-fixed-dim": "#acd0aa", "secondary": "#6b5d3a", "secondary-container": "#f4e1b4", "on-secondary-fixed": "#241a01", "surface-bright": "#fcfae9", "surface-container": "#f0efde", "inverse-on-surface": "#f3f1e1", "on-error-container": "#93000a", "error": "#ba1a1a", "secondary-fixed": "#f4e1b4", "surface-muted": "#F3F2EB", "on-surface": "#1b1c12", "on-primary": "#ffffff", "surface-tint": "#466647", "secondary-fixed-dim": "#d7c59a", "on-primary-fixed": "#032109", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#4b4900", "tertiary-fixed-dim": "#cfcb59", "inverse-primary": "#acd0aa", "tertiary-container": "#b3af41", "tertiary": "#646100", "primary": "#446345", "tertiary-fixed": "#ece772", "on-secondary-container": "#71633f", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "margin": "3rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-sm": "0.75rem", "gutter-mobile": "1rem" }, "fontFamily": { "title-md": ["Manrope"], "label-sm": ["Manrope"], "headline-sm": ["Manrope"], "body-md": ["Manrope"], "headline-lg": ["Manrope"], "label-md": ["Manrope"], "headline-lg-mobile": ["Manrope"], "display-mobile": ["Manrope"], "display": ["Manrope"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-lg mb-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Farmora Care Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJlb4vuGlIwt7ZidnYBeSJQe-TABNr9DmHsRh0-dvoAnHixafX5RgyOjK4QcXU5aj9CuXVi5mPYPKdBTyoGOuQTMN4JaZ88_nYl8W_3WBvG0OeGUxB4kacKiXlIUfcrl7tSCULZH8dkiGA26AzQYbF2FH_jLo97ICYay14EfkufSTuqLfzi1pmyw62SjLvcDtglyuWA7I66r3ajSgVw4996xRkkfhqePWc4EFEaUKaRKaRQT5J0co"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Farmora Care</span></div></div><div class="px-space-md mb-space-md"><div class="p-1.5 rounded-xl bg-surface-container flex items-center justify-between"><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]">Farmer</button><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Expert</button><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Admin</button></div></div><div class="flex-1 overflow-y-auto px-space-md flex flex-col gap-space-lg"><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Farmer Workspace</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-report-problem" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-label-md text-label-md">Report a Problem</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-my-reports" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">My Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-similar-solved" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-label-md text-label-md">Similar Solved</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-md text-label-md">Profile</span></a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Agronomist Expert</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-assigned-cases" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-md text-label-md">Assigned Cases</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-unresolved-queue" href="#"><span class="material-symbols-outlined text-[20px]">pending_actions</span><span class="font-label-md text-label-md">Unresolved Queue</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-similar-solved-cases" href="#"><span class="material-symbols-outlined text-[20px]">find_in_page</span><span class="font-label-md text-label-md">Similar Solved Cases</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="knowledge-base" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-md text-label-md">Knowledge Base</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-my-profile" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">My Profile</span></a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System Administration</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" data-path="admin-system-overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-md text-label-md">System Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-unassigned-reports" href="#"><span class="material-symbols-outlined text-[20px]">mark_chat_unread</span><span class="font-label-md text-label-md">Unassigned Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-expert-assignment" href="#"><span class="material-symbols-outlined text-[20px]">engineering</span><span class="font-label-md text-label-md">Expert Assignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-user-management" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md">User Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Analytics</span></a></nav></div></div><div class="px-space-md pt-space-xs mt-auto"><div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">support_agent</span><div><p class="font-label-sm text-label-sm font-semibold text-on-surface">Field Support</p><p class="font-label-sm text-label-sm text-outline">24/7 Soil Desk</p></div></div><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-8 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Agronomy Network Active</span></div><div class="hidden md:flex items-center relative w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-full bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search case ID, crop, symptom..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTDRkpU_BDI5TEBZoVs1k1TxorzC4y-0KpPHAxRgkzBncfNvorkdbbD6CPi_XgoRd_YU-qejQnly66XegGLc149SRaNyjI-NwRq96S9Gq0ahpwmJxckE2Gv_udF_VWC2tW3_68ABRuwDEswnULltYVSCfshcdNizZ3pvzcYcJjPuT97V9qfr6FgW5rRn0LBt_Z48m2pnUeiKOLHMDfHuq2xK5PZUtF6gVofQyCa8lxwZ4GB2Uogo-G"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-primary font-medium leading-tight">Certified Agronomist</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-8 py-space-lg"><div class="flex flex-col w-full gap-space-lg pb-12">
+<!-- Operational Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Triage Terminal v2.4</span>
+<span class="font-label-sm text-label-sm text-outline">Cluster: Maharashtra &amp; Central Nodes</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Agronomic Operations &amp; Triage Command</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time dispatch between smallholders, ICAR scientists, and regional agriculture universities.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-auto">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold">System Load: Normal • 99.8% Advisory SLA Met</span>
+</div>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Auto-Sync Active</span>
+</button>
+</div>
+</div>
+<!-- Metric KPI Cards (4 clean, restrained cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Community Reach</span>
+<p class="font-title-md text-title-md font-bold text-on-surface mt-1">Registered Farmers</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-mobile text-display-mobile text-on-surface font-bold leading-none">14,820</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +340 this week
+        </span>
+</div>
+<div class="mt-3 w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">University Network</span>
+<p class="font-title-md text-title-md font-bold text-on-surface mt-1">Active Agronomists</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-mobile text-display-mobile text-on-surface font-bold leading-none">128</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Across 6 State Nodes</span>
+</div>
+<p class="mt-3 font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 112 on active shift today
+      </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Telemetry Inflow</span>
+<p class="font-title-md text-title-md font-bold text-on-surface mt-1">Total Reports</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">pest_control</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-mobile text-display-mobile text-on-surface font-bold leading-none">3,942</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Seasonal Kharif</span>
+</div>
+<p class="mt-3 font-label-sm text-label-sm text-outline">3,584 successfully resolved (91%)</p>
+</div>
+<!-- Card 4 (Alert state) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Queue Attention</span>
+<p class="font-title-md text-title-md font-bold text-on-surface mt-1">Unassigned Reports</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-display-mobile text-display-mobile text-error font-bold leading-none">9</span>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-semibold">
+          Requires Triage within 45m
+        </span>
+</div>
+<p class="mt-3 font-label-sm text-label-sm text-on-surface-variant font-medium">Oldest pending: 1 hr 04m</p>
+</div>
+</div>
+<!-- Operational Visualizations & Analytics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart Container 1: Reports by Crop Distribution (5 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Regional Mix</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Reports by Crop Distribution</h2>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Field incidents reported during current monsoon surge across western soil belts.</p>
+<div class="mt-6 flex flex-col gap-3.5">
+<!-- Cotton -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span> Cotton (Cash Belt)
+              </span>
+<span class="text-on-surface-variant font-bold">38% • 1,498</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 38%"></div>
+</div>
+</div>
+<!-- Soybean -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span> Soybean (Vidarbha)
+              </span>
+<span class="text-on-surface-variant font-bold">26% • 1,024</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 26%"></div>
+</div>
+</div>
+<!-- Onion -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary"></span> Onion (Nashik Valley)
+              </span>
+<span class="text-on-surface-variant font-bold">14% • 551</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full transition-all duration-500" style="width: 14%"></div>
+</div>
+</div>
+<!-- Pomegranate -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container"></span> Pomegranate (Solapur)
+              </span>
+<span class="text-on-surface-variant font-bold">12% • 473</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 12%"></div>
+</div>
+</div>
+<!-- Others -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-outline-variant"></span> Others (Pulses / Citrus)
+              </span>
+<span class="text-on-surface-variant font-bold">10% • 396</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full transition-all duration-500" style="width: 10%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-low p-3 rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bollworm threshold alerts active</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">State Protocol Level 2</span>
+</div>
+</div>
+<!-- Chart Container 2: Turnaround Time by Severity (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Response Efficiency</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Turnaround Time vs SLA</h2>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">timer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Average diagnostic issuance from ingestion to farmer notification.</p>
+<!-- Circular gauge and metrics -->
+<div class="mt-6 flex items-center justify-center gap-6">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-container" cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-width="10"></circle>
+<!-- SLA target marker arc -->
+<circle class="text-primary" cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-dasharray="264" stroke-dashoffset="60" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">2.4<span class="text-xs font-normal">h</span></span>
+<span class="font-label-sm text-label-sm text-outline">Average</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-2 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline uppercase block">SLA Benchmark</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">3.0 hrs max</span>
+</div>
+<div class="p-2 rounded-lg bg-primary/10">
+<span class="font-label-sm text-label-sm text-primary uppercase block font-semibold">Delta Performance</span>
+<span class="font-label-md text-label-md font-bold text-primary">+20% Ahead of SLA</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex flex-col gap-2">
+<div class="flex justify-between items-center text-body-sm font-body-sm p-2 rounded-lg bg-surface-container">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span> High Severity Triage
+            </span>
+<span class="font-bold text-on-surface">1.2 hrs <span class="text-outline font-normal">(Goal &lt; 1.5h)</span></span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm p-2 rounded-lg bg-surface-container">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Standard Pathology
+            </span>
+<span class="font-bold text-on-surface">2.9 hrs <span class="text-outline font-normal">(Goal &lt; 4.0h)</span></span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 text-right">
+<span class="font-label-sm text-label-sm text-outline">Verified by ICAR Digital Audit Registry</span>
+</div>
+</div>
+<!-- Chart Container 3: Agronomist Workload Balance (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Faculty Load</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Agronomist Capacity Matrix</h2>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">balance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Live active diagnostic caseload allocated per senior regional scientist.</p>
+<div class="mt-5 flex flex-col gap-3">
+<!-- Dr. Kulkarni -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-label-md">MK</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Dr. M. Kulkarni</span>
+<span class="font-label-sm text-label-sm text-outline">MPKV Rahuri • Entomology</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">6 cases</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Optimal</span>
+</div>
+</div>
+<!-- Dr. Rao -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-bold text-label-md">SR</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Dr. S. Rao</span>
+<span class="font-label-sm text-label-sm text-outline">PDKV Akola • Mycology</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">5 cases</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-label-sm text-label-sm font-semibold">Available</span>
+</div>
+</div>
+<!-- Dr. Verma -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-error/20 text-error flex items-center justify-center font-bold text-label-md">AV</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Dr. A. Verma</span>
+<span class="font-label-sm text-label-sm text-outline">VNMKV Parbhani • Pathology</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-error">8 cases</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm font-semibold">Near Cap</span>
+</div>
+</div>
+<!-- Dr. Patwardhan -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-label-md">NP</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Dr. N. Patwardhan</span>
+<span class="font-label-sm text-label-sm text-outline">Regional Soil Lab • Agronomy</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">3 cases</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-label-sm text-label-sm font-semibold">Available</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex justify-between items-center font-label-sm text-label-sm text-outline">
+<span>Max recommended: 8 cases/day</span>
+<button class="text-primary hover:underline font-semibold">Rebalance Pools →</button>
+</div>
+</div>
+</div>
+<!-- Unassigned Reports Triage Table (Core operational action table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Controls -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Unassigned Queue — Immediate Dispatch Required</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold animate-pulse">4 High Alert</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pending computer-vision auto-triaged alerts ready for faculty assignment.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filter: All Nodes</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary hover:bg-primary/90 font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">auto_mode</span>
+<span>Batch Auto-Assign (3)</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant uppercase font-label-sm text-label-sm tracking-wider">
+<th class="py-3.5 px-space-lg font-semibold">Report ID</th>
+<th class="py-3.5 px-space-md font-semibold">Submitted</th>
+<th class="py-3.5 px-space-md font-semibold">Farmer &amp; Location</th>
+<th class="py-3.5 px-space-md font-semibold">Crop &amp; Symptom</th>
+<th class="py-3.5 px-space-md font-semibold">Severity</th>
+<th class="py-3.5 px-space-md font-semibold">Auto-Triaged Domain</th>
+<th class="py-3.5 px-space-lg text-right font-semibold">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md font-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/60 transition-colors group">
+<td class="py-4 px-space-lg font-mono font-bold text-on-surface">#FC-9512</td>
+<td class="py-4 px-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-error font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> 14 mins ago
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Ramesh K.</span>
+<span class="font-label-sm text-label-sm text-outline">Nashik Sub-District • 4.2 Ha</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Cotton</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Pink Bollworm infestation</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-error/15 text-error font-label-sm text-label-sm font-bold uppercase tracking-wider inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span> High Severity
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Entomology</span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary hover:bg-primary/90 font-label-md text-label-md font-semibold transition-all shadow-sm" onclick="document.getElementById('assignModal').classList.remove('hidden')">
+                Assign Expert
+              </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/60 transition-colors group">
+<td class="py-4 px-space-lg font-mono font-bold text-on-surface">#FC-9511</td>
+<td class="py-4 px-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">28 mins ago</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Balaji T.</span>
+<span class="font-label-sm text-label-sm text-outline">Amravati Region • 2.8 Ha</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Soybean</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rust &amp; Blight spots</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                Medium
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Mycology</span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="document.getElementById('assignModal').classList.remove('hidden')">
+                Assign Expert
+              </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/60 transition-colors group">
+<td class="py-4 px-space-lg font-mono font-bold text-on-surface">#FC-9508</td>
+<td class="py-4 px-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-error font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> 41 mins ago
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Sunil P.</span>
+<span class="font-label-sm text-label-sm text-outline">Pune South • 6.1 Ha</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Sugarcane</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Red Rot cane internal wilt</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-error/15 text-error font-label-sm text-label-sm font-bold uppercase tracking-wider inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span> High Severity
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Pathology</span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="document.getElementById('assignModal').classList.remove('hidden')">
+                Assign Expert
+              </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/60 transition-colors group">
+<td class="py-4 px-space-lg font-mono font-bold text-on-surface">#FC-9504</td>
+<td class="py-4 px-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">1 hr ago</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Geeta B.</span>
+<span class="font-label-sm text-label-sm text-outline">Nagpur East • 1.5 Ha</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Orange</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Citrus Canker leaf marks</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                Low
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Bacteriology</span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="document.getElementById('assignModal').classList.remove('hidden')">
+                Assign Expert
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span>Showing 4 of 9 pending cases requiring manual university routing</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface shadow-sm font-medium">Previous</button>
+<span class="font-bold text-on-surface">Page 1 of 3</span>
+<button class="px-3 py-1 rounded-md bg-surface-container-lowest text-on-surface shadow-sm font-medium">Next</button>
+</div>
+</div>
+</div>
+<!-- Interactive "Assign Expert" Modal / Drawer Preview -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/50 backdrop-blur-sm transition-opacity" id="assignModal">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-xl overflow-hidden flex flex-col">
+<!-- Modal Top Bar -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded font-mono font-bold text-label-sm text-on-surface bg-surface-container-high">Case #FC-9512</span>
+<span class="px-2 py-0.5 rounded-full bg-error/15 text-error font-label-sm text-label-sm font-bold uppercase">High Severity</span>
+<span class="text-outline font-label-sm text-label-sm">Submitted 14 mins ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Assign Qualified Agronomist</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Target Domain: Cotton Entomology • Nashik Regional Agri Cluster</p>
+</div>
+<button class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" onclick="document.getElementById('assignModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Case Context Preview Strip -->
+<div class="px-space-lg py-space-sm bg-surface-container flex flex-wrap items-center justify-between gap-3 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Farmer:</span> Ramesh K. (Nashik)
+        </div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Diagnosis Clue:</span> Pink Bollworm larvae in bolls
+        </div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Auto-Match Score:</span> 98.4%
+        </div>
+</div>
+<!-- Expert Selection Radios / Cards -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Available Regional Scientists</span>
+<!-- Option B (Selected / High Match) -->
+<label class="p-space-md rounded-xl bg-primary/5 cursor-pointer relative flex flex-col gap-2 hover:bg-primary/10 transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<input checked="" class="accent-primary w-4 h-4 mt-0.5" name="agronomist" type="radio"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">Dr. R. Kumar</span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">Highest Match (99%)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Specialist: Cotton Bollworms &amp; IPM Strategies • ICAR-CICR Fellow</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface block">4 active cases</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Immediate Availability</span>
+</div>
+</div>
+<div class="pl-7 flex items-center gap-4 font-label-sm text-label-sm text-outline">
+<span>Avg response: 18m</span>
+<span>•</span>
+<span>Language: Marathi, Hindi, English</span>
+<span>•</span>
+<span>Resolution score: 4.9/5.0</span>
+</div>
+</label>
+<!-- Option A (Alternative) -->
+<label class="p-space-md rounded-xl bg-surface-container cursor-pointer relative flex flex-col gap-2 hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<input class="accent-primary w-4 h-4 mt-0.5" name="agronomist" type="radio"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md font-bold text-on-surface">Dr. M. Kulkarni</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Qualified (86%)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Specialist: Fruit &amp; Cash Crops • MPKV Rahuri Dept of Entomology</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface block">6 active cases</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Moderate load</span>
+</div>
+</div>
+<div class="pl-7 flex items-center gap-4 font-label-sm text-label-sm text-outline">
+<span>Avg response: 34m</span>
+<span>•</span>
+<span>Language: Marathi, Hindi</span>
+<span>•</span>
+<span>Resolution score: 4.8/5.0</span>
+</div>
+</label>
+<!-- Notification Options -->
+<div class="mt-2 p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-body-sm text-on-surface">
+<input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-medium">Notify Expert via Priority SMS &amp; Mobile Agronomy Portal</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Push SLA timer: 30 mins</span>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between gap-space-md">
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold transition-colors" onclick="document.getElementById('assignModal').classList.add('hidden')">
+          Cancel &amp; Return to Queue
+        </button>
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary/90 font-label-md text-label-md font-semibold transition-all shadow-md flex items-center gap-2" onclick="document.getElementById('assignModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Confirm Assignment &amp; Start Timer</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

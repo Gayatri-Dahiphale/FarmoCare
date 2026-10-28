@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_blank" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#1b1c12", "surface": "#fcfae9", "primary-container": "#5c7d5c", "primary-fixed": "#c8ecc5", "surface-bright": "#fcfae9", "on-background": "#1b1c12", "secondary-container": "#f4e1b4", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#d7c59a", "tertiary-fixed-dim": "#cfcb59", "background": "#fcfae9", "on-primary": "#ffffff", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "outline": "#737970", "on-primary-container": "#f7fff2", "tertiary-container": "#b3af41", "inverse-surface": "#303126", "on-secondary-fixed-variant": "#524524", "on-primary-fixed": "#032109", "on-secondary": "#ffffff", "primary-fixed-dim": "#acd0aa", "surface-dim": "#dcdbcb", "inverse-on-surface": "#f3f1e1", "error-container": "#ffdad6", "on-tertiary-fixed": "#1e1d00", "secondary-fixed": "#f4e1b4", "on-error": "#ffffff", "on-primary-fixed-variant": "#2f4e31", "on-secondary-container": "#71633f", "inverse-primary": "#acd0aa", "primary": "#446345", "tertiary": "#646100", "on-tertiary-fixed-variant": "#4b4900", "on-secondary-fixed": "#241a01", "canvas-bg": "#FBFBFB", "surface-muted": "#F3F2EB", "accent-beige": "#D7CE93", "surface-container": "#f0efde", "surface-container-high": "#eae9d8", "surface-container-highest": "#e4e3d3", "surface-variant": "#e4e3d3", "on-surface-variant": "#424841", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "surface-tint": "#466647", "secondary": "#6b5d3a", "border-subtle": "#E5E4DC", "tertiary-fixed": "#ece772" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-tablet": "2rem" }, "fontFamily": { "headline-sm": ["Manrope"], "headline-lg": ["Manrope"], "display": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "title-md": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Manrope"], "display-mobile": ["Manrope"] }, "fontSize": { "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600"}], "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}], "title-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600"}], "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}], "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface" style="background-color: rgb(241, 248, 238);"><main class="min-h-screen w-full flex items-center justify-center p-space-md bg-surface" style="background-color: rgb(241, 248, 238);"><div class="flex flex-col w-full max-w-7xl mx-auto py-space-sm md:py-space-md">
+<!-- Top Utility Bar: Language & Trust Strip -->
+<div class="flex flex-wrap items-center justify-between gap-y-3 pb-space-sm text-on-surface">
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[17px]">verified_user</span>
+</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface/70">
+        Govt. Certified Agronomic Portal • ICAR Standards Compliant
+      </span>
+</div>
+<!-- Regional Language Selector Dropdown -->
+<div class="relative inline-block text-left" id="lang-menu-wrapper">
+<button class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors shadow-sm focus:outline-none" id="lang-btn" onclick="document.getElementById('lang-dropdown').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">translate</span>
+<span class="font-label-md text-label-md font-semibold" id="current-lang">मराठी / Marathi</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-52 rounded-xl bg-surface-container-lowest shadow-xl z-50 p-1.5" id="lang-dropdown">
+<div class="grid grid-cols-1 gap-0.5">
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container-low text-on-surface flex items-center justify-between font-label-md text-label-md" onclick="selectLang('English', 'English')" type="button">
+<span class="">English</span>
+<span class="font-label-sm text-label-sm text-outline">EN</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg bg-surface-container-low text-primary flex items-center justify-between font-label-md text-label-md" onclick="selectLang('मराठी (Marathi)', 'मराठी / Marathi')" type="button">
+<span class="font-semibold">मराठी (Marathi)</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container-low text-on-surface flex items-center justify-between font-label-md text-label-md" onclick="selectLang('हिंदी (Hindi)', 'हिंदी / Hindi')" type="button">
+<span class="">हिंदी (Hindi)</span>
+<span class="font-label-sm text-label-sm text-outline">HI</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container-low text-on-surface flex items-center justify-between font-label-md text-label-md" onclick="selectLang('ગુજરાતી (Gujarati)', 'ગુજરાતી / Gujarati')" type="button">
+<span class="">ગુજરાતી (Gujarati)</span>
+<span class="font-label-sm text-label-sm text-outline">GU</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container-low text-on-surface flex items-center justify-between font-label-md text-label-md" onclick="selectLang('ಕನ್ನಡ (Kannada)', 'ಕನ್ನಡ / Kannada')" type="button">
+<span class="">ಕನ್ನಡ (Kannada)</span>
+<span class="font-label-sm text-label-sm text-outline">KN</span>
+</button>
+<button class="w-full text-left px-3 py-2 rounded-lg hover:bg-surface-container-low text-on-surface flex items-center justify-between font-label-md text-label-md" onclick="selectLang('తెలుగు (Telugu)', 'తెలుగు / Telugu')" type="button">
+<span class="">తెలుగు (Telugu)</span>
+<span class="font-label-sm text-label-sm text-outline">TE</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mt-2">
+<!-- LEFT PANEL: Organic Agritech Story, Verified Badges & Field Visuals (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between rounded-xl bg-surface-container-low p-6 md:p-8 shadow-sm relative overflow-hidden" style="border: 1px solid rgb(165, 214, 160); color: rgb(24, 53, 34);">
+<!-- Decorative Botanical Contour Ambient Backdrop -->
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 bottom-12 w-48 h-48 rounded-full bg-secondary-container/40 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col space-y-6">
+<!-- Brand Signature -->
+<div class="flex items-center space-x-3">
+<div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">spa</span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">Farmora<span class="text-primary font-bold">Care</span></h1>
+<p class="font-label-sm text-label-sm text-secondary tracking-wide uppercase font-semibold">Empowering agriculture through verified science</p>
+</div>
+</div>
+<!-- Narrative Hook -->
+<div class="space-y-2 pt-2">
+<span class="inline-block px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+            Agronomy 4.0 Network
+          </span>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+            Precision soil health, real-time diagnostic advisories.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Join over 420,000 verified growers, licensed agronomists, and university research cooperatives optimizing yields with zero crop telemetry leakage.
+          </p>
+</div>
+<!-- Field Photo Card with Micro-metric Sparkline -->
+<div class="relative rounded-xl overflow-hidden shadow-md bg-surface-container-highest group">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up documentary shot of an Indian agronomist and a farmer inspecting lush green chickpea crop canopy in golden morning sunlight, earthy tones, cinematic natural lighting, documentary photography, muted organic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWAqDYkZbZ1sYUINHrKVDPwKD9u2Rg_DEq-zw_I7-YdJD1HnrjOTwPf9qG53gKOPz8kflLI1Q8hi_PrUr2LlpiIPvIYYBcf5-gYLsY3Jap2HWXGanJkwSKrnZ6ydqlm1d4p4XAoJbd-45nBDIiGUgWOSWl4BTniExmoZr6-NY4O0YscwsUdFVvx6ouwxi-QXRCV-kMmMT_RppdLYvJnu69XwtKL1WKQYbJPVan6vskM8xPO8c5U2tf">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex flex-col justify-end p-4 text-inverse-on-surface">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-accent-beige uppercase tracking-wider block">Zone Telemetry</span>
+<span class="font-title-md text-title-md text-inverse-on-surface font-semibold">Nashik • Valley Cluster 4B</span>
+</div>
+<div class="flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-medium text-inverse-on-surface">Live Sensors</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Data Guarantee -->
+<div class="rounded-xl bg-surface-container-lowest/80 p-4 shadow-sm flex items-start space-x-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">encrypted</span>
+<div class="space-y-1">
+<h3 class="font-label-md text-label-md text-on-surface font-bold">Encrypted Telemetry Guarantee</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Field boundaries, soil moisture readings, and chemical inputs remain encrypted under farmer-sovereign data covenants. Never shared with third-party brokers.
+            </p>
+</div>
+</div>
+</div>
+<!-- Verified Trust Footer Badges -->
+<div class="relative z-10 pt-6 mt-6">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-3 font-semibold">Recognized &amp; Accredited By</p>
+<div class="grid grid-cols-3 gap-2">
+<div class="flex flex-col items-center justify-center p-2.5 rounded-lg bg-surface-container text-center">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">domain</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">ICAR</span>
+<span class="font-label-sm text-label-sm text-outline">Affiliated</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2.5 rounded-lg bg-surface-container text-center">
+<span class="material-symbols-outlined text-secondary text-[20px] mb-1">pest_control</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">CIB&amp;RC</span>
+<span class="font-label-sm text-label-sm text-outline">Pest Protocol</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2.5 rounded-lg bg-surface-container text-center">
+<span class="material-symbols-outlined text-tertiary text-[20px] mb-1">volunteer_activism</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">100% Free</span>
+<span class="font-label-sm text-label-sm text-outline">For Smallholders</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Interactive Authentication Card & Role Onboarding (7 cols) -->
+<div class="lg:col-span-7 flex flex-col rounded-xl bg-surface-container-lowest p-6 md:p-10 shadow-sm relative">
+<!-- Stepper / Micro Status -->
+<div class="flex items-center justify-between pb-6">
+<div class="flex items-center space-x-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Identity &amp; Profile Setup</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Instant Access • Step 1 of 2</span>
+</div>
+<!-- Step Header -->
+<div class="space-y-1 mb-6">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+          Select Your Agricultural Role
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Your dashboard, telemetry inputs, and advisory depth calibrate directly based on your accreditation.
+        </p>
+</div>
+<!-- Role Selection Tabs (3 distinct modes) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8" id="role-selector">
+<!-- Farmer Role Card -->
+<button class="role-card flex flex-col items-start p-4 rounded-xl text-left transition-all duration-150 bg-surface-container-low shadow-sm ring-2 ring-primary" id="role-card-farmer" onclick="setRole('farmer')" type="button" style="background-color: rgb(225, 240, 223); border: 2px solid rgb(40, 122, 62);">
+<div class="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">agriculture</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Smallholder Farmer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Free advisory, local weather radar &amp; instant pest scan.
+          </span>
+<span class="mt-3 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+            Subsidized / Free
+          </span>
+</button>
+<!-- Certified Agronomist Role Card -->
+<button class="role-card flex flex-col items-start p-4 rounded-xl text-left transition-all duration-150 bg-surface-container hover:bg-surface-container-high" id="role-card-agronomist" onclick="setRole('agronomist')" type="button" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="w-10 h-10 rounded-full bg-secondary/15 text-secondary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">psychology_alt</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Certified Agronomist</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Soil lab reviews, prescription dispatch &amp; farmer consultations.
+          </span>
+<span class="mt-3 px-2 py-0.5 rounded-full bg-surface-dim text-on-surface-variant font-label-sm text-label-sm">
+            Licensure Req.
+          </span>
+</button>
+<!-- Institution / Admin Role Card -->
+<button class="role-card flex flex-col items-start p-4 rounded-xl text-left transition-all duration-150 bg-surface-container hover:bg-surface-container-high" id="role-card-institution" onclick="setRole('institution')" type="button" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="w-10 h-10 rounded-full bg-tertiary/15 text-tertiary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Institution / FPO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            FPO cluster logistics, cooperative audits &amp; aggregate yields.
+          </span>
+<span class="mt-3 px-2 py-0.5 rounded-full bg-surface-dim text-on-surface-variant font-label-sm text-label-sm">
+            Corporate / Gov
+          </span>
+</button>
+</div>
+<!-- Authentication Method Switcher -->
+<div class="flex items-center space-x-1 p-1 bg-surface-container rounded-full w-fit mb-6">
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md transition-all font-semibold bg-surface-container-lowest text-on-surface shadow-sm" id="btn-tab-phone" onclick="switchAuthMethod('phone')" type="button">
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">smartphone</span>
+            Mobile OTP (Fast)
+          </span>
+</button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md transition-all font-medium text-on-surface/70 hover:text-on-surface" id="btn-tab-cred" onclick="switchAuthMethod('cred')" type="button">
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+            Email / Agronomist License
+          </span>
+</button>
+</div>
+<!-- AUTH FORM: Mobile Number & Instant OTP Path -->
+<form class="space-y-5" id="form-phone-auth" onsubmit="event.preventDefault(); showOtpScreen();">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface block">
+            Mobile Number for Immediate Verification
+          </label>
+<div class="flex rounded-xl bg-surface-container-low focus-within:ring-2 focus-within:ring-primary overflow-hidden transition-all">
+<div class="flex items-center px-3.5 bg-surface-container text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px] mr-1 text-primary">flag</span>
+              +91
+            </div>
+<input class="w-full bg-transparent px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="phone-input" pattern="[0-9]{10}" placeholder="98765 43210" required="" type="tel">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+            Free instantaneous code dispatched via WhatsApp or High-Priority SMS.
+          </p>
+</div>
+<!-- Verification Channel Preference -->
+<div class="flex flex-col sm:flex-row gap-3 pt-1">
+<label class="flex-1 flex items-center p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 text-primary accent-primary" name="otp_channel" type="radio" value="whatsapp">
+<div class="ml-3 flex items-center space-x-2">
+<span class="material-symbols-outlined text-[20px] text-primary">chat</span>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">WhatsApp OTP</span>
+<span class="font-label-sm text-label-sm text-outline">Recommended for low signal</span>
+</div>
+</div>
+</label>
+<label class="flex-1 flex items-center p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary accent-primary" name="otp_channel" type="radio" value="sms">
+<div class="ml-3 flex items-center space-x-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">sms</span>
+<div>
+<span class="block font-label-md text-label-md font-semibold text-on-surface">Standard SMS</span>
+<span class="font-label-sm text-label-sm text-outline">Direct carrier network</span>
+</div>
+</div>
+</label>
+</div>
+<!-- State / District Quick Pinning for Micro-Advisories -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<div>
+<label class="font-label-sm text-label-sm font-semibold uppercase text-outline block mb-1">State / Province</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low rounded-xl px-4 py-2.5 font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary pr-8">
+<option>Maharashtra</option>
+<option>Gujarat</option>
+<option>Karnataka</option>
+<option>Punjab</option>
+<option>Telangana</option>
+<option>Madhya Pradesh</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[18px] text-outline">expand_more</span>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm font-semibold uppercase text-outline block mb-1">District / Agronomic Taluka</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low rounded-xl px-4 py-2.5 font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary pr-8">
+<option>Nashik (Niphad Sub-basin)</option>
+<option>Pune (Baramati Plain)</option>
+<option>Amravati (Cotton Belt)</option>
+<option>Kolhapur (Sugarcane Basin)</option>
+<option>Aurangabad (Marathwada)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[18px] text-outline">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-4">
+<button class="w-full py-3.5 px-6 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg" type="submit" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="">Generate Secure 6-Digit OTP</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- AUTH FORM: Email & License ID Option (Hidden by default) -->
+<form class="space-y-4 hidden" id="form-cred-auth" onsubmit="event.preventDefault(); showOtpScreen();">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface block">
+            Institutional Email or Agronomist Reg. ID
+          </label>
+<div class="flex rounded-xl bg-surface-container-low focus-within:ring-2 focus-within:ring-primary overflow-hidden">
+<span class="flex items-center pl-3.5 text-outline">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<input class="w-full bg-transparent px-3 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="e.g. agronomist@icar.gov.in or AGR-2024-MH98" required="" type="text">
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Password / Portal Token</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Forgot credentials?</a>
+</div>
+<div class="flex rounded-xl bg-surface-container-low focus-within:ring-2 focus-within:ring-primary overflow-hidden">
+<span class="flex items-center pl-3.5 text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</span>
+<input class="w-full bg-transparent px-3 py-3 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" placeholder="Enter your security phrase" required="" type="password">
+</div>
+</div>
+<div class="rounded-xl bg-surface-container p-3.5 flex items-start space-x-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            State council licenses are auto-validated against the national agricultural advisory registry before activation.
+          </p>
+</div>
+<!-- Action Button -->
+<div class="pt-2">
+<button class="w-full py-3.5 px-6 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-all flex items-center justify-center space-x-2 shadow-md hover:shadow-lg" type="submit">
+<span class="">Verify Institutional Credentials</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+</div>
+</form>
+<!-- OTP Modal Overlay Container (Dynamic Simulation) -->
+<div class="hidden absolute inset-0 bg-surface-container-lowest/95 backdrop-blur-md rounded-xl p-8 flex flex-col justify-center items-center text-center z-30" id="otp-panel">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-4 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">mark_email_read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Enter Verification Code</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-6">
+          A temporary 6-digit cryptographic security code was sent to your registered channel.
+        </p>
+<!-- 6 Digit Inputs -->
+<div class="flex space-x-2 mb-6">
+<input class="w-11 h-13 text-center font-headline-sm text-headline-sm rounded-lg bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="7">
+<input class="w-11 h-13 text-center font-headline-sm text-headline-sm rounded-lg bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="2">
+<input class="w-11 h-13 text-center font-headline-sm text-headline-sm rounded-lg bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="9">
+<input class="w-11 h-13 text-center font-headline-sm text-headline-sm rounded-lg bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text">
+<input class="w-11 h-13 text-center font-headline-sm text-headline-sm rounded-lg bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text">
+<input class="w-11 h-13 text-center font-headline-sm text-headline-sm rounded-lg bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text">
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="document.getElementById('otp-panel').classList.add('hidden')" type="button">
+            Change Number
+          </button>
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors shadow-md" onclick="alert('Authentication successful! Initializing field diagnostic portal...');" type="button">
+            Confirm &amp; Proceed
+          </button>
+</div>
+<p class="font-label-sm text-label-sm text-outline mt-6">Resend OTP in <span class="font-bold text-on-surface">00:42</span></p>
+</div>
+<!-- Testimonial & Data Privacy Assurance Snippet -->
+<div class="mt-auto pt-8 flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+            “Farmora Care helped us cut nitrate runoffs by 34% while securing verified yields.”
+            <span class="block font-label-sm text-label-sm text-on-surface font-semibold">— R. Deshmukh, Lead FPO Director (Satara)</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Legal & Environmental Alignment Notice -->
+<div class="mt-6 flex flex-wrap items-center justify-between text-outline text-label-sm font-label-sm px-2 gap-4">
+<div class="flex items-center space-x-4">
+<span class="">Farmora Care Enterprise ID: AGR-IN-88912-C</span>
+<span class="">•</span>
+<span class="">ISO/IEC 27001 Agricultural Privacy Compliant</span>
+</div>
+<div class="flex space-x-6">
+<a class="hover:underline" href="#">Farmer Data Bill of Rights</a>
+<a class="hover:underline" href="#">Agronomic Protocol Terms</a>
+<a class="hover:underline" href="#">Helpline: 1800-419-AGRI (Toll Free)</a>
+</div>
+</div>
+</div>
+<script>
+  function selectLang(name, label) {
+    document.getElementById('current-lang').innerText = label;
+    document.getElementById('lang-dropdown').classList.add('hidden');
+  }
+
+  function setRole(role) {
+    const roles = ['farmer', 'agronomist', 'institution'];
+    roles.forEach(r => {
+      const card = document.getElementById('role-card-' + r);
+      if (r === role) {
+        card.className = "role-card flex flex-col items-start p-4 rounded-xl text-left transition-all duration-150 bg-surface-container-low shadow-sm ring-2 ring-primary";
+      } else {
+        card.className = "role-card flex flex-col items-start p-4 rounded-xl text-left transition-all duration-150 bg-surface-container hover:bg-surface-container-high";
+      }
+    });
+  }
+
+  function switchAuthMethod(method) {
+    const btnPhone = document.getElementById('btn-tab-phone');
+    const btnCred = document.getElementById('btn-tab-cred');
+    const formPhone = document.getElementById('form-phone-auth');
+    const formCred = document.getElementById('form-cred-auth');
+
+    if (method === 'phone') {
+      btnPhone.className = "px-4 py-1.5 rounded-full font-label-md text-label-md transition-all font-semibold bg-surface-container-lowest text-on-surface shadow-sm";
+      btnCred.className = "px-4 py-1.5 rounded-full font-label-md text-label-md transition-all font-medium text-on-surface/70 hover:text-on-surface";
+      formPhone.classList.remove('hidden');
+      formCred.classList.add('hidden');
+    } else {
+      btnCred.className = "px-4 py-1.5 rounded-full font-label-md text-label-md transition-all font-semibold bg-surface-container-lowest text-on-surface shadow-sm";
+      btnPhone.className = "px-4 py-1.5 rounded-full font-label-md text-label-md transition-all font-medium text-on-surface/70 hover:text-on-surface";
+      formPhone.classList.add('hidden');
+      formCred.classList.remove('hidden');
+    }
+  }
+
+  function showOtpScreen() {
+    document.getElementById('otp-panel').classList.remove('hidden');
+  }
+</script></main>
+
+</body></html>

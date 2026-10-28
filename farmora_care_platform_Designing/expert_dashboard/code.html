@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#434100", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e4e3d3", "accent-beige": "#D7CE93", "on-primary-fixed-variant": "#2f4e31", "outline": "#737970", "primary-fixed": "#c8ecc5", "primary-container": "#5c7d5c", "on-tertiary": "#ffffff", "on-background": "#1b1c12", "canvas-bg": "#FBFBFB", "border-subtle": "#E5E4DC", "surface-variant": "#e4e3d3", "on-secondary-fixed-variant": "#524524", "on-surface-variant": "#424841", "surface-dim": "#dcdbcb", "surface": "#fcfae9", "on-tertiary-fixed": "#1e1d00", "surface-container-high": "#eae9d8", "inverse-surface": "#303126", "on-primary-container": "#f7fff2", "on-secondary": "#ffffff", "background": "#fcfae9", "primary-fixed-dim": "#acd0aa", "secondary": "#6b5d3a", "secondary-container": "#f4e1b4", "on-secondary-fixed": "#241a01", "surface-bright": "#fcfae9", "surface-container": "#f0efde", "inverse-on-surface": "#f3f1e1", "on-error-container": "#93000a", "error": "#ba1a1a", "secondary-fixed": "#f4e1b4", "surface-muted": "#F3F2EB", "on-surface": "#1b1c12", "on-primary": "#ffffff", "surface-tint": "#466647", "secondary-fixed-dim": "#d7c59a", "on-primary-fixed": "#032109", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#4b4900", "tertiary-fixed-dim": "#cfcb59", "inverse-primary": "#acd0aa", "tertiary-container": "#b3af41", "tertiary": "#646100", "primary": "#446345", "tertiary-fixed": "#ece772", "on-secondary-container": "#71633f", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "margin": "3rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-sm": "0.75rem", "gutter-mobile": "1rem" }, "fontFamily": { "title-md": ["Manrope"], "label-sm": ["Manrope"], "headline-sm": ["Manrope"], "body-md": ["Manrope"], "headline-lg": ["Manrope"], "label-md": ["Manrope"], "headline-lg-mobile": ["Manrope"], "display-mobile": ["Manrope"], "display": ["Manrope"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }] } } } };</script><style id="agri-green-palette">
+body, main, .bg-surface {
+  background-color: #F1F8EE !important;
+}
+aside {
+  background-color: #E8F5E9 !important;
+  border-right: 1px solid #A5D6A0 !important;
+}
+aside nav a[aria-current="page"], .bg-primary-container {
+  background-color: #174A2A !important;
+  color: #FFFFFF !important;
+}
+header {
+  background-color: rgba(241, 248, 238, 0.9) !important;
+  border-bottom: 1px solid #A5D6A0 !important;
+}
+.bg-surface-container-lowest {
+  background-color: #FFFFFF !important;
+  border: 1px solid #A5D6A0 !important;
+}
+.bg-primary, button.bg-primary {
+  background-color: #287A3E !important;
+  color: #FFFFFF !important;
+}
+.text-primary {
+  color: #287A3E !important;
+}
+.bg-primary-fixed {
+  background-color: #E1F0DF !important;
+  color: #183522 !important;
+}
+</style></head><body class="bg-surface font-body-md text-on-surface antialiased" style="background-color: rgb(241, 248, 238);"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]" style="background-color: rgb(225, 240, 223); border-right: 1px solid rgb(197, 224, 194);"><div class="px-space-lg mb-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Farmora Care Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJlb4vuGlIwt7ZidnYBeSJQe-TABNr9DmHsRh0-dvoAnHixafX5RgyOjK4QcXU5aj9CuXVi5mPYPKdBTyoGOuQTMN4JaZ88_nYl8W_3WBvG0OeGUxB4kacKiXlIUfcrl7tSCULZH8dkiGA26AzQYbF2FH_jLo97ICYay14EfkufSTuqLfzi1pmyw62SjLvcDtglyuWA7I66r3ajSgVw4996xRkkfhqePWc4EFEaUKaRKaRQT5J0co"><span class="font-title-md text-title-md text-on-surface tracking-tight">Farmora Care</span></div></div><div class="px-space-md mb-space-md"><div class="p-1.5 rounded-xl bg-surface-container flex items-center justify-between"><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]">Farmer</button><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Expert</button><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Admin</button></div></div><div class="flex-1 overflow-y-auto px-space-md flex flex-col gap-space-lg"><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Farmer Workspace</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-report-problem" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-label-md text-label-md">Report a Problem</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-my-reports" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">My Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-similar-solved" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-label-md text-label-md">Similar Solved</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-md text-label-md">Profile</span></a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Agronomist Expert</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" data-path="expert-assigned-cases" href="#" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-md text-label-md">Assigned Cases</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-unresolved-queue" href="#"><span class="material-symbols-outlined text-[20px]">pending_actions</span><span class="font-label-md text-label-md">Unresolved Queue</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-similar-solved-cases" href="#"><span class="material-symbols-outlined text-[20px]">find_in_page</span><span class="font-label-md text-label-md">Similar Solved Cases</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="knowledge-base" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-md text-label-md">Knowledge Base</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-my-profile" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">My Profile</span></a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System Administration</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-system-overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-md text-label-md">System Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-unassigned-reports" href="#"><span class="material-symbols-outlined text-[20px]">mark_chat_unread</span><span class="font-label-md text-label-md">Unassigned Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-expert-assignment" href="#"><span class="material-symbols-outlined text-[20px]">engineering</span><span class="font-label-md text-label-md">Expert Assignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-user-management" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md">User Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Analytics</span></a></nav></div></div><div class="px-space-md pt-space-xs mt-auto"><div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">support_agent</span><div><p class="font-label-sm text-label-sm font-semibold text-on-surface">Field Support</p><p class="font-label-sm text-label-sm text-outline">24/7 Soil Desk</p></div></div><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-8 flex items-center justify-between gap-space-md" style="background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(225, 240, 223);"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Agronomy Network Active</span></div><div class="hidden md:flex items-center relative w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-full bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search case ID, crop, symptom..." type="text" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(225, 240, 223); color: rgb(24, 53, 34);"></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTDRkpU_BDI5TEBZoVs1k1TxorzC4y-0KpPHAxRgkzBncfNvorkdbbD6CPi_XgoRd_YU-qejQnly66XegGLc149SRaNyjI-NwRq96S9Gq0ahpwmJxckE2Gv_udF_VWC2tW3_68ABRuwDEswnULltYVSCfshcdNizZ3pvzcYcJjPuT97V9qfr6FgW5rRn0LBt_Z48m2pnUeiKOLHMDfHuq2xK5PZUtF6gVofQyCa8lxwZ4GB2Uogo-G"><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-primary font-medium leading-tight">Certified Agronomist</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-8 py-space-lg" style="background-color: rgb(241, 248, 238);"><div class="flex flex-col w-full gap-space-lg pb-12"><div class="flex items-center justify-between px-5 py-3 rounded-xl shadow-sm text-on-primary" style="background-color: rgb(36, 92, 54);"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[22px]">eco</span><div class="flex items-center gap-2"><span class="font-label-md text-label-md font-semibold tracking-wide">Active Agronomic Review Session</span><span class="px-2 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase" style="background-color: #3F8F46; color: #ffffff;">Nashik Cluster Telemetry • Live</span></div></div><div class="flex items-center gap-4 text-label-sm font-label-sm opacity-90"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> Session #AG-4982-S2</span><span class="hidden md:inline">•</span><span class="hidden md:flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">verified_user</span> Protocol CIB&amp;RC Verified</span></div></div>
+<!-- Role & Operational Header Meta -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-start md:items-center gap-space-md">
+<div class="relative w-14 h-14 rounded-full overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up professional portrait of an Indian agronomist specialist in his late forties wearing field linen shirt, natural daylight, dignified and calm, warm olive skin and rimless glasses." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbSJ-4yNftaBjhm2xunHhdFx9MKRWd-ytl8rasGe97rpBgQ02aTxV-JdiMRSQzInZXTpxjJIVHC4rUSRITUCEfYyTx0WG44BllBWE1QpNRETCuF1PwquwM_z6Lj-DnszcFmqbQJXUJDdWeTfdPkfTPMX1VOGEFj0JXQihk4j14vGWUPi4yoJ2fjIRTvt1MWj6hobIzzI2f9PdunLzWLpAM4jlRQgCuwSTmy_yPtEkJ51eFP55w6Yoj">
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-primary rounded-full ring-2 ring-surface-container-lowest"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dr. M. Kulkarni</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">Senior Agronomist</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Western Zone • Nashik Cluster</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Specialization: Entomological Pathology, Solanaceae &amp; Fiber Cash Crops • License #AG-9420-MH</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span class="">Telemetry Live</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="">Field Protocol Specs</span>
+</button>
+</div>
+</div>
+<!-- KPI Banner -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Assigned Active Cases</span>
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+</div>
+<div class="flex items-baseline gap-2 mt-4">
+<span class="font-headline-lg text-headline-lg text-on-surface">06</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">2 High Urgency</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-2/3"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Unresolved Queue</span>
+<span class="material-symbols-outlined text-tertiary text-[22px]">pending_actions</span>
+</div>
+<div class="flex items-baseline gap-2 mt-4">
+<span class="font-headline-lg text-headline-lg text-on-surface">14</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">+4 regional triage</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full w-4/5"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Awaiting Farmer Info</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">hourglass_top</span>
+</div>
+<div class="flex items-baseline gap-2 mt-4">
+<span class="font-headline-lg text-headline-lg text-on-surface">03</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Pending reshoots</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full w-1/3"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Resolved This Month</span>
+<span class="material-symbols-outlined text-primary-container text-[22px]">task_alt</span>
+</div>
+<div class="flex items-baseline gap-2 mt-4">
+<span class="font-headline-lg text-headline-lg text-on-surface">42</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">98.2% Accuracy</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Segmentation Ribbon -->
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-sm bg-surface-container-lowest p-3 px-space-md rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-2 font-semibold">Status:</span>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface font-semibold">All (23)</button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">Triage (8)</button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-container text-on-primary-container font-semibold" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">In Review (6)</button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">Needs Info (3)</button>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<div class="relative">
+<select class="appearance-none bg-surface-container-low pl-3 pr-8 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Crop: All (Cotton, Soybean, Pomegranate)</option>
+<option selected="">Crop: Cotton &amp; Soybean Focus</option>
+<option>Crop: Onion &amp; Solanaceae</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-2 pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low pl-3 pr-8 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Region: All Western Zones</option>
+<option selected="">Region: Nashik Sub-division</option>
+<option>Region: Vidarbha Belt</option>
+<option>Region: Solapur Arid</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-2 pointer-events-none">expand_more</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+<span class="">Oct 20 - Oct 27</span>
+</button>
+</div>
+</div>
+<!-- Master-Detail Split Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Master Case Queue (Col span 4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<!-- Search Component -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-3 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-lowest pl-10 pr-4 py-2.5 rounded-xl font-body-sm text-body-sm text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search Case ID, farmer name, symptom..." type="text" value="FC-9482">
+<span class="absolute right-3 top-2.5 px-2 py-0.5 rounded bg-surface-container-high text-outline font-label-sm text-[10px]">⌘K</span>
+</div>
+<!-- Queue Cards Container -->
+<div class="flex flex-col gap-2.5">
+<!-- Case #FC-9482 (Selected State) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-md relative overflow-hidden transition-all cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-semibold text-primary">#FC-9482</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold uppercase">High Priority</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[10px] font-semibold">In Review</span>
+</div>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface leading-snug">Cotton (Flowering Stage)</h4>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 font-medium">Bollworm Pest Damage</p>
+<div class="flex items-center justify-between mt-3 pt-3 bg-surface-container-low/40 -mx-space-md px-space-md -mb-space-md pb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">person</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Rajesh Patil</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Submitted 2h ago</span>
+</div>
+</div>
+<!-- Case #FC-9479 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-semibold text-outline">#FC-9479</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-semibold" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42);">Triage</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface leading-snug">Soybean (Vegetative)</h4>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Yellow Mosaic Virus Suspicion</p>
+<div class="flex items-center justify-between mt-3 text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="">Ananda Jadhav</span>
+</div>
+<span class="">Submitted 4h ago</span>
+</div>
+</div>
+<!-- Case #FC-9461 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-semibold text-outline">#FC-9461</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-semibold">Needs Info</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface leading-snug">Tomato (Fruiting)</h4>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Early Blight &amp; Stem Lesion</p>
+<div class="flex items-center justify-between mt-3 text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="">Sunita Shinde</span>
+</div>
+<span class="">Submitted Yesterday</span>
+</div>
+</div>
+<!-- Case #FC-9430 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer opacity-75">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-semibold text-outline">#FC-9430</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-semibold">Resolved</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface leading-snug">Rabi Onion</h4>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Purple Blotch (Alternaria porri)</p>
+<div class="flex items-center justify-between mt-3 text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="">Vikram More</span>
+</div>
+<span class="">Oct 22</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Case Detail & Advisory Action Workspace (Col span 8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Detail Card Core -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md" style="border: 1px solid rgb(220, 230, 218);">
+<!-- Case Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low/30 -mx-space-lg px-space-lg -mt-space-lg pt-space-lg rounded-t-xl">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Case #FC-9482</span>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">High Severity</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium mt-1">Cotton Bollworm Infestation (Helicoverpa armigera suspicion)</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Print Case Record">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Export Soil &amp; Specimen Data">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Farmer & Field Meta Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm p-space-md rounded-xl bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Farmer</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5">Rajesh Patil</span>
+<span class="font-label-sm text-label-sm text-outline">+91 98231 ••••</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Location</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5">Dindori, Nashik</span>
+<span class="font-label-sm text-label-sm text-outline">Maharashtra, In</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Plot Area</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5">3.5 Acres</span>
+<span class="font-label-sm text-label-sm text-outline">Black Cotton Clay</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Sowing Date</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5">July 12, 2024</span>
+<span class="font-label-sm text-label-sm text-outline">107 Days In Growth</span>
+</div>
+</div>
+<!-- Specimen Imagery & Analysis Section -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Field Specimen Telemetry</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> AI Confidence: 94.1%
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Specimen Photo (Inspiration match) -->
+<div class="md:col-span-7 relative rounded-xl overflow-hidden h-72 shadow-inner group border" style="border-color: rgb(220, 230, 218);"><img class="w-full h-full object-cover" alt="Macro close-up photo of fresh green crop leaves showing clear pest caterpillar feeding damage and yellowing chlorosis spots, agronomy diagnostics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlflbWyrDZsA5G4EZeVitFX5oa3boEp7SPYzNxOr7zamG2bMgQfWCfTe5X8hYKFUCCudvG9aCZPlEyY5H-kk-3Xc86A8-2gbMsGjUA4oQGs1ieGZTNNQcY8FWlkoDu8dB0P1tZaBOvRHqZf2ESmJwoidOi0s6QQylTu_yTumgOj5ls5weAQOLFTlvDJgdyQsStZhtVqfeY8zEICIB2c1FPGwDviuSpTXfwpqPRWppGOKEUnr57WkLP"><div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-transparent to-transparent"></div><div class="absolute top-3 left-3 flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold text-white backdrop-blur-md flex items-center gap-1.5" style="background-color: rgba(36, 92, 54, 0.85);"><span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span> Specimen ID: #FL-8812</span><span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-medium text-white backdrop-blur-md" style="background-color: rgba(0, 0, 0, 0.5);">Early Flowering Phase</span></div><div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-secondary"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-emerald-300">center_focus_strong</span><span class="font-label-sm text-label-sm font-medium text-white">Macro 1.2x Optical • Nashik Field Plot B</span></div><span class="px-2.5 py-1 rounded-lg backdrop-blur-md font-label-sm text-label-sm font-semibold text-white shadow-sm" style="background-color: #3F8F46;">High Res Telemetry</span></div></div>
+<!-- Descriptive Specimen Annotations -->
+<div class="md:col-span-5 flex flex-col justify-between h-72 p-space-md rounded-xl bg-surface-container"><div class="flex flex-col gap-2 overflow-hidden h-full justify-between"><div class="flex items-center gap-3 bg-surface-container-lowest p-2 rounded-lg border border-subtle shadow-sm"><div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 relative"><img class="w-full h-full object-cover" alt="Indian agricultural field officer and farmer discussing crop health" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5R1TtBTXTzRXYlstbpg1Zm-eRofgNBHoICsnaIE6_1_zv2QS_yPpSet5IA4mcdlWvXVxBvCqb06NvFfrc6uFo1_I0xB2E3JnH0N1PsW5E7kwIAM1MYn3realUO36oMDp5rIKl67pBaRK07McRGLL-1eO_ST8G_bGclwmlmVl66Tj0R01vCVzQ6bnEpf3xHYH70zaSG3eTlUH_aZNNMEB7OKZ4tHffYw9o075g_-pObXkm62N0GZwa"><span class="absolute bottom-1 right-1 px-1 rounded text-[9px] bg-primary text-white font-semibold">Field Visit</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1 text-[11px] font-semibold text-primary uppercase"><span class="material-symbols-outlined text-[14px]">verified</span> Ground Telemetry</div><p class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Farmer Rajesh Patil Consultation</p><p class="font-body-sm text-[11px] text-outline line-clamp-2">Nashik sub-division field audit conducted on plot B with active bollworm signs.</p></div></div><div><span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Symptom Statement</span><p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">“Square dropping observed across 30% of field. Visible caterpillar entry on lower boll stems. Last spray 18 days ago (neem oil 1500ppm).”</p></div><div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center justify-between text-label-sm font-label-sm shadow-sm"><div><span class="text-outline block text-[11px]">Pest Cycle</span><span class="font-semibold text-tertiary">3rd Instar Larvae</span></div><div><span class="text-outline block text-[11px]">Weather Impact</span><span class="font-semibold text-on-surface">RH 78% • 28°C</span></div><div><span class="text-outline block text-[11px]">Economic Threshold</span><span class="font-semibold text-error">Exceeded (12%)</span></div></div></div></div>
+</div>
+</div>
+<!-- Case Status Timeline Horizontal -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold tracking-wider">Triage Sequence</span>
+<div class="grid grid-cols-4 gap-2 text-left relative">
+<div class="flex flex-col p-2.5 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Submitted</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">10:15 AM</span>
+</div>
+<div class="flex flex-col p-2.5 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Auto-triaged</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">10:30 AM</span>
+</div>
+<div class="flex flex-col p-2.5 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Assigned</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">11:00 AM (Kulkarni)</span>
+</div>
+<div class="flex flex-col p-2.5 rounded-lg bg-primary-container text-on-primary-container" style="background-color: rgb(36, 92, 54); color: rgb(255, 255, 255);">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span>
+<span class="font-label-sm text-label-sm font-semibold">Scientific Review</span>
+</div>
+<span class="font-label-sm text-label-sm opacity-90 mt-1">Active Now</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Expert Diagnostic Response Composer -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md" style="border: 1px solid rgb(220, 230, 218);">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">medical_services</span>
+<span class="font-title-md text-title-md text-on-surface">Agronomic Prescription &amp; Advisory Composer</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Formal Advisory Certificate Protocol</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Classification Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Confirmed Botanical Pathology / Pest</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="">Helicoverpa armigera (American Bollworm)</option>
+<option>Spodoptera litura (Tobacco Caterpillar)</option>
+<option>Pectinophora gossypiella (Pink Bollworm)</option>
+<option>Bacterial Blight (Xanthomonas citri subsp. malvacearum)</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-outline absolute right-3 top-3 pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Dosage Calculator Reference Widget -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Formulation Dilution Calculator (Plot: 3.5 Acres)</label>
+<div class="flex items-center gap-2">
+<input class="flex-1 bg-surface-container-low px-4 py-2.5 rounded-xl font-label-md text-label-md text-on-surface font-medium focus:outline-none" readonly="" type="text" value="Calculated: 140g Emamectin per 350L Water">
+<button class="px-3 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+                Recalculate
+              </button>
+</div>
+</div>
+</div>
+<!-- Prescription Narrative Editor -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Prescription Advisory (Delivered via SMS &amp; Farmora Voice Audio Note in Marathi &amp; English)</label>
+<textarea class="w-full bg-surface-container-low p-4 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary leading-relaxed resize-none" rows="4">Recommend Emamectin Benzoate 5% SG @ 4g per 10L water. Alternate with Spinetoram 11.7% SC after 10 days if damage persists. Cease flood irrigation for 48 hours to retard larval pupation in wet topsoil.</textarea>
+</div>
+<!-- Remedial Protocol Checklist -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-4">
+<label class="flex items-center gap-2 cursor-pointer text-label-sm font-label-sm text-on-surface">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary" type="checkbox">
+<span class="">Include Pheromone Trap Guidelines (5 traps/acre)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer text-label-sm font-label-sm text-on-surface">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary" type="checkbox">
+<span class="">Notify Nearest Krishi Kendra (Dindori Center)</span>
+</label>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold">Ref: CIB&amp;RC Reg #7821-2019</span>
+</div>
+<!-- Action Command Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm pt-2">
+<button class="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+<span class="">Retrieve Similar Solved Cases (4 Matches)</span>
+</button>
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed-dim transition-colors font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+<span class="">Request More Info / Photos</span>
+</button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-md text-label-md font-semibold shadow-sm" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span class="">Submit &amp; Notify Farmer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,1059 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-container": "#71633f",
+          "on-secondary-fixed-variant": "#524524",
+          "primary-container": "#5c7d5c",
+          "on-secondary": "#ffffff",
+          "surface-bright": "#fcfae9",
+          "surface-container-highest": "#e4e3d3",
+          "accent-beige": "#D7CE93",
+          "on-primary": "#ffffff",
+          "error-container": "#ffdad6",
+          "surface": "#fcfae9",
+          "primary": "#446345",
+          "inverse-on-surface": "#f3f1e1",
+          "on-secondary-fixed": "#241a01",
+          "tertiary-fixed": "#ece772",
+          "surface-container-low": "#f6f4e4",
+          "tertiary": "#646100",
+          "surface-variant": "#e4e3d3",
+          "primary-fixed-dim": "#acd0aa",
+          "error": "#ba1a1a",
+          "on-primary-fixed-variant": "#2f4e31",
+          "surface-dim": "#dcdbcb",
+          "surface-container-lowest": "#ffffff",
+          "primary-fixed": "#c8ecc5",
+          "secondary-fixed-dim": "#d7c59a",
+          "on-background": "#1b1c12",
+          "secondary-container": "#f4e1b4",
+          "inverse-primary": "#acd0aa",
+          "on-tertiary": "#ffffff",
+          "on-surface-variant": "#424841",
+          "surface-tint": "#466647",
+          "border-subtle": "#E5E4DC",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#1e1d00",
+          "on-primary-container": "#f7fff2",
+          "surface-container": "#f0efde",
+          "background": "#fcfae9",
+          "tertiary-fixed-dim": "#cfcb59",
+          "inverse-surface": "#303126",
+          "canvas-bg": "#FBFBFB",
+          "surface-container-high": "#eae9d8",
+          "on-surface": "#1b1c12",
+          "secondary-fixed": "#f4e1b4",
+          "outline-variant": "#c2c8be",
+          "surface-muted": "#F3F2EB",
+          "tertiary-container": "#b3af41",
+          "on-tertiary-fixed-variant": "#4b4900",
+          "secondary": "#6b5d3a",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#032109",
+          "outline": "#737970",
+          "on-tertiary-container": "#434100"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.75rem",
+          "margin-mobile": "1.25rem",
+          "margin-tablet": "2rem",
+          "margin": "3rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.5rem"
+        },
+        "fontFamily": {
+          "headline-lg-mobile": [
+            "Manrope"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-md": [
+            "Manrope"
+          ],
+          "body-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "Manrope"
+          ],
+          "headline-lg": [
+            "Manrope"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased" style="background-color: rgb(241, 248, 238);"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-6 pb-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" style="background-color: rgb(232, 245, 233); border-right: 1px solid rgb(200, 230, 201);"><div class="px-6 mb-8 flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-2xl">potted_plant</span></div><div><div class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Farmora</div><div class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mt-0.5">Care Expert Portal</div></div></div><div class="px-6 mb-4"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Advisory Navigation</span></div><nav class="flex-1 px-4 flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="expert-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="">Expert Dashboard</span></a><a aria-current="page" class="flex items-center justify-between px-4 py-3 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="case-queue" href="#" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="">Assigned Cases</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed">12</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="formulations-and-database" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="">Formulations &amp; Database</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="historical-archives" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="">Historical Archives</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="expert-profile-and-certifications" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="">Expert Profile &amp; Certifications</span></a></nav><div class="px-4 pt-4 mt-auto border-t border-subtle"><div class="p-3 rounded-xl bg-surface-container flex items-center justify-between"><div class="flex items-center gap-2.5"><div class="w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-primary-fixed"></div><div><div class="font-label-md text-label-md text-on-surface leading-tight">Agronomy Network</div><div class="font-label-sm text-label-sm text-on-surface-variant">Duty Active</div></div></div><span class="material-symbols-outlined text-outline text-[18px]">wifi_tethering</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8" style="background-color: rgba(241, 248, 238, 0.9); border-bottom: 1px solid rgb(200, 230, 201);"><div class="flex items-center gap-4 flex-1 max-w-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-xl bg-surface-container-lowest border border-border-subtle font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search cases, telemetry, crop varieties..." type="text"></div></div><div class="flex items-center gap-5"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><button class="p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-5 w-px bg-border-subtle"></div><div class="flex items-center gap-3"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Dr. Elena Vance</div><div class="font-label-sm text-label-sm text-primary">Lead Agronomist</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface w-full px-8 min-h-screen" style="background-color: rgb(241, 248, 238);"><div class="flex flex-col w-full pb-16">
+<!-- Top Breadcrumb & Editorial Header Section -->
+<section class="mb-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Expert Portal</span>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Case Management Queue</span>
+<span class="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+        Live Duty Active
+      </span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+<div class="max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Assigned Cases Master Ledger
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1.5 leading-relaxed">
+          Manage, triage, and prescribe scientific interventions for your 18 active assigned farmer dossiers across agro-climatic zones.
+        </p>
+</div>
+<!-- Header Secondary Fast Actions -->
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">autorenew</span>
+<span class="">Sync Farmora Telemetry</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-md" type="button" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="">Start Priority Triage</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Metric Overview Cards Strip -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"><div class="rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Active Caseload</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">18</span>
+<span class="font-title-md text-title-md text-outline">/ 20 Quota</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: #E8F5E9; color: #183522;">
+<span class="material-symbols-outlined text-[22px]">assignment_ind</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between border-t border-subtle">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 rounded-full overflow-hidden" style="background-color: #E8F5E9;">
+<div class="h-full rounded-full" style="width: 90%; background-color: #287A3E;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">90% Cap</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+2 Overdue SLA
+</span>
+</div>
+</div>
+<div class="rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Critical / High Severity</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-lg text-headline-lg text-error">5</span>
+<span class="font-title-md text-title-md text-on-surface-variant">Immediate Rx</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 border-t border-subtle">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">
+Spodoptera (3) &amp; Xanthomonas (2)
+</span>
+</div>
+</div>
+<div class="rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Average Triage Speed</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">38</span>
+<span class="font-title-md text-title-md text-outline">mins</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: #E8F5E9; color: #287A3E;">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 border-t border-subtle" style="color: #183522;">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-label-sm text-label-sm font-semibold">22m faster than 60m SLA</span>
+</div>
+</div>
+<div class="rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Prescription Accuracy</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">98.6%</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: #E8F5E9; color: #183522;">
+<span class="material-symbols-outlined text-[22px]">task_alt</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant border-t border-subtle">
+<span class="material-symbols-outlined text-[16px]" style="color: #287A3E;">verified</span>
+<span class="font-label-sm text-label-sm font-medium">KVK &amp; Peer Audit Approval</span>
+</div>
+</div></section>
+<!-- Search and Multi-Filter Deck -->
+<section class="bg-surface-container-lowest rounded-2xl p-5 mb-6 shadow-sm" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<!-- Top Search & Main Actions -->
+<div class="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between pb-4">
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search by Case #, Farmer Name, Crop, Pathogen, or Village..." type="text">
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<!-- View Toggle Buttons -->
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-xs font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+<span class="">Table View</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">view_kanban</span>
+<span class="">Kanban (SLA)</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span class="">Export Docket Batch</span>
+</button>
+</div>
+</div>
+<!-- Filter Selectors Row -->
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 pt-3"><div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase font-semibold" style="color: #183522;">Crop Family</label>
+<select class="w-full px-3 py-2 rounded-xl font-body-sm text-body-sm focus:outline-none transition-all cursor-pointer" style="background-color: #E1F0DF; color: #183522; border: 1px solid #C8E6C9;">
+<option value="">All Crop Types (6)</option>
+<option value="cotton">Cotton (Bt-II)</option>
+<option value="pomegranate">Pomegranate (Bhagwa)</option>
+<option value="grapes">Grapes (Thompson)</option>
+<option value="pulses">Pulses &amp; Soy</option>
+<option value="tomato">Tomato (Hybrid)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase font-semibold" style="color: #183522;">District / Taluka</label>
+<select class="w-full px-3 py-2 rounded-xl font-body-sm text-body-sm focus:outline-none transition-all cursor-pointer" style="background-color: #E1F0DF; color: #183522; border: 1px solid #C8E6C9;">
+<option value="">All Regions</option>
+<option value="nashik">Nashik (Dindori/Niphad)</option>
+<option value="solapur">Solapur (Pandharpur)</option>
+<option value="ahmednagar">Ahmednagar (Rahata)</option>
+<option value="baramati">Baramati Division</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase font-semibold" style="color: #183522;">Urgency / SLA</label>
+<select class="w-full px-3 py-2 rounded-xl font-body-sm text-body-sm focus:outline-none transition-all cursor-pointer" style="background-color: #E1F0DF; color: #183522; border: 1px solid #C8E6C9;">
+<option value="">All Urgency Levels</option>
+<option value="overdue">Overdue SLA (&lt;0m)</option>
+<option value="approaching">Approaching (&lt;30m)</option>
+<option value="routine">Routine (Active Window)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm uppercase font-semibold" style="color: #183522;">Pathogen Category</label>
+<select class="w-full px-3 py-2 rounded-xl font-body-sm text-body-sm focus:outline-none transition-all cursor-pointer" style="background-color: #E1F0DF; color: #183522; border: 1px solid #C8E6C9;">
+<option value="">All Vectors</option>
+<option value="insect">Insect Pests</option>
+<option value="fungal">Fungal Blight / Rust</option>
+<option value="bacterial">Bacterial Canker</option>
+<option value="viral">Viral / Mosaic</option>
+<option value="abiotic">Abiotic &amp; Nutritional</option>
+</select>
+</div>
+<div class="flex items-end col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1">
+<button class="w-full py-2 px-3 rounded-xl font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" style="background-color: #E1F0DF; color: #183522; border: 1px solid #C8E6C9;" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+<span class="">Reset Filters</span>
+</button>
+</div></div>
+</section>
+<!-- Master Assigned Cases Ledger Table -->
+<section class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden mb-6" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1100px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider" style="background-color: rgb(225, 240, 223); color: rgb(24, 53, 34); border-bottom: 1px solid rgb(200, 230, 201);">
+<th class="py-4 px-5 font-semibold">Case ID &amp; SLA Timer</th>
+<th class="py-4 px-5 font-semibold">Farmer &amp; Plot Details</th>
+<th class="py-4 px-5 font-semibold">AI Triage &amp; Visual Specimen</th>
+<th class="py-4 px-5 font-semibold">Micro-Climate Telemetry</th>
+<th class="py-4 px-5 font-semibold">Current State</th>
+<th class="py-4 px-5 font-semibold text-right">Agronomic Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Overdue Critical (Spodoptera) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<!-- Col 1 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">#FC-9104</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-error mr-1"></span>
+                    -12m Overdue
+                  </span>
+</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">Rec'd 07:42 AM IST</span>
+</div>
+<span class="inline-block font-label-sm text-label-sm text-error font-semibold uppercase tracking-wider">Priority 1 Escalation</span>
+</div>
+</td>
+<!-- Col 2 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Ramesh S. Patil</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                  Dindori, Nashik (Plot 4B)
+                </span>
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">3.5 Ha Cotton (Bt-II)</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">Black Clay Soil</span>
+</div>
+</div>
+</td>
+<!-- Col 3 -->
+<td class="py-4 px-5 align-top">
+<div class="flex items-start gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up agronomic macro shot of cotton leaves showing perforated holes and caterpillar larvae damage from Spodoptera pest, daylight outdoors, sharp depth of field, agricultural diagnostic catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLr7EpnPfvmw1EI9TRwLdt8dnPEgooA6QO350LCy-rmRbn2CxT2e064FaKIoILVRI_bgMlPtnz9b-cJCvtg-oVp8lfko6G4CBLPwxNSY42cjiRUhJdYzDHkrOfGlVRvPmO93ZCDeFyxQdwIiRFol_2iEDa8bBQSyA-l3AL2742j_RMjqCE6Py5TehFWuXzI29D8PRCJwDG-DE6LEWnOHxfxFYp4C_W_NbKE1BtyZNIBDOlt0z1iXsG">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Spodoptera frugiperda</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Fall Armyworm (Foliar)</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      96.8% Confidence
+                    </span>
+<span class="text-error font-label-sm text-label-sm font-semibold">Severe</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Col 4 -->
+<td class="py-4 px-5 align-top">
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Moisture:</span>
+<span class="font-semibold text-on-surface">28% (Dry Stress)</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Canopy:</span>
+<span class="font-semibold text-error">34.2°C (+3°C)</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Humidity:</span>
+<span class="font-semibold text-on-surface">78% RH</span>
+</div>
+</div>
+</td>
+<!-- Col 5 -->
+<td class="py-4 px-5 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                In Review
+              </span>
+<div class="mt-2 font-label-sm text-label-sm text-outline">
+                Assigned to Dr. Vance
+              </div>
+</td>
+<!-- Col 6 -->
+<td class="py-4 px-5 align-top text-right">
+<div class="flex flex-col items-end gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm whitespace-nowrap" type="button" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="">Examine Dossier &amp; Rx</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-3 pr-1">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Reshoot
+                  </button>
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 2: Approaching SLA (Xanthomonas Canker) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<!-- Col 1 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">#FC-9098</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary mr-1"></span>
+                    14m Remaining
+                  </span>
+</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">Rec'd 08:15 AM IST</span>
+</div>
+<span class="inline-block font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Approaching Benchmark</span>
+</div>
+</td>
+<!-- Col 2 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Anand V. Deshmukh</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                  Pandharpur, Solapur (Sector 1)
+                </span>
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">5.0 Ha Pomegranate</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">Bhagwa / Loamy</span>
+</div>
+</div>
+</td>
+<!-- Col 3 -->
+<td class="py-4 px-5 align-top">
+<div class="flex items-start gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Agronomic pathology visual showing pomegranate fruit skin with oily spot lesions and dark necrotic bacterial blight patches caused by Xanthomonas axonopodis, organic agriculture diagnostic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDliZ74Knqcy4EooJIpGDLBDqvu25o3REzsYzXaKhWYaBAEOYzGfcona_Jn0HgGjrLac43R1xARgkYHwtO9FjVNkPTCu7tAj74fDXx0NxP-WP0KyoUGYIy_RE0rSlxYOEyDBs9abIHIi4lzDX5dxo3GIJc9-AR6XXVWyvIj_rlhYSIwSoUNIzgftxgtrfzIes8YjOMKAcKMVkVVgDak39QaaBVJQ_i2V5AWav3-bJIuI8EhNFgLXnlS">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Xanthomonas axonopodis</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Bacterial Oily Spot</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      94.2% Confidence
+                    </span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">Moderate</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Col 4 -->
+<td class="py-4 px-5 align-top">
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Moisture:</span>
+<span class="font-semibold text-on-surface">42% (Normal)</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Canopy:</span>
+<span class="font-semibold text-on-surface">29.1°C</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Humidity:</span>
+<span class="font-semibold text-secondary">85% RH (High)</span>
+</div>
+</div>
+</td>
+<!-- Col 5 -->
+<td class="py-4 px-5 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Ready for Rx
+              </span>
+<div class="mt-2 font-label-sm text-label-sm text-on-surface-variant">
+                Lab match confirmed
+              </div>
+</td>
+<!-- Col 6 -->
+<td class="py-4 px-5 align-top text-right">
+<div class="flex flex-col items-end gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm whitespace-nowrap" type="button" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="">Examine Dossier &amp; Rx</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-3 pr-1">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Reshoot
+                  </button>
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 3: Downy Mildew in Table Grapes -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<!-- Col 1 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">#FC-9087</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1"></span>
+                    48m Remaining
+                  </span>
+</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">Rec'd 08:44 AM IST</span>
+</div>
+<span class="inline-block font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Within Benchmark</span>
+</div>
+</td>
+<!-- Col 2 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Kavita B. Gaikwad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                  Niphad, Nashik (Grape Belt)
+                </span>
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">2.2 Ha Thompson Seedless</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">Sandy Loam</span>
+</div>
+</div>
+</td>
+<!-- Col 3 -->
+<td class="py-4 px-5 align-top">
+<div class="flex items-start gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Grapevine leaf specimen showing yellowish oil-spots on upper surface and delicate white downy fungal growth on underside caused by Plasmopara viticola, vineyard diagnostics photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9iBva_f9CBlh6g8aII4KeeFyI3rjuXim2Imu3cf2YTnw9qCXKHsxj7OWQBCVjg_QszLxUNGAcsGoz8z8xlQXIIZmRpmM6mhN2xqrAB5GPudAragWFaMQhw7FtjvZ6OFdsR-_noWKt9fdJC7oHN3t8Zu_4zmdjklaOvTefqyiHbhKbKgy3hMl9CvkSgvv42ceBAqXJhDfhSrBIjo6WrFAurbkVqFxKu0p3-IMQCmrWlNKLgRBX3vqk">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Plasmopara viticola</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Downy Mildew (Fungal)</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      98.1% Confidence
+                    </span>
+<span class="text-secondary font-label-sm text-label-sm font-semibold">Spreading</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Col 4 -->
+<td class="py-4 px-5 align-top">
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Moisture:</span>
+<span class="font-semibold text-on-surface">65% (Saturated)</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Canopy:</span>
+<span class="font-semibold text-on-surface">24.5°C</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Humidity:</span>
+<span class="font-semibold text-error">92% RH (Sporulation)</span>
+</div>
+</div>
+</td>
+<!-- Col 5 -->
+<td class="py-4 px-5 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Ready for Rx
+              </span>
+<div class="mt-2 font-label-sm text-label-sm text-outline">
+                Weather advisory aligned
+              </div>
+</td>
+<!-- Col 6 -->
+<td class="py-4 px-5 align-top text-right">
+<div class="flex flex-col items-end gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm whitespace-nowrap" type="button" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="">Examine Dossier &amp; Rx</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-3 pr-1">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Reshoot
+                  </button>
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 4: Awaiting Lab Test (Yellow Mosaic Virus) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<!-- Col 1 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">#FC-9079</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline mr-1"></span>
+                    SLA Paused
+                  </span>
+</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">biotech</span>
+<span class="">Lab Ticket #782</span>
+</div>
+<span class="inline-block font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">PCR Assay Pending</span>
+</div>
+</td>
+<!-- Col 2 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Santosh T. Shinde</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                  Rahata, Ahmednagar
+                </span>
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">4.0 Ha Soy / Pigeonpea</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">Medium Black</span>
+</div>
+</div>
+</td>
+<!-- Col 3 -->
+<td class="py-4 px-5 align-top">
+<div class="flex items-start gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Soybean crop leaf exhibiting bright mottled yellow and green mosaic virus symptoms caused by Mungbean yellow mosaic India virus, macro farm pathology context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABSxwpUVYWUzpHgGtWeyHVAdiEIHU68T-IImn5Du_ir5jYD30VC2DVrrbni3_gBv2yacZC6lhl_pz9xpqRcA4-T8WN6d8zuhnmoP4UhjWW69D-1zFv8mwlhvxJNjYWwbg3uD06ZqI2dxV9g9UAOqnWDdFv60yHP71wvq5dHJQJDkZ_AEb_rHO1uhXe1_9NPP0fDR6LcSPwKG-fRZoA0EsjzTFWwgd4MKDMCwT3pxfYo_uZinMOlZfu">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Yellow Mosaic Virus (MYMV)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Whitefly Vector Vector-borne</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">
+                      83.4% Confidence (Ambiguous)
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<!-- Col 4 -->
+<td class="py-4 px-5 align-top">
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Moisture:</span>
+<span class="font-semibold text-on-surface">36% (Adequate)</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Canopy:</span>
+<span class="font-semibold text-on-surface">31.8°C</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Humidity:</span>
+<span class="font-semibold text-on-surface">62% RH</span>
+</div>
+</div>
+</td>
+<!-- Col 5 -->
+<td class="py-4 px-5 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/60 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Awaiting Lab Test
+              </span>
+<div class="mt-2 font-label-sm text-label-sm text-outline">
+                MPKV Rahuri Lab Queue
+              </div>
+</td>
+<!-- Col 6 -->
+<td class="py-4 px-5 align-top text-right">
+<div class="flex flex-col items-end gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-xs whitespace-nowrap" type="button">
+<span class="">Track Lab Progress</span>
+<span class="material-symbols-outlined text-[16px]">science</span>
+</button>
+<div class="flex items-center gap-3 pr-1">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span> Ping Field Agent
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 5: Info Requested (Tomato Early Blight vs Nutrient Deficiency) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<!-- Col 1 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">#FC-9062</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1"></span>
+                    52m Remaining
+                  </span>
+</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">Rec'd 09:12 AM IST</span>
+</div>
+<span class="inline-block font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Awaiting Farmer Input</span>
+</div>
+</td>
+<!-- Col 2 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Baban Rao More</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                  Baramati Rural (Zone 3)
+                </span>
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">1.8 Ha Hybrid Tomato (Abhinav)</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">Red Sandy Loam</span>
+</div>
+</div>
+</td>
+<!-- Col 3 -->
+<td class="py-4 px-5 align-top">
+<div class="flex items-start gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Agricultural diagnostics photo of tomato plant foliage with concentric target-board brown spots and marginal chlorosis, Alternaria solani early blight, bright natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzrS5JEISvw1__dt2t6BhAPIb14I2LmKu9cE-nrf01f_U_Id9C5qFudN65CYR2uinoyuwPbIrGMGzKZo27O-PbMamBEkGjhfvTJuO9OKTLzhc4rUgM6Er1rz7FTiywwwJq-OOuhU6teeCUxaCngmR980XZD-dkKgEjuvx6_2iMw6zdUbsfXM_OzxIezylDQFlJDu9J9QObopfE6czZypfpZls8lL8a2Eul4nFS3FIVA1lVt5Er6lkO">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Alternaria solani</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Early Blight / Potassium Def?</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+                      89.1% Confidence
+                    </span>
+<span class="text-tertiary font-label-sm text-label-sm font-semibold">Low Specimen Clarity</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Col 4 -->
+<td class="py-4 px-5 align-top">
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Moisture:</span>
+<span class="font-semibold text-on-surface">32%</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Canopy:</span>
+<span class="font-semibold text-on-surface">30.0°C</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Humidity:</span>
+<span class="font-semibold text-on-surface">71% RH</span>
+</div>
+</div>
+</td>
+<!-- Col 5 -->
+<td class="py-4 px-5 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-beige/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Info Requested
+              </span>
+<div class="mt-2 font-label-sm text-label-sm text-outline">
+                Asked for stem collar photo
+              </div>
+</td>
+<!-- Col 6 -->
+<td class="py-4 px-5 align-top text-right">
+<div class="flex flex-col items-end gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-xs whitespace-nowrap" type="button">
+<span class="">View Thread</span>
+<span class="material-symbols-outlined text-[16px]">forum</span>
+</button>
+<div class="flex items-center gap-3 pr-1">
+<button class="font-label-sm text-label-sm text-error hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">cancel</span> Recall Request
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 6: Abiotic Heat & Micro-nutrient Deficiency -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-surface-container-low/20">
+<!-- Col 1 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">#FC-9055</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1"></span>
+                    58m Remaining
+                  </span>
+</div>
+<div class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="">Rec'd 09:30 AM IST</span>
+</div>
+<span class="inline-block font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Routine Advisory</span>
+</div>
+</td>
+<!-- Col 2 -->
+<td class="py-4 px-5 align-top">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Sunil D. Kadam</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                  Yeola, Nashik
+                </span>
+<div class="mt-2 flex flex-wrap items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">3.0 Ha Onion (Garwa Late)</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">Clay Loam</span>
+</div>
+</div>
+</td>
+<!-- Col 3 -->
+<td class="py-4 px-5 align-top">
+<div class="flex items-start gap-3">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Onion crop field showing leaf tip burning and physiological moisture necrosis with sulfur deficiency, clean agricultural diagnostics macro setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdIVgiQnBO1bHYIKBTvurn7p0O3gDEgyeS-z3x4CjtD6jyMc05L8f8jktZWZNHLLRYNa_Yf9ZEQH3aIP43fnJkfT9RngNfWB1hPJXAsSvRWlnMUc7l-m4clG_ZPxzVEajVkumLOSH6Z9UkgEQMv1aWJ7sb_2ym1-GKcqBDaCsd50O88gc16SW0w7FwRGaSkctX34kZQ92PD--RC3rTi8mMJuEqi-5-Q4FfO3NjqvkCQj5aJmVsCXVP">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Tip Burn &amp; Zinc Def.</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Abiotic Thermal Stress</div>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="inline-flex px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                      91.7% Confidence
+                    </span>
+<span class="text-primary font-label-sm text-label-sm font-semibold">Non-Pathogenic</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Col 4 -->
+<td class="py-4 px-5 align-top">
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Moisture:</span>
+<span class="font-semibold text-error">21% (Critical Low)</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Canopy:</span>
+<span class="font-semibold text-error">36.1°C</span>
+</div>
+<div class="flex items-center justify-between gap-3">
+<span class="text-outline text-label-sm font-semibold">Humidity:</span>
+<span class="font-semibold text-on-surface">45% RH</span>
+</div>
+</div>
+</td>
+<!-- Col 5 -->
+<td class="py-4 px-5 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Ready for Rx
+              </span>
+<div class="mt-2 font-label-sm text-label-sm text-on-surface-variant">
+                Fertigation protocol ready
+              </div>
+</td>
+<!-- Col 6 -->
+<td class="py-4 px-5 align-top text-right">
+<div class="flex flex-col items-end gap-2">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm whitespace-nowrap" type="button" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="">Examine Dossier &amp; Rx</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-3 pr-1">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Reshoot
+                  </button>
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span> Transfer
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Ledger Footer Controls -->
+<div class="px-6 py-4 bg-surface-container-low/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <span class="font-semibold text-on-surface">1 - 6</span> of <span class="font-semibold text-on-surface">18</span> farmer dossiers</span>
+<div class="h-4 w-px bg-surface-container-high"></div>
+<div class="flex items-center gap-1.5">
+<label class="font-label-sm text-label-sm text-outline">Items per page:</label>
+<select class="px-2 py-1 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>6</option>
+<option>12</option>
+<option>24</option>
+</select>
+</div>
+</div>
+<!-- Pagination Nav -->
+<div class="flex items-center gap-2">
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container-high hover:text-on-surface disabled:opacity-40 transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-xs">1</span>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors" type="button">2</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-colors" type="button">3</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Quick Batch Tools Banner & Scientific Compliance Strip -->
+<section class="bg-surface-container rounded-2xl p-5 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">auto_fix_high</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface leading-tight font-semibold">Triage Orchestration &amp; Batch Tools</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Execute rapid batch actions across the selected 18 farmer cases in queue</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">add_a_photo</span>
+<span class="">Bulk Request Additional Data</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span class="">Mark Low-Risk Protocols</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">chevron_forward</span>
+<span class="">Sync with KVK Lab Registry</span>
+</button>
+</div>
+</section>
+</div></main></div>
+
+</body></html>

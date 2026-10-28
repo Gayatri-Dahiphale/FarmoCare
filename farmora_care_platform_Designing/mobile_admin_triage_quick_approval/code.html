@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Farmora Care</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#acd0aa", "on-secondary": "#ffffff", "accent-beige": "#D7CE93", "on-secondary-container": "#71633f", "inverse-surface": "#303126", "canvas-bg": "#FBFBFB", "surface-container-low": "#f6f4e4", "error": "#ba1a1a", "on-error-container": "#93000a", "surface-dim": "#dcdbcb", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "secondary": "#6b5d3a", "tertiary-fixed": "#ece772", "on-secondary-fixed": "#241a01", "on-error": "#ffffff", "tertiary": "#646100", "inverse-primary": "#acd0aa", "secondary-fixed-dim": "#d7c59a", "surface-variant": "#e4e3d3", "on-background": "#1b1c12", "outline-variant": "#c2c8be", "surface-muted": "#F3F2EB", "tertiary-container": "#b3af41", "secondary-container": "#f4e1b4", "surface-container-highest": "#e4e3d3", "surface-container-high": "eae9d8", "on-secondary-fixed-variant": "#524524", "on-tertiary-fixed-variant": "#4b4900", "primary-container": "#5c7d5c", "surface-container": "#f0efde", "primary-fixed": "#c8ecc5", "on-primary-fixed-variant": "#2f4e31", "on-primary-fixed": "#032109", "surface-tint": "#466647", "inverse-on-surface": "#f3f1e1", "on-tertiary-fixed": "#1e1d00", "background": "#fcfae9", "on-primary-container": "#f7fff2", "outline": "#737970", "primary": "#446345", "surface-container-lowest": "#ffffff", "on-surface-variant": "#424841", "error-container": "#ffdad6", "surface": "#fcfae9", "on-primary": "#ffffff", "tertiary-fixed-dim": "#cfcb59", "on-surface": "#1b1c12", "surface-bright": "#fcfae9", "secondary-fixed": "#f4e1b4", "border-subtle": "#E5E4DC" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.75rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-tablet": "2rem", "gutter": "1.5rem", "gutter-mobile": "1rem" }, fontFamily: { "display-mobile": ["Manrope"], "body-lg": ["Manrope"], "headline-sm": ["Manrope"], "body-sm": ["Manrope"], "headline-md": ["Manrope"], "display": ["Manrope"], "headline-lg-mobile": ["Manrope"], "title-md": ["Manrope"], "body-md": ["Manrope"], "label-sm": ["Manrope"], "label-md": ["Manrope"], "headline-lg": ["Manrope"] }, fontSize: { "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "500" }], "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(12,13,5,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed"><span class="material-symbols-outlined text-[20px]">potted_plant</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-title-md text-title-md text-on-surface leading-tight tracking-tight">Farmora Care</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase">Admin</span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Triage</span></div></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile py-space-sm space-y-space-md">
+<!-- Directorate Jurisdiction Badge -->
+<div class="flex items-center justify-between bg-surface-container px-space-md py-space-xs rounded-full">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Nashik Agro-Climatic Directorate • Emergency Escalations</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold tracking-wide shrink-0">DEFCON 2</span>
+</div>
+<!-- Live System Triage Metrics Strip -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Urgent Sign-off</span>
+<span class="material-symbols-outlined text-[16px] text-error" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">3</span>
+<span class="font-label-sm text-label-sm text-error font-medium">pending</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Auto-escalates in 40m</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Clusters</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">hub</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">active</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-medium mt-0.5">Dindori &amp; Niphad</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Resp. Rate</span>
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">18</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">min</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary mt-0.5 font-medium">-4m vs yesterday</span>
+</div>
+</div>
+<!-- Priority Incident Triage Cards -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Action Required</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Pending Protocol Decs</span>
+</div>
+<!-- Incident #EM-8042 Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md transition-all duration-300" id="card-em-8042">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-secondary">INCIDENT #EM-8042</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-[10px] uppercase font-bold tracking-wider">Critical Outbreak</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-1">Fall Armyworm (Spodoptera)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">14 bordering farms affected • Dindori Taluka Sector 4G</p>
+</div>
+</div>
+<!-- Outbreak Visual & Telemetry Preview -->
+<div class="relative w-full h-28 rounded-lg overflow-hidden my-space-xs bg-surface-muted">
+<img class="w-full h-full object-cover" data-alt="High resolution aerial drone perspective of green farmland showing localized crop leaf damage and thermal boundary markers across rural agricultural plots in golden afternoon sunlight, clean minimal aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLdvghINp7Np14oNl0J1LehrtKyFeVZn3m2zSsFnMnh0U_sXgRc3iQdgn-aa2fuhXxIQUf7Qzl0tWi6QVzpLx1AMacQGGNS1eGB8TlQrH3jK_FuNhCGxkbqXExbZ-uX1hQWYAmp8fAc4RzBTB0X3imdeJgLWg3Sk7QW6NKUS5ffmQgQZgUlgZV064a-1y1wXyyr5wAVgH6q6OD4I7_h0hx9EailHGiJWEs9oiku3NsnmXo15jxwQE0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-accent-beige">location_on</span>
+<span class="font-label-sm text-label-sm font-medium">84.2 Hectares Canopy Radius</span>
+</div>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-on-primary font-medium">Drone Telemetry Synced</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg mb-space-sm">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">AI Agronomic Recommendation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          Authorize immediate aerial bio-spray drone cluster (NPV / Bacillus thuringiensis) &amp; grant fast-track State Emergency Subsidization ₹1,850/ha.
+        </p>
+</div>
+<!-- Action Panel -->
+<div class="flex flex-col gap-2">
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-full flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-sm hover:bg-primary-container" onclick="handleApproval('card-em-8042', 'Drone Cluster Dispatched')">
+<span class="material-symbols-outlined text-[18px]">drone</span>
+<span>Approve Drone Cluster Dispatch</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-9 bg-surface-container text-on-surface font-label-sm text-label-sm font-medium rounded-full flex items-center justify-center gap-1 hover:bg-surface-variant transition-colors" onclick="handleReRoute('card-em-8042')">
+<span class="material-symbols-outlined text-[16px]">forward</span>
+<span>Re-route to Field Lead</span>
+</button>
+<button class="h-9 bg-surface-container text-on-surface font-label-sm text-label-sm font-medium rounded-full flex items-center justify-center gap-1 hover:bg-surface-variant transition-colors" onclick="openDossierModal()">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Dossier</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Incident #EM-8049 Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md transition-all duration-300" id="card-em-8049">
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-secondary">INCIDENT #EM-8049</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-[10px] uppercase font-bold tracking-wider">High Advisory</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-1">Bacterial Blight Containment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Niphad Sub-basin Vineyards • 6 Estates Verified</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg my-space-xs">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">shield_with_heart</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Directorate Protocol Advisory</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          Issue CIB&amp;RC emergency quarantine perimeter advisory. Release emergency buffer inventory of subsidized Copper Oxychloride 50% WP from Ozar Depot.
+        </p>
+</div>
+<!-- Action Panel -->
+<div class="grid grid-cols-2 gap-2 mt-space-sm">
+<button class="h-10 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-full flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform shadow-sm" onclick="handleApproval('card-em-8049', 'Buffer Stocks Released')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>One-Tap Release</span>
+</button>
+<button class="h-10 bg-surface-container text-on-surface font-label-md text-label-md font-medium rounded-full flex items-center justify-center gap-1.5 hover:bg-surface-variant transition-colors" onclick="handleHold('card-em-8049')">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+<span>Hold for Lab PCR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Agronomist Duty Balancer Mini-Widget -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">group_work</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Agronomist Load Balancer</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Nashik Core Division</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Agronomist 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed-variant shrink-0 font-label-md font-bold">
+            RK
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Dr. Ramesh Kulkarni</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-error font-medium">14 / 20 active cases</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Dindori Sector</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-medium hover:bg-surface-variant transition-colors" onclick="toggleAvailability(this)">
+            Available
+          </button>
+<button class="p-1.5 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="quickReassign('Dr. Ramesh Kulkarni')" title="Rebalance Cases">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+</div>
+</div>
+<!-- Agronomist 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0 font-label-md font-bold">
+            SM
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Dr. Shalini Mehta</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-primary font-medium">6 / 20 active cases</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Niphad Sector</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold" onclick="toggleAvailability(this)">
+            Standby
+          </button>
+<button class="p-1.5 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" onclick="quickReassign('Dr. Shalini Mehta')" title="Assign Emergency Cases">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Emergency Broadcast Banner -->
+<div class="bg-secondary-container p-space-md rounded-xl text-on-secondary-fixed-variant shadow-md flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">cell_tower</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Perimeter Flare Alert</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm font-semibold">15 km Zone</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed leading-snug">
+      Instantly push urgent advisory dispatch via regional SMS &amp; WhatsApp broadcasts directly to all registered cultivators.
+    </p>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">group</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-secondary-fixed">4,200 growers queued</span>
+</div>
+<button class="px-4 py-2 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm font-semibold flex items-center gap-1.5 active:scale-95 transition-transform shadow-sm" id="btn-broadcast" onclick="triggerBroadcast(this)">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>Push Flare Broadcast</span>
+</button>
+</div>
+</div>
+<!-- Dossier Inspection Modal (Hidden by Default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm" id="dossier-modal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-sm p-space-md shadow-2xl flex flex-col space-y-space-sm animate-in fade-in zoom-in-95">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Incident Dossier #EM-8042</h4>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="closeDossierModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex justify-between items-center">
+<span>Infestation Index</span>
+<span class="font-label-md text-label-md text-error font-semibold">68.4% Severe</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex justify-between items-center">
+<span>Crop Type</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Maize &amp; Hybrid Sorghum</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex justify-between items-center">
+<span>Target Cluster Drone Base</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Dindori AgTech Depot #3</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex justify-between items-center">
+<span>Weather Compatibility</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Wind 6 km/h • Clear</span>
+</div>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-full flex items-center justify-center gap-1.5" onclick="closeDossierModal(); handleApproval('card-em-8042', 'Drone Cluster Dispatched');">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Approve Right From Dossier</span>
+</button>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 hidden px-4 py-2 bg-inverse-surface text-inverse-on-surface rounded-full shadow-lg font-label-sm text-label-sm items-center gap-2 animate-bounce" id="toast-msg">
+<span class="material-symbols-outlined text-accent-beige text-[18px]">check_circle</span>
+<span id="toast-text">Action executed successfully</span>
+</div>
+</div>
+<script>
+  function showToast(message) {
+    const toast = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    toastText.textContent = message;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 3200);
+  }
+
+  function handleApproval(cardId, actionName) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    card.classList.add('opacity-40', 'pointer-events-none', 'scale-95');
+    setTimeout(() => {
+      card.innerHTML = `
+        <div class="py-space-md flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+              <span class="material-symbols-outlined text-[18px]">check</span>
+            </span>
+            <div>
+              <p class="font-label-md text-label-md font-bold text-on-surface">${actionName}</p>
+              <p class="font-label-sm text-[11px] text-on-surface-variant">Directorate sign-off token logged on audit chain.</p>
+            </div>
+          </div>
+          <span class="font-label-sm text-label-sm text-primary font-semibold">Authorized</span>
+        </div>
+      `;
+      card.classList.remove('opacity-40', 'scale-95');
+      showToast(`${actionName} confirmed`);
+    }, 400);
+  }
+
+  function handleHold(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    showToast("Incident held pending Niphad Lab PCR assay results.");
+    card.style.opacity = '0.7';
+  }
+
+  function handleReRoute(cardId) {
+    showToast("Incident re-routed to Dindori Sub-Division Field Lead.");
+    const card = document.getElementById(cardId);
+    if (card) {
+      card.classList.add('opacity-40', 'pointer-events-none');
+    }
+  }
+
+  function toggleAvailability(btn) {
+    if (btn.innerText.trim() === 'Available') {
+      btn.innerText = 'Busy';
+      btn.className = 'px-2.5 py-1 rounded-full bg-error-container text-on-error-container text-label-sm font-semibold transition-colors';
+      showToast("Agronomist status marked as Engaged.");
+    } else {
+      btn.innerText = 'Available';
+      btn.className = 'px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-medium hover:bg-surface-variant transition-colors';
+      showToast("Agronomist marked Available.");
+    }
+  }
+
+  function quickReassign(name) {
+    showToast(`Balanced 4 queue assignments to ${name}`);
+  }
+
+  function triggerBroadcast(btn) {
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span><span>Broadcasting...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span><span>Dispatched (4.2k)</span>`;
+      btn.className = 'px-4 py-2 bg-primary text-on-primary rounded-full font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm';
+      showToast("Emergency SMS & WhatsApp flare sent to 4,200 growers!");
+    }, 1200);
+  }
+
+  function openDossierModal() {
+    document.getElementById('dossier-modal').classList.remove('hidden');
+  }
+
+  function closeDossierModal() {
+    document.getElementById('dossier-modal').classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(12,13,5,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] py-1 transition-colors text-primary font-bold" data-path="triage" href="#"><span class="material-symbols-outlined text-[22px]">checklist_rtl</span><span class="font-label-sm text-label-sm">Triage</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="models" href="#"><span class="material-symbols-outlined text-[22px]">neurology</span><span class="font-label-sm text-label-sm">Models</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="alerts" href="#"><span class="material-symbols-outlined text-[22px]">notifications_active</span><span class="font-label-sm text-label-sm">Alerts</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

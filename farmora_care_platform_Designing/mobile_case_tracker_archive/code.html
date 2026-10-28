@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#1b1c12", "surface": "#fcfae9", "primary-container": "#5c7d5c", "primary-fixed": "#c8ecc5", "surface-bright": "#fcfae9", "on-background": "#1b1c12", "secondary-container": "#f4e1b4", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#d7c59a", "tertiary-fixed-dim": "#cfcb59", "background": "#fcfae9", "on-primary": "#ffffff", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "outline": "#737970", "on-primary-container": "#f7fff2", "tertiary-container": "#b3af41", "inverse-surface": "#303126", "on-secondary-fixed-variant": "#524524", "on-primary-fixed": "#032109", "on-secondary": "#ffffff", "primary-fixed-dim": "#acd0aa", "surface-dim": "#dcdbcb", "inverse-on-surface": "#f3f1e1", "error-container": "#ffdad6", "on-tertiary-fixed": "#1e1d00", "secondary-fixed": "#f4e1b4", "on-error": "#ffffff", "on-primary-fixed-variant": "#2f4e31", "on-secondary-container": "#71633f", "inverse-primary": "#acd0aa", "primary": "#446345", "tertiary": "#646100", "on-tertiary-fixed-variant": "#4b4900", "on-secondary-fixed": "#241a01", "canvas-bg": "#FBFBFB", "surface-muted": "#F3F2EB", "accent-beige": "#D7CE93", "surface-container": "#f0efde", "surface-container-high": "#eae9d8", "surface-container-highest": "#e4e3d3", "surface-variant": "#e4e3d3", "on-surface-variant": "#424841", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "surface-tint": "#466647", "secondary": "#6b5d3a", "border-subtle": "#E5E4DC", "tertiary-fixed": "#ece772" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-tablet": "2rem" }, fontFamily: { "headline-sm": ["Manrope"], "headline-lg": ["Manrope"], "display": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "title-md": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Manrope"], "display-mobile": ["Manrope"] }, fontSize: { "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }], "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">potted_plant</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Farmora Care</span><h1 class="font-title-md text-title-md text-on-surface leading-tight">My Cases</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-20 pb-safe"><div class="flex flex-col w-full px-margin-mobile pb-space-lg space-y-space-md">
+<!-- Search and Global Status Overview -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline pl-11 pr-10 py-3 rounded-xl shadow-sm focus:outline-none focus:bg-surface-container-lowest font-body-md text-body-md transition-all" id="caseSearchInput" placeholder="Search Case ID (e.g. FC-9482) or crop..." type="text"/>
+<button aria-label="Clear search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface p-1 rounded-full transition-colors" id="clearSearch" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Active Filter Chips Carousel -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin-mobile px-margin-mobile">
+<button class="filter-chip active flex-shrink-0 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-filter="all" type="button">
+        All (4)
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" data-filter="action-required" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+        Action Required (1)
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" data-filter="under-review" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+        Under Review (2)
+      </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" data-filter="resolved" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+        Resolved (8)
+      </button>
+</div>
+</div>
+<!-- Cards Feed -->
+<div class="flex flex-col gap-space-md" id="casesContainer">
+<!-- Case Card 1: Urgent Follow-Up -->
+<article class="case-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-space-sm" data-case="FC-9482" data-category="action-required" data-crop="Cotton Bt-II">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Macro view of green cotton plant with healthy bolls and a minor spotted yellow leaf symptom under bright morning natural agricultural daylight, crisp focus on botany." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeDu5fwZo5a5fc6TptN9dLtZfs88f6B1QTKGGNeHh3FW01gWPkEp3nEBSAnKJpRYAmtgglo1Mo2PlA4cPQTUTDg0NOY1YhT7jq0d5Y4uQpcPix7kOI0SS-sOvSUMZiFF8uOJSMNfq5SMtwlLJf-9m1-3qhr_3nSqytOc0uCaOhPEJ5LiSu8lTytzi9DJv2GwfW6cBFP4tnuvGma9xC3Vm1X5TkbWgJjJtoPD_l9wrjPM8YxBmQ-RGn"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">#FC-9482</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">North Acre-4</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Cotton Bt-II</h3>
+<span class="font-label-sm text-label-sm text-secondary">Flowering Stage • Day 54</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+          Urgent Action
+        </span>
+</div>
+<!-- Warning Callout Box -->
+<div class="bg-error-container/40 rounded-xl p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px] flex-shrink-0 mt-0.5">save_as</span>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-error-container font-bold">72-Hour Verification</span>
+<span class="font-label-sm text-label-sm text-error font-bold">18h remaining</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+            Upload post-spray foliage photos to confirm leaf curl recovery before prescription renewal.
+          </p>
+</div>
+</div>
+<!-- Mini-Stepper (Step 3: Rx Issued / Verification Pending) -->
+<div class="py-1">
+<div class="flex items-center justify-between text-center relative">
+<!-- Track bar background -->
+<div class="absolute top-3.5 left-4 right-4 h-0.5 bg-surface-container -z-0"></div>
+<!-- Track bar progress fill (approx 75%) -->
+<div class="absolute top-3.5 left-4 w-2/3 h-0.5 bg-primary -z-0"></div>
+<!-- Step 1: Submitted -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Submitted</span>
+</div>
+<!-- Step 2: Expert Review -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Review</span>
+</div>
+<!-- Step 3: Rx Issued (Current) -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center ring-4 ring-primary/20 shadow-xs">
+<span class="material-symbols-outlined text-[16px]">medication</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Rx Active</span>
+</div>
+<!-- Step 4: Verified -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verified</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+          Upload Photo
+        </button>
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          View Advisory
+        </button>
+</div>
+</article>
+<!-- Case Card 2: Agronomist Triage -->
+<article class="case-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-space-sm" data-case="FC-9310" data-category="under-review" data-crop="Soybean">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Lush soybean plants in field undergoing pod development stage, showing rich green foliage and healthy root nodule inspection context, warm sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmV_lKsoNzOpl0q7dp8yTKK0MLwQFbb1TRH2FXpn9qubokbHY9zLn2Z0uMGnVj80E9IXAnRQFDIqSfPrwSwv6Ls67w5inp5M5zxObWDY4XzmMdJL_l0Zxi6tznCpH67bxy6ZLN2snBh5tkExXoZbQKf2GoPwJ4yvxU7rR5RgbPprW3FkM9MYXG0G_ILcr4adEDoI5dcDoXeW-gOGAZfW14ohdRUBc1H5i6mfyDWOXaBWy-AjxYL8va"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">#FC-9310</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">South Plot-B</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Soybean (JS-335)</h3>
+<span class="font-label-sm text-label-sm text-secondary">Pod Fill Stage • R5 Phase</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+          Agronomist Triage
+        </span>
+</div>
+<!-- Assigned Specialist Bio Strip -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 font-bold font-label-md text-label-md">
+            RK
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned Agronomist</span>
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">Dr. Ramesh Kulkarni</span>
+</div>
+</div>
+<a aria-label="Call Agronomist" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors flex-shrink-0" href="tel:#">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+<!-- Mini-Stepper (Step 2: Expert Review active) -->
+<div class="py-1">
+<div class="flex items-center justify-between text-center relative">
+<div class="absolute top-3.5 left-4 right-4 h-0.5 bg-surface-container -z-0"></div>
+<div class="absolute top-3.5 left-4 w-1/3 h-0.5 bg-primary -z-0"></div>
+<!-- Step 1: Submitted -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Submitted</span>
+</div>
+<!-- Step 2: Expert Review (Active) -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center ring-4 ring-tertiary-container/30 shadow-xs">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Reviewing</span>
+</div>
+<!-- Step 3: Rx Issued -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">medication</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rx Issued</span>
+</div>
+<!-- Step 4: Verified -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verified</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+          Expected Rx by 4:00 PM
+        </span>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" type="button">
+          Track Details
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Case Card 3: Resolved Case -->
+<article class="case-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all flex flex-col gap-space-sm" data-case="FC-9140" data-category="resolved" data-crop="Pomegranate">
+<!-- Card Header -->
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Healthy organic pomegranate fruit ripening on orchard branches, deep red skins, pristine green orchard grove in soft sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTc8u_7qHIuLYyGFVXT85XaEpBSed5zVbGMKSFRsw35q3uRFR2FoHs83Hc-pTpt1geqNOGuS78CDlnLS-mZzQO3aCNdbogrj7FkemJ0dQCJTxz3S5AgP2iXJ30ggUuOOv3bf-Wtg5y62sQtunWYAJUJUgtbN4EIrbUDVWHotpi8vrUhK3dNfFTolhNc5XSxr8fSSoLDjnziirq0DyTUXrvlwexJ0EV8EuolVDmdYRlUhsmzDAbREPd"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">#FC-9140</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Orchard Block 2</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Bhagwa Pomegranate</h3>
+<span class="font-label-sm text-label-sm text-secondary">Fruit Development • Day 112</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm flex-shrink-0 font-bold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          Resolved
+        </span>
+</div>
+<!-- Outcome Summary Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bacterial Blight Arrested</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100% Target yield retained</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Oct 12</span>
+</div>
+<!-- Mini-Stepper (All 4 Completed) -->
+<div class="py-1">
+<div class="flex items-center justify-between text-center relative">
+<div class="absolute top-3.5 left-4 right-4 h-0.5 bg-primary -z-0"></div>
+<!-- Step 1: Submitted -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Submitted</span>
+</div>
+<!-- Step 2: Expert Review -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Review</span>
+</div>
+<!-- Step 3: Rx Issued -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Rx Applied</span>
+</div>
+<!-- Step 4: Verified (Complete) -->
+<div class="flex flex-col items-center gap-1 z-10 w-1/4">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Verified</span>
+</div>
+</div>
+</div>
+<!-- Resolution Certificate Action Link -->
+<div class="pt-1">
+<button class="w-full flex items-center justify-between p-3 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">picture_as_pdf</span>
+<span class="font-label-md text-label-md font-semibold">Resolution Certificate.pdf</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold">
+<span>View PDF</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</div>
+</button>
+</div>
+</article>
+</div>
+<!-- Empty State (Hidden initially) -->
+<div class="hidden flex-col items-center justify-center py-space-xl text-center px-space-md" id="noCasesState">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">folder_off</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface">No cases match your filter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">
+      Try choosing a different category or search term to track your crop health cases.
+    </p>
+<button class="mt-space-md px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm" id="resetFilters" type="button">
+      Reset Filters
+    </button>
+</div>
+<!-- Botanical Quick Tip / Delight Footer Strip -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-sm mt-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">psychiatry</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Proactive Verification Tip</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+        Taking follow-up photos in uniform morning lighting speeds agronomist clearance by 40%.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  (function initCasesScreen() {
+    // 1. Sync Shell Bottom Nav for "My Cases"
+    const navLinks = document.querySelectorAll('nav[data-active-classes] a');
+    navLinks.forEach(link => {
+      const isCases = link.getAttribute('data-path') === 'my-cases';
+      if (isCases) {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary', 'font-semibold');
+      } else {
+        link.classList.remove('text-primary', 'font-semibold');
+        link.classList.add('text-on-surface-variant');
+      }
+    });
+
+    // 2. Client-side Interactive Filter & Search
+    const searchInput = document.getElementById('caseSearchInput');
+    const clearBtn = document.getElementById('clearSearch');
+    const filterButtons = document.querySelectorAll('.filter-chip');
+    const caseCards = document.querySelectorAll('.case-card');
+    const noCasesState = document.getElementById('noCasesState');
+    const resetBtn = document.getElementById('resetFilters');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function applyFilterAndSearch() {
+      let visibleCount = 0;
+      caseCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const caseId = (card.getAttribute('data-case') || '').toLowerCase();
+        const crop = (card.getAttribute('data-crop') || '').toLowerCase();
+
+        const matchesCat = (currentFilter === 'all') || (cat === currentFilter);
+        const matchesQuery = !searchQuery || caseId.includes(searchQuery) || crop.includes(searchQuery);
+
+        if (matchesCat && matchesQuery) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noCasesState.classList.remove('hidden');
+        noCasesState.classList.add('flex');
+      } else {
+        noCasesState.classList.add('hidden');
+        noCasesState.classList.remove('flex');
+      }
+    }
+
+    // Filter Chips click handler
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        currentFilter = btn.getAttribute('data-filter') || 'all';
+        applyFilterAndSearch();
+      });
+    });
+
+    // Search input handler
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        if (searchQuery.length > 0) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+        applyFilterAndSearch();
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.classList.add('hidden');
+        applyFilterAndSearch();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.classList.add('hidden');
+        currentFilter = 'all';
+        filterButtons.forEach((b, idx) => {
+          if (idx === 0) {
+            b.classList.add('bg-primary', 'text-on-primary');
+            b.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          } else {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          }
+        });
+        applyFilterAndSearch();
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">space_dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="submit-report" href="#"><span class="material-symbols-outlined text-[22px]">add_circle</span><span class="font-label-sm text-label-sm mt-0.5">Report</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-full transition-colors text-primary font-semibold" data-path="my-cases" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm mt-0.5">Cases</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="advisory-alerts" href="#"><span class="material-symbols-outlined text-[22px]">warning_amber</span><span class="font-label-sm text-label-sm mt-0.5">Alerts</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="grower-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>

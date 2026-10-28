@@ -1,0 +1,587 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Farmora Care</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#b3af41", "on-secondary-container": "#71633f", "surface-container-high": "#eae9d8", "on-secondary": "#ffffff", "on-primary": "#ffffff", "on-surface-variant": "#424841", "surface-dim": "#dcdbcb", "on-surface": "#1b1c12", "tertiary-fixed-dim": "#cfcb59", "secondary": "#6b5d3a", "secondary-fixed-dim": "#d7c59a", "surface": "#fcfae9", "primary-fixed-dim": "#acd0aa", "surface-container": "#f0efde", "on-tertiary-container": "#434100", "on-primary-fixed": "#032109", "surface-tint": "#466647", "on-secondary-fixed-variant": "#524524", "error-container": "#ffdad6", "on-primary-container": "#f7fff2", "tertiary": "#646100", "canvas-bg": "#FBFBFB", "outline": "#737970", "surface-muted": "#F3F2EB", "surface-container-low": "#f6f4e4", "border-subtle": "#E5E4DC", "secondary-fixed": "#f4e1b4", "surface-container-highest": "#e4e3d3", "primary-fixed": "#c8ecc5", "secondary-container": "#f4e1b4", "primary-container": "#5c7d5c", "on-error-container": "#93000a", "inverse-primary": "#acd0aa", "accent-beige": "#D7CE93", "on-background": "#1b1c12", "on-primary-fixed-variant": "#2f4e31", "outline-variant": "#c2c8be", "primary": "#446345", "tertiary-fixed": "#ece772", "inverse-on-surface": "#f3f1e1", "on-tertiary-fixed-variant": "#4b4900", "inverse-surface": "#303126", "surface-container-lowest": "#ffffff", "surface-bright": "#fcfae9", "on-tertiary-fixed": "#1e1d00", "error": "#ba1a1a", "surface-variant": "#e4e3d3", "on-secondary-fixed": "#241a01", "on-tertiary": "#ffffff", "background": "#fcfae9", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "margin": "3rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "space-sm": "0.75rem" }, "fontFamily": { "headline-md": ["Manrope"], "headline-lg": ["Manrope"], "label-sm": ["Manrope"], "label-md": ["Manrope"], "title-md": ["Manrope"], "display-mobile": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-sm": ["Manrope"], "body-md": ["Manrope"], "headline-sm": ["Manrope"], "display": ["Manrope"], "body-lg": ["Manrope"] }, "fontSize": { "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col" style="background-color: rgb(241, 248, 238);"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" style="background-color: rgba(241, 248, 238, 0.95); border-bottom: 1px solid rgb(165, 214, 160);"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);"><span class="material-symbols-outlined text-[22px]">psychiatry</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight" style="color: rgb(23, 74, 42); font-weight: 700;">Farmora Care</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="how-it-works" href="#">How It Works</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="about" href="#">About</a><a aria-current="page" class="transition-colors py-space-xs text-primary font-semibold" data-path="contact" href="#" style="color: rgb(23, 74, 42); font-weight: 700;">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><a class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md text-on-surface px-space-md py-space-xs hover:text-primary transition-colors" data-path="login" href="#">Farmer Login</a><a class="inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-md py-2.5 rounded-full transition-colors shadow-sm" data-path="register" href="#" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">Sign Up</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-grow" style="background-color: rgb(241, 248, 238);"><div class="flex flex-col w-full">
+<!-- Top Support Bar / Breadcrumb Strip -->
+<div class="w-full bg-surface-container-low px-margin-mobile md:px-margin-tablet lg:px-margin py-space-sm" style="background-color: rgb(225, 240, 223); border-bottom: 1px solid rgb(165, 214, 160);">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="color: rgb(23, 74, 42);">verified_user</span>
+<span class="">Dedicated Agronomy &amp; Kisan Assistance Center</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" style="background-color: rgb(255, 255, 255); color: rgb(23, 74, 42); border: 1px solid rgb(165, 214, 160);">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse" style="background-color: rgb(63, 143, 70);"></span> Desk Active (6:00 AM - 8:00 PM IST)
+        </span>
+<span class="text-on-surface-variant hidden sm:inline">Average triage: 14 mins</span>
+</div>
+</div>
+</div>
+<!-- Hero Header & Value Proposition -->
+<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-xl pb-space-lg">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-semibold" style="color: rgb(23, 74, 42);">Field Network &amp; Support Desk</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Care Protocol v4.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" style="color: rgb(24, 53, 34);">Support &amp; Inquiries</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-1">
+          We are here to assist farmers, field officers, and partner organizations with precision guidance, diagnostic case escalation, and regional field extension services.
+        </p>
+</div>
+<!-- Quick Resolution Metric Banner -->
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm bg-surface-container rounded-xl p-space-md shadow-sm" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Emergency Queue Status</p>
+<p class="font-title-md text-title-md text-on-surface">32 Agronomists Online</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-high rounded-lg px-3 py-2" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct Soil Lab Routing</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Operational
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Support Channels Section -->
+<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-lg">
+<div class="max-w-7xl mx-auto">
+<div class="mb-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface" style="color: rgb(24, 53, 34);">Immediate Assistance Channels</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Choose your direct touchpoint according to field urgency and internet connectivity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: Kisan Emergency Helpline -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md group" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[26px]">ring_volume</span>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); border: 1px solid rgb(165, 214, 160);">Toll-Free Kisan Desk</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Kisan Emergency Advisory Helpline</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Direct tele-advisory for sudden pest outbreaks, severe nutrient burn, and unseasonal weather advisories.</p>
+<div class="bg-surface-container-low rounded-lg p-space-sm mb-space-md" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block mb-1">Direct Dial</span>
+<a class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight block hover:underline" href="tel:18001234567" style="color: rgb(23, 74, 42);">
+                1800-XXX-XXXX
+              </a>
+<span class="font-label-sm text-label-sm text-secondary block mt-1">Operating Hours: Mon - Sat, 6:00 AM – 8:00 PM IST</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">language</span>
+              Marathi, Hindi, English
+            </span>
+<span class="font-medium text-primary">Zero Airtime Charge</span>
+</div>
+</div>
+<!-- Card 2: WhatsApp Incident Support -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-sm" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); border: 1px solid rgb(165, 214, 160);">Visual Telemetry</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">WhatsApp Incident Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Send geotagged high-resolution leaf photos, crop canopy scans, or soil testing printouts for instant AI &amp; agronomist validation.</p>
+<div class="bg-surface-container-low rounded-lg p-space-sm mb-space-md" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide block mb-1">Instant Photo Triage</span>
+<div class="my-2 rounded-lg overflow-hidden border border-border-subtle shadow-sm"><img src="https://lh3.googleusercontent.com/aida/AEtjO1U071gyf_P0LpFNTCE-y76Eeloy4K9oKLQ5ITdDw3Xt42slhk6Z3loa5Y9SXrkTqJRQ94K_yHYNUS1l6hXeu7Np5o_UI41Y1zHoaj4u3tq290v0l7x0fJnfa_WmDCzkL-YQwt3PlPjmlSqy-7TQZ-m2lLofw7V3td2qT8Z99O_qt7D2R0T9_zY3a_MkpDcqiQKPBbWw0KR23uCJwx2eE3RqLxr4wLeVu8m5gLJJV4T7MchJM7ZNUm6zgjU" alt="Instant field leaf photo triage with agronomist mobile application" class="w-full h-32 object-cover"><div class="p-2 bg-surface-container-lowest flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant"><span class="flex items-center gap-1 text-primary font-semibold"><span class="material-symbols-outlined text-[16px]">check_circle</span> Field Photo Validated</span><span class="">Maharastra Sugarcane Plot</span></div></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Automated computer vision leaf pre-screen under 90 seconds.</p>
+</div>
+</div>
+<div>
+<a class="inline-flex w-full items-center justify-center gap-2 bg-primary text-on-primary font-label-md text-label-md py-3 px-space-md rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm" href="#" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+              Launch WhatsApp Desk
+            </a>
+</div>
+</div>
+<!-- Card 3: Regional Extension Centers Overview -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[26px]">share_location</span>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); border: 1px solid rgb(165, 214, 160);">On-Ground Hubs</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Regional Extension Help Desks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Physically staffed agricultural research labs and cluster hubs offering in-person spectrometer calibration and sample submission.</p>
+<div class="space-y-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Nashik Grape &amp; Onion Hub</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dindori Agronomy Cluster</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Vidarbha Cotton &amp; Soybean Desk</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Akola Research Center</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md">
+<a class="inline-flex w-full items-center justify-center gap-1.5 font-label-md text-label-md text-primary bg-surface-container hover:bg-surface-container-high py-2.5 rounded-full transition-colors" href="#regional-clusters" style="background-color: rgb(225, 240, 223); color: rgb(23, 74, 42); border: 1px solid rgb(165, 214, 160);">
+<span class="">View All 3 Cluster Stations</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Form & Field Diagnostic Context Split -->
+<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl bg-surface-container-low mt-space-lg" style="background-color: rgb(241, 248, 238);">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Side: Interactive Contact / Inquiry Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold" style="color: rgb(23, 74, 42);">Official Agronomy Dossier</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock</span> Encrypted Transmission
+          </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2" style="color: rgb(24, 53, 34);">Send an Agricultural Inquiry</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+          Submit your field telemetry, pest observations, or institutional partnership requests directly into the Farmora Care agronomist queue.
+        </p>
+<form class="space-y-space-md" id="farmora-inquiry-form" onsubmit="event.preventDefault(); submitInquiryForm();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-medium" for="fullName">Full Name <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-3 pl-10 focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm placeholder:text-outline-variant" id="fullName" placeholder="e.g. Rajesh Patil" required="" type="text" style="border: 1px solid rgb(165, 214, 160); background-color: rgb(251, 253, 251);">
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-[18px] text-on-surface-variant">person</span>
+</div>
+</div>
+<!-- Role Selector -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-medium" for="roleSelector">Your Field Role <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-3 pl-10 pr-8 focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm appearance-none" id="roleSelector" required="" style="border: 1px solid rgb(165, 214, 160); background-color: rgb(251, 253, 251);">
+<option disabled="" selected="" value="">Select your profile</option>
+<option value="farmer">Farmer / Primary Cultivator</option>
+<option value="extension">Extension Field Officer</option>
+<option value="agronomist">Agronomist / Soil Scientist</option>
+<option value="partner">Institutional / FPO Partner</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-[18px] text-on-surface-variant">badge</span>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Contact Channel -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-medium" for="contactInfo">Phone Number / Email <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-3 pl-10 focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm placeholder:text-outline-variant" id="contactInfo" placeholder="+91 98XXX XXXXX or mail@domain.com" required="" type="text" style="border: 1px solid rgb(165, 214, 160); background-color: rgb(251, 253, 251);">
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-[18px] text-on-surface-variant">contact_phone</span>
+</div>
+</div>
+<!-- District / Region -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-medium" for="districtRegion">District / Agro-Zone <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-3 pl-10 focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm placeholder:text-outline-variant" id="districtRegion" placeholder="e.g. Nashik, Baramati, Akola" required="" type="text" style="border: 1px solid rgb(165, 214, 160); background-color: rgb(251, 253, 251);">
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-[18px] text-on-surface-variant">explore</span>
+</div>
+</div>
+</div>
+<!-- Subject -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5 font-medium" for="subjectField">Inquiry Subject <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-3 pl-10 focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm placeholder:text-outline-variant" id="subjectField" placeholder="e.g. Yellow leaf curls observed across 4-acre pomegranate plot" required="" type="text" style="border: 1px solid rgb(165, 214, 160); background-color: rgb(251, 253, 251);">
+<span class="material-symbols-outlined absolute left-3 top-3.5 text-[18px] text-on-surface-variant">label</span>
+</div>
+</div>
+<!-- Detailed Message -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="detailedMessage">Detailed Observation / Message <span class="text-error">*</span></label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Include days elapsed &amp; treatments applied</span>
+</div>
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg p-3 focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm placeholder:text-outline-variant resize-y" id="detailedMessage" placeholder="Describe crop variety, sowing date, observed symptoms, pesticide history, and prevailing soil moisture..." required="" rows="4" style="border: 1px solid rgb(165, 214, 160); background-color: rgb(251, 253, 251);"></textarea>
+</div>
+<!-- Attachment Mockup -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">attachment</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-medium block">Attach Field Photos or Soil Reports</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">JPG, PNG, PDF up to 15MB</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+              Browse Files
+            </button>
+</div>
+<!-- Submit Action & Privacy Reassurance -->
+<div class="pt-space-xs">
+<button class="w-full md:w-auto inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-md text-label-md px-space-xl py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-md" id="submitBtn" type="submit" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span class="">Send Inquiry</span>
+</button>
+<div class="hidden mt-3 p-3 rounded-lg bg-primary-fixed text-on-primary-fixed font-body-sm text-body-sm flex items-center gap-2" id="formSuccessToast">
+<span class="material-symbols-outlined text-primary text-[20px]">task_alt</span>
+              Inquiry ticket generated. An assigned regional agronomist will review your case shortly.
+            </div>
+</div>
+<!-- Privacy Reassurance Callout -->
+<div class="flex items-start gap-2 pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">verified</span>
+<p class="">
+<strong class="font-medium text-on-surface">Data Privacy &amp; Farmer Stewardship:</strong> Your coordinates, harvest records, and crop diagnostics remain confidential. Farmora Care strictly safeguards farmer data against commercial exploitation or unconsented broker marketing.
+            </p>
+</div>
+</form>
+</div>
+<!-- Right Side: Field Advisory Context & Agronomist Network -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Live Advisory Response Pipeline -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]" style="color: rgb(23, 74, 42);">alt_route</span>
+<h3 class="font-title-md text-title-md text-on-surface">What happens after you submit?</h3>
+</div>
+<div class="space-y-space-md relative pl-6 before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-surface-container-highest">
+<div class="relative">
+<div class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Step 1 • 0-5 Minutes</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">Automatic Geo-Tag &amp; Zone Categorization</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The telemetry engine matches your district and soil type with regional microclimate data.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Step 2 • Within 45 Minutes</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">Extension Officer Review</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A certified agronomist from your nearest extension station verifies plant symptom photos.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-tertiary-container ring-4 ring-surface-container-lowest"></div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Step 3 • Final Prescription</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">CIB&amp;RC Compliant Protocol Delivery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clear action steps sent via SMS and digital PDF docket with localized dosage rates.</p>
+</div>
+</div>
+</div>
+<!-- Field Agronomist Quote Card -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling senior agronomist wearing field vest in an Indian vineyard research farm under warm morning sunlight, natural authentic agricultural photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrgV8yiq_2qRoO5muG-gtl-tw9-ZNYYh-S4zp1YkEmnIo6ilGkHsRcrMRiZzwLlCj7MmdCqKq-cbxjTNS_M1kKqbtknx_jwD88C5XxGIJgxvpZoVloN_-xOjCk6-_08eAvSiMa8pGjN_Jw8K81Wd-MKNM4eKB1BuIYiNrgv7Src8q0AIhJemcZXSNkFTSrhXlv1R7ZrAoR4g6g-vPrQm9FlObl_tZDAw2yrm5ETMFwdRUaxz5a1iEZ">
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Dr. Ananya Deshmukh</p>
+<p class="font-label-sm text-label-sm text-primary font-medium">Lead Soil Microbiologist • Pune Central</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-space-sm">
+            “Timely diagnosis avoids unnecessary chemical blanket sprays. Every hour saved in pest identification translates directly into protected yield and lower input expense for the farmer.”
+          </p>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">local_police</span>
+<span class="">Accredited by Indian Council of Agricultural Research</span>
+</div>
+</div>
+<!-- Support Coverage Summary Card -->
+<div class="bg-surface-container-high rounded-xl p-space-md shadow-sm" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Live Field Desk Metrics</span>
+<span class="material-symbols-outlined text-primary text-[18px]">query_stats</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-center">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<p class="font-headline-sm text-headline-sm text-primary font-bold" style="color: rgb(23, 74, 42);">98.4%</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Same-Day Resolution</p>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<p class="font-headline-sm text-headline-sm text-secondary font-bold" style="color: rgb(23, 74, 42);">14,200+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Fields Assisted (2025)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Extension Centers: Nashik, Vidarbha, Pune -->
+<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl" id="regional-clusters">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Footprint &amp; On-Ground Facilities</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight" style="color: rgb(24, 53, 34);">Regional Extension Help Desks</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-1">Walk-in consultation desks equipped with NPK rapid spectrometer testing, microscopic pathology units, and water analysis suites.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">3 Primary Clusters</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">18 Sub-Stations</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Center 1: Nashik Cluster -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div>
+<div class="h-44 w-full rounded-lg overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="Agricultural research laboratory in Nashik surrounded by vineyards and onion fields, agronomists working on soil sampling equipment, clean modern facility with warm morning daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzH8Q3Q_wZe6uvfUiOL1_dcm_0tN7jG_2Z7mLAJ-nEjHGcvtvcSQLu4B3SwT-I0QGmiNdt4CvAuvbaUckdbUAcolJLYmv9cKnmmwpNjw8qCQkP1VpQNRkpt5az-l_esAwEKByS4OWSYIZT9hj4byamCJnW6B1ZKTsgBwoubj7wq2is9vZKqmnI5z-26AUlt1PPZUFhbCWm9qV1aR98dX3MMk58aYfBK-19LfLTHT4W1rI2VW_wwNMk">
+<div class="absolute top-3 left-3 px-space-xs py-1 rounded-full bg-surface/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">science</span> Grape &amp; Horticultural Zone
+              </div>
+</div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Nashik Horticultural Hub</h3>
+<span class="font-label-sm text-label-sm text-primary font-bold">Cluster #01</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Specialized in table grapes, red onions, and export-grade pomegranate pathology and soil pH optimization.</p>
+<div class="space-y-2 text-body-sm text-body-sm text-on-surface-variant mb-space-md">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">pin_drop</span>
+<span class="">Plot 42, Dindori Agro Park, Near APMC Market, Nashik, MH - 422004</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">call</span>
+<span class="font-medium text-on-surface">+91 (0253) 298-CARE</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">schedule</span>
+<span class="">Mon-Sat: 07:30 AM - 06:30 PM</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lead: Dr. V. Kulkarni</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Accepting Samples
+            </span>
+</div>
+</div>
+<!-- Center 2: Vidarbha Cluster -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div>
+<div class="h-44 w-full rounded-lg overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="Extension agricultural research station in Vidarbha region with cotton and soybean demonstration plots, clean modern agronomy center under soft clear sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7gQNNQFWGmw0u-a9mjDhE6PAgiz1ULTHzzMARMroBj64XTC8Ntx2ZQJ_S2qgyOTbwYgk0WFlzg4JZhFgOd7Ynmo16b0nNjJH8pE7xBjhXIS_eendnZv91g8hxygNSM5czIWFlfMKpHCAS2Va6nhNwTaj3I14pYSEIWjpoze5CBv2cxRIyFxljC4lkI-oBvp7jD2IXoXONt3dpg-E77TC5wmswFQKCmf1XX7iX4F4Gw6vEU-uakK-J">
+<div class="absolute top-3 left-3 px-space-xs py-1 rounded-full bg-surface/90 backdrop-blur text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">eco</span> Cotton &amp; Pulses Belt
+              </div>
+</div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Vidarbha Agronomy Center</h3>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Cluster #02</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Focused on rainfed cotton resilience, pink bollworm traps, soybean rhizobium inoculation, and moisture retention.</p>
+<div class="space-y-2 text-body-sm text-body-sm text-on-surface-variant mb-space-md">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">pin_drop</span>
+<span class="">Sector 9, Krishi Vigyan Corridor, Akola Bypass Road, Akola, MH - 444002</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">call</span>
+<span class="font-medium text-on-surface">+91 (0724) 244-SOIL</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">schedule</span>
+<span class="">Mon-Sat: 06:30 AM - 07:00 PM</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lead: Er. S. Wankhede</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> In-Field Testing Active
+            </span>
+</div>
+</div>
+<!-- Center 3: Pune Cluster -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div>
+<div class="h-44 w-full rounded-lg overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="High precision agricultural testing facility and soil sensor laboratory in Pune outskirts, modern architecture with sugarcane and floriculture fields in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBYdGcM5dn2yeBmBZVX7FdxSotilH-rYKFCGmWbOnwusIPN3DkFiGe21rIrMzKdropvxo_56_wsc6RwhGevlzXLTxIHz0maK-4MduO9WuBWW6rwTOC-tsnlmzQGmLwAw8leTHX65bUjYVAbfe7MpQch5L3MreiFzv3esnHJ8EhEblSv4X8zlCXwrLvkomjmWp4ETFDLLZ6cKUCMHUTVMGWgPWW7FZnOT8Nti2jqP5yXPJhcmRypD4I">
+<div class="absolute top-3 left-3 px-space-xs py-1 rounded-full bg-surface/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span> Precision IoT Hub
+              </div>
+</div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Pune Research &amp; IoT Testing</h3>
+<span class="font-label-sm text-label-sm text-primary font-bold">Cluster #03</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Sugarcane fertigation scheduling, automated drip telemetry calibration, floriculture climate chambers, and export advisory.</p>
+<div class="space-y-2 text-body-sm text-body-sm text-on-surface-variant mb-space-md">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">pin_drop</span>
+<span class="">Baramati Agri-Tech Park, Building B, Malegaon Road, Pune District, MH - 413115</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">call</span>
+<span class="font-medium text-on-surface">+91 (020) 256-FARM</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">schedule</span>
+<span class="">Mon-Sat: 08:00 AM - 08:00 PM</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low rounded-lg p-space-xs flex items-center justify-between" style="background-color: rgb(225, 240, 223); border: 1px solid rgb(165, 214, 160);">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lead: Dr. P. Bhor</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Sensor Diagnostic Open
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comprehensive FAQ Accordion Section -->
+<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl bg-surface-container-low" style="background-color: rgb(241, 248, 238);">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-space-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Clear Explanations &amp; Protocols</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1" style="color: rgb(24, 53, 34);">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mt-2">
+          Answers to critical inquiries regarding response SLAs, offline field usage, regulatory compliance, and agronomic credentials.
+        </p>
+</div>
+<div class="space-y-space-sm">
+<!-- FAQ Item 1 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-md text-label-md">01</span>
+              How fast will an agronomist respond to my case?
+            </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<p class="">
+              Cases submitted via the <strong>Toll-Free Helpline (1800-XXX-XXXX)</strong> during operating hours (6:00 AM – 8:00 PM IST) are triaged live with an agronomist within <strong>3 to 5 minutes</strong>. For inquiries submitted through the digital inquiry form or WhatsApp incident queue, automated computer vision prescreens symptoms in under 90 seconds, and a district-assigned extension agronomist verifies and signs off on your tailored docket within <strong>45 minutes</strong>. Severe blight or epidemic alerts receive top queue priority.
+            </p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-md text-label-md">02</span>
+              What if I do not have active internet connection in my field?
+            </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<p class="">
+              Farmora Care is deliberately engineered for rural connectivity constraints. Farmers can simply place a direct voice call to our toll-free line without requiring mobile data. Additionally, our mobile portal supports an <strong>Offline First Mode</strong> that stores your logged readings, leaf photographs, and soil observations locally on your device; as soon as your device reconnects to 2G or intermittent EDGE signals, the data bundles are compressed and dispatched asynchronously to your local extension station.
+            </p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-md text-label-md">03</span>
+              Are the chemical dosage recommendations CIB&amp;RC compliant?
+            </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<p class="">
+              Yes, unconditionally. Every bio-stimulant, fertilizer dilution ratio, fungicide, and pesticide recommendation formulated by Farmora Care strictly follows the statutory guidelines established by the <strong>Central Insecticides Board &amp; Registration Committee (CIB&amp;RC)</strong> and the Ministry of Agriculture &amp; Farmers Welfare. We enforce strict Pre-Harvest Interval (PHI) warnings and Maximum Residue Limits (MRL) to protect farm safety, consumer health, and export eligibility.
+            </p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<button class="faq-btn w-full px-space-lg py-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-md text-label-md">04</span>
+              How can an agricultural expert register on Farmora Care?
+            </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-lg pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<p class="">
+              Agronomists, soil scientists, plant pathologists, and certified extension officers with a recognized B.Sc./M.Sc. in Agriculture or ICAR credentials can apply through our <strong>Expert Onboarding Pathway</strong>. Candidates submit their academic verification, regional cluster preference, and licensing documentation. After a peer review by our Senior Scientific Advisory Council, selected experts receive access to our telemetry triage console, diagnostic AI tools, and localized grower advisory panels.
+            </p>
+</div>
+</div>
+</div>
+<!-- Additional Question Prompt -->
+<div class="mt-space-lg text-center p-space-md rounded-xl bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="text-left">
+<h4 class="font-title-md text-title-md text-on-surface">Still have a specific query or partnership request?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our institutional relationship desk responds to FPOs and cooperatives within 24 hours.</p>
+</div>
+<a class="shrink-0 px-space-lg py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm" href="#farmora-inquiry-form" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+          Submit Partner Docket
+        </a>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for FAQs & Form Validation -->
+<script>
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close all other open FAQs for a clean single-open accordion feel
+      document.querySelectorAll('.faq-content').forEach(el => {
+        el.classList.add('hidden');
+      });
+      document.querySelectorAll('.faq-btn .material-symbols-outlined').forEach(ic => {
+        ic.style.transform = 'rotate(0deg)';
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function submitInquiryForm() {
+      const submitBtn = document.getElementById('submitBtn');
+      const toast = document.getElementById('formSuccessToast');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Transmitting Docket...</span>';
+
+      setTimeout(() => {
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Ticket Dispatched</span>';
+        submitBtn.classList.remove('bg-primary');
+        submitBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+        toast.classList.remove('hidden');
+
+        setTimeout(() => {
+          document.getElementById('farmora-inquiry-form').reset();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          submitBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+          submitBtn.classList.add('bg-primary');
+        }, 5000);
+      }, 900);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-auto" style="background-color: rgb(241, 248, 238); border-top: 1px solid rgb(165, 214, 160);"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-margin"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);"><span class="material-symbols-outlined text-[18px]">psychiatry</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Farmora Care</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Dedicated to modern agronomists, farm enterprise operators, and soil consultants with scientific rigor and environmental attunement.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm" style="background-color: rgb(220, 235, 221); color: rgb(63, 143, 70);"><span class="material-symbols-outlined text-[14px]" style="background-color: rgb(63, 143, 70);">verified</span>Certified Soil Advisory</span></div></div><div><h4 class="font-label-md text-label-md text-on-surface mb-space-sm uppercase tracking-wider">Solutions</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class=""><a class="hover:text-on-surface transition-colors" href="#">Crop Health</a></li><li class=""><a class="hover:text-on-surface transition-colors" href="#">Soil Chemistry</a></li><li class=""><a class="hover:text-on-surface transition-colors" href="#">Nutrient Telemetry</a></li><li class=""><a class="hover:text-on-surface transition-colors" href="#">Yield Forecasts</a></li></ul></div><div><h4 class="font-label-md text-label-md text-on-surface mb-space-sm uppercase tracking-wider">Company</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class=""><a class="hover:text-on-surface transition-colors" data-path="about" href="#">About Us</a></li><li class=""><a class="hover:text-on-surface transition-colors" href="#">Research Labs</a></li><li class=""><a class="hover:text-on-surface transition-colors" href="#">Agri-Partners</a></li><li class=""><a class="hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></li></ul></div><div><h4 class="font-label-md text-label-md text-on-surface mb-space-sm uppercase tracking-wider">Kisan Support</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class=""><span class="font-label-sm text-label-sm text-on-surface">Toll-Free Helpline</span></li><li class=""><span class="font-body-sm text-body-sm text-primary font-medium">1800-419-CARE (2273)</span></li><li class=""><span class="font-label-sm text-label-sm text-on-surface-variant">Mon - Sat: 06:00 - 20:00 IST</span></li><li class=""><a class="hover:text-on-surface transition-colors pt-space-xs" href="#">Regional Centers</a></li></ul></div></div><div class="rounded-xl bg-surface-container p-space-md mb-space-lg" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary text-[20px]">info</span><p class="font-body-sm text-body-sm text-on-secondary-container"><span class="font-semibold text-on-surface">Kisan Support Disclaimer:</span> Advisory metrics are formulated using sensor telemetry and empirical agro-climatic data. Field decisions should consider local rainfall, seasonal deviations, and localized field inspections.</p></div></div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-sm pt-space-md border-t border-surface-container-highest text-on-surface-variant font-label-sm text-label-sm"><p class="">© 2025 Farmora Care Private Limited. All rights reserved.</p><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Stewardship</a><a class="hover:text-on-surface transition-colors" href="#">Data Security</a></div></div></div></footer>
+
+
+
+</body></html>

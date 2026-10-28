@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#1b1c12", "surface": "#fcfae9", "primary-container": "#5c7d5c", "primary-fixed": "#c8ecc5", "surface-bright": "#fcfae9", "on-background": "#1b1c12", "secondary-container": "#f4e1b4", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#d7c59a", "tertiary-fixed-dim": "#cfcb59", "background": "#fcfae9", "on-primary": "#ffffff", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "outline": "#737970", "on-primary-container": "#f7fff2", "tertiary-container": "#b3af41", "inverse-surface": "#303126", "on-secondary-fixed-variant": "#524524", "on-primary-fixed": "#032109", "on-secondary": "#ffffff", "primary-fixed-dim": "#acd0aa", "surface-dim": "#dcdbcb", "inverse-on-surface": "#f3f1e1", "error-container": "#ffdad6", "on-tertiary-fixed": "#1e1d00", "secondary-fixed": "#f4e1b4", "on-error": "#ffffff", "on-primary-fixed-variant": "#2f4e31", "on-secondary-container": "#71633f", "inverse-primary": "#acd0aa", "primary": "#446345", "tertiary": "#646100", "on-tertiary-fixed-variant": "#4b4900", "on-secondary-fixed": "#241a01", "canvas-bg": "#FBFBFB", "surface-muted": "#F3F2EB", "accent-beige": "#D7CE93", "surface-container": "#f0efde", "surface-container-high": "#eae9d8", "surface-container-highest": "#e4e3d3", "surface-variant": "#e4e3d3", "on-surface-variant": "#424841", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "surface-tint": "#466647", "secondary": "#6b5d3a", "border-subtle": "#E5E4DC", "tertiary-fixed": "#ece772" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-tablet": "2rem" }, "fontFamily": { "headline-sm": ["Manrope"], "headline-lg": ["Manrope"], "display": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "title-md": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Manrope"], "display-mobile": ["Manrope"] }, "fontSize": { "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600"}], "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400"}], "title-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600"}], "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500"}], "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}], "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg px-space-md"><div class="flex items-center gap-space-xs px-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">eco</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">Farmora Care</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Agritech Platform</span></div></div><div class="h-[1px] bg-outline-variant/30 mx-space-sm"></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="farmer-reports-archive-and-timeline" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-md text-label-md">My Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="notifications-and-advisory-alerts-center" href="#"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-label-md text-label-md">Alerts &amp; Advisory</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="user-profile-and-farm-telemetry-settings" href="#"><span class="material-symbols-outlined text-[20px]">sensors</span><span class="font-label-md text-label-md">Farm Telemetry</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="system-user-management-and-expert-verification" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-md text-label-md">User &amp; Expert Verify</span></a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="bg-surface-container rounded-xl p-space-sm flex items-center gap-space-xs"><div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Telemetry Sync</span><span class="font-label-sm text-label-sm text-on-surface-variant">Active • Gateway Node 04</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm bg-surface-container px-space-sm py-1.5 rounded-full"><span class="material-symbols-outlined text-outline text-[18px]">badge</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Role Scope:</span><div class="flex items-center gap-1"><button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-primary text-on-primary transition-all" type="button">Farmer</button><button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Expert</button><button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Admin</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">routine</span><span class="font-body-sm text-body-sm text-on-surface">Plot Alpha • Loam Soil</span></div><button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="h-5 w-[1px] bg-outline-variant/40"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Bar (Verification Queue Activity) -->
+<div class="px-gutter pt-space-lg pb-space-sm flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-label-sm uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span>Regulatory Governance • Directorate Console</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Institutional Credentialing &amp; Agronomist Verification</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-0.5">
+          Audit agricultural licensure, arbitrate agronomist onboarding compliance, and balance active district-level triage capacity across agro-climatic subzones.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="px-space-md py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors flex items-center gap-space-xs font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Audit Export (CSV)</span>
+</button>
+<button class="px-space-md py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors flex items-center gap-space-xs font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+<span>Invite Institution</span>
+</button>
+</div>
+</div>
+<!-- Top Analytical Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Platform Users -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full pointer-events-none transition-transform group-hover:scale-125"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Total Registry Base</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">14,948</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-primary flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +8.4%
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs. previous month</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Active Verified Agronomists -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-container/10 rounded-full pointer-events-none transition-transform group-hover:scale-125"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Active Agronomists</span>
+<span class="p-1.5 rounded-lg bg-primary-container/20 text-on-surface">
+<span class="material-symbols-outlined text-[18px]">psychology_alt</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">128</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">94 on active duty triage</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Pending Agronomist Verifications -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary-container/15 rounded-full pointer-events-none transition-transform group-hover:scale-125"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Verification Queue</span>
+<span class="p-1.5 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">14</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">Action Required</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Avg. resolution: 18.4 hrs</span>
+</div>
+</div>
+</div>
+<!-- Metric 4: Accredited Universities & ICAR Nodes -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-fixed/20 rounded-full pointer-events-none transition-transform group-hover:scale-125"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Accredited Centers</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</span>
+</div>
+<div class="mt-space-md">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">28+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">ICAR, MPKV, &amp; State KVKs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Navigation Tabs -->
+<div class="flex items-center justify-between overflow-x-auto pb-1 mt-2">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl">
+<button class="tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="switchMainTab(this, 'tab-verified')" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Verified Experts</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px]">128</span>
+</button>
+<button class="tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md transition-all bg-primary text-on-primary font-semibold flex items-center gap-1.5 shadow-sm" onclick="switchMainTab(this, 'tab-pending')" type="button">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span>Pending Approvals</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary text-primary text-[11px] font-bold">14</span>
+</button>
+<button class="tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="switchMainTab(this, 'tab-farmers')" type="button">
+<span class="material-symbols-outlined text-[18px]">agriculture</span>
+<span>Registered Farmers</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px]">14.8k</span>
+</button>
+<button class="tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" onclick="switchMainTab(this, 'tab-institutions')" type="button">
+<span class="material-symbols-outlined text-[18px]">domain</span>
+<span>Institutions &amp; Universities</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px]">28</span>
+</button>
+</div>
+<div class="hidden xl:flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-Credentialing Policy:</span>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          ICAR Level 3 Protocol Active
+        </span>
+</div>
+</div>
+<!-- Filter & Control Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary transition-all" placeholder="Search by name, registry ID, council number..." type="text"/>
+</div>
+<!-- Advanced Taxonomy Filters -->
+<div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto">
+<!-- Specialization Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 py-2 rounded-lg hover:bg-surface-container focus:outline-none cursor-pointer transition-colors">
+<option value="">All Specializations</option>
+<option value="entomology">Entomology &amp; Pest Biology</option>
+<option value="pathology">Plant Pathology &amp; Virology</option>
+<option value="soil">Soil Chemistry &amp; Agronomy</option>
+<option value="horticulture">Arid Zone Horticulture</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">expand_more</span>
+</div>
+<!-- Regional Agro-Climatic Zone Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 py-2 rounded-lg hover:bg-surface-container focus:outline-none cursor-pointer transition-colors">
+<option value="">Agro-Climatic Zone</option>
+<option value="zone-9">Zone IX: Western Plateau &amp; Hills (Maharashtra)</option>
+<option value="zone-10">Zone X: Southern Plateau (Kaveri Basin)</option>
+<option value="zone-6">Zone VI: Trans-Gangetic Plain (Punjab/Haryana)</option>
+<option value="zone-12">Zone XII: Western Coastal Plains (Konkan)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">expand_more</span>
+</div>
+<!-- Document Status Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md pl-3 pr-8 py-2 rounded-lg hover:bg-surface-container focus:outline-none cursor-pointer transition-colors">
+<option value="">Document Status</option>
+<option value="verified">Govt. Board Verified</option>
+<option value="pending-ocr">OCR Validation Passed</option>
+<option value="manual-flag">Flagged for Re-Audit</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">expand_more</span>
+</div>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-low text-outline hover:text-on-surface transition-colors" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- MAIN PENDING VERIFICATION QUEUE SECTION -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Section Internal Header -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-low/50">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Priority Agronomist Verification Queue</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Applications waiting on council registry validation, degree apostille, and peer endorsement.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>14 Dossiers under review</span>
+</div>
+</div>
+<!-- Queue Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md">Applicant Details</th>
+<th class="py-3.5 px-space-md">Domain Specialization</th>
+<th class="py-3.5 px-space-md">Institution &amp; Registry</th>
+<th class="py-3.5 px-space-md">Certificates &amp; Dossier</th>
+<th class="py-3.5 px-space-md">SLA Compliance</th>
+<th class="py-3.5 px-space-md text-right">Verification Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Applicant 1: Dr. Ananya Mukherjee -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-cover bg-center overflow-hidden flex-shrink-0" data-alt="Close up portrait photograph of an Indian woman agricultural scientist wearing glasses and a formal collared shirt in front of an agronomy field research station in warm daylight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCP5D3_v5Z_Ni12w0ZgtS_Fv2AHMz5ywFrmijUshabNu43oydcQrEHCHJbp30SKEA6px6bjb3qLhEM6fQHuzWGGJBy7zEatShhqyjYJaTpRLS6E6gmJxjNjoDqguyG0oq-ZHBNAH489lAb3y-n0uBsW3GJsBkEA7CCCH3fNqcFs2p2lrptW8TCQtTG5PWZWKU7ON8KG_B5YjshEScn3v9n3cPvDx7YyLMwJOgVLZxkxUZEFR7DPsLo7')"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Dr. Ananya Mukherjee</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">ananya.m@icar-cicr.res.in</span>
+<span class="font-label-sm text-label-sm text-outline">Zone IX • Western Vidarbha Sub-District</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold w-max">
+                    Entomology &amp; Pest Biology
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sub-discipline: Lepidopteran Resistance in Bt-Cotton</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">ICAR-CICR Nagpur</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Central Institute for Cotton Research</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono">REG: ICAR-AGR-884920</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1.5">
+<button class="inline-flex items-center gap-1.5 text-primary hover:underline font-label-sm text-label-sm text-left" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Ph.D_Entomology_Apostille.pdf</span>
+</button>
+<button class="inline-flex items-center gap-1.5 text-primary hover:underline font-label-sm text-label-sm text-left" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>ICAR_Principal_Endorsement.p7s</span>
+</button>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> DigiLocker Verified
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">98.2%</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm">High Reliability</span>
+</div>
+<div class="w-24 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[98%] h-full bg-primary rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trial resolution: 14m avg</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<div class="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-1.5">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm" onclick="triggerCredentialIssue('Dr. Ananya Mukherjee')" type="button">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Approve &amp; Issue</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Request Additional Credentials" type="button">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface-variant transition-colors" title="Reject Application" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Applicant 2: Dr. Rameshwar Patil -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-cover bg-center overflow-hidden flex-shrink-0" data-alt="High quality professional photograph of a senior South Asian male soil scientist in an outdoor agronomy test greenhouse, holding a soil moisture telemetry monitor, bright diffuse daylight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNugFyt0FqSxdmslfbFdZ7cXXU2s7Y3wINU9LnCJqiWGLiWYZRQhZEKTpmf7kNUYcVXuSzERXL8N9B0-zBc5HBZjDAVxFYV0IfKta8hlg-o3SqZoJOA50qIeMixyJLVX1MAt6A2zrg-GW8cMHxGE4Aqn31RCmx-YDY1OY3BEg7kHIlGR3QwuHfdYnOr90clTWte_TCzeGldKH8Zazym-zKX-YeCF4KvpxSSaKbZtuXScWagmrkpIr5')"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Prof. Rameshwar Patil</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">patil.r@mpkv.ac.in</span>
+<span class="font-label-sm text-label-sm text-outline">Zone IX • Western Ghats Rainshadow</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold w-max">
+                    Soil Science &amp; Plant Nutrition
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sub-discipline: Vertisol Salinization &amp; Micronutrient Leaching</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">MPKV Rahuri</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mahatma Phule Krishi Vidyapeeth</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono">REG: MPKV-FAC-9941</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1.5">
+<button class="inline-flex items-center gap-1.5 text-primary hover:underline font-label-sm text-label-sm text-left" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Council_SoilSci_Accreditation.pdf</span>
+</button>
+<button class="inline-flex items-center gap-1.5 text-primary hover:underline font-label-sm text-label-sm text-left" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Field_Trial_Audit_Report.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history</span> Institutional Check in Progress
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">94.6%</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Standard</span>
+</div>
+<div class="w-24 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[94%] h-full bg-primary rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trial resolution: 26m avg</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<div class="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-1.5">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm" onclick="triggerCredentialIssue('Prof. Rameshwar Patil')" type="button">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Approve &amp; Issue</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Request Additional Credentials" type="button">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface-variant transition-colors" title="Reject Application" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Applicant 3: Dr. Kavita Sundaram -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-cover bg-center overflow-hidden flex-shrink-0" data-alt="Headshot of a middle aged female Indian plant virologist in laboratory attire holding a petri dish of plant samples, bright crisp indoor cleanroom lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvqQvh2gyZNYDBMrvCLdyxoK0WW4sqagMi6lxqB_58uFcfd1KbUVowFJ3O8UXeXkvf1imHCv_BmJ-Ln-_O3kEiUeCjLjAj2NVJA2_Yp9idornyhgI5mlR_RvUxqh-biId70c3GJNQq3tVKIWqptHFkk8Id2rCDKvTVnKu6djqdYFvquW6BGpkhbDo4iQZ2nga_KfAw9Sp-JySZoH4ahEuVX0757uURzroCp_S1pRPg6U90DlxruVUj')"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Dr. Kavita Sundaram</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">kavita.s@tnau.ac.in</span>
+<span class="font-label-sm text-label-sm text-outline">Zone X • Kaveri Delta Semi-Arid</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container font-label-sm text-label-sm font-semibold w-max">
+                    Plant Pathology &amp; Virology
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sub-discipline: Banana Bunchy Top &amp; Citrus Greening Vector Control</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">TNAU Coimbatore</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tamil Nadu Agricultural University</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono">REG: TNAU-EXP-1102</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1.5">
+<button class="inline-flex items-center gap-1.5 text-primary hover:underline font-label-sm text-label-sm text-left" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>TNAU_Doctoral_Degree.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Missing License Renewal Slip (2024)
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">88.0%</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Review Flag</span>
+</div>
+<div class="w-24 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[88%] h-full bg-accent-beige rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trial resolution: 38m avg</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<div class="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-1.5">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm font-semibold flex items-center gap-1" onclick="requestMoreDocuments('Dr. Kavita Sundaram')" type="button">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>Request Docs</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface-variant transition-colors" title="Reject Application" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Applicant 4: Harpreet Singh Brar -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-cover bg-center overflow-hidden flex-shrink-0" data-alt="Portrait of an Indian Sikh male agronomist wearing a turban and field vest smiling while inspecting wheat stalk genetics in a sunny agricultural test nursery." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-ERwktyrpau9txIAKyN7vHKWaQfI1GzOTAY8tY9FbzJI3zDh_rVt3HpTXAOSEhi5Sa2QQ3k6RSXHyHOS_RHWABHWsyIs9b3_vTbAcIjmZJGmF6gOtiUx6GU_fdy25qUs5qnZs2nd4v-7Cy5junA3PrlddMIbaQEZaIFhhWvho17yZ8MiN6EofRa73Gg184UxM3hPcQmO76sWODTR8cHGFLKmeFQ3wjIiabLr_POJhjUuCXLImmYCg')"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Harpreet Singh Brar, M.Sc</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">brar.agronomy@pau.edu</span>
+<span class="font-label-sm text-label-sm text-outline">Zone VI • Trans-Gangetic Alluvial</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold w-max">
+                    Hydrology &amp; Micro-Irrigation
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sub-discipline: Subsurface Drip &amp; Canal Water Salinity Remediation</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">PAU Ludhiana</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Punjab Agricultural University</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono">REG: PAU-AGR-4018</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1.5">
+<button class="inline-flex items-center gap-1.5 text-primary hover:underline font-label-sm text-label-sm text-left" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>PAU_Agronomy_MSc_Registry.pdf</span>
+</button>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> DigiLocker Verified
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">96.8%</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm">Compliant</span>
+</div>
+<div class="w-24 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[96%] h-full bg-primary rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trial resolution: 18m avg</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<div class="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-1.5">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-sm" onclick="triggerCredentialIssue('Harpreet Singh Brar')" type="button">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Approve &amp; Issue</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Request Additional Credentials" type="button">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface-variant transition-colors" title="Reject Application" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 4 of 14 queue applicants</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="" type="button">Previous</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold" type="button">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- LOWER SECTION: EXPERT WORKLOAD & REAL-TIME AVAILABILITY DISPATCH -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Left 8 Cols: Caseload & Availability Operations Console -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Agronomist Duty &amp; Caseload Balancing</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Real-time telemetry of triage capacity, dispatch queues, and active case routing across district hubs.</p>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-Dispatch: Live</span>
+</div>
+</div>
+<!-- Availability & Workload Table -->
+<div class="overflow-x-auto mt-2">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3">Agronomist</th>
+<th class="py-2.5 px-3">Assigned Zone</th>
+<th class="py-2.5 px-3">Active Cases</th>
+<th class="py-2.5 px-3">Throughput (7D)</th>
+<th class="py-2.5 px-3">Status Dispatch Toggle</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Expert Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center font-label-sm text-on-primary-fixed font-bold">DP</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Dr. Devendra P.</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Soil Science • MPKV</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">Pune / Ahmednagar</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">14 / 20</span>
+<span class="w-12 h-1.5 bg-surface-container rounded-full overflow-hidden inline-block">
+<span class="block h-full bg-primary" style="width: 70%;"></span>
+</span>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-medium">42 resolved</td>
+<td class="py-3 px-3">
+<button class="duty-toggle px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-semibold flex items-center gap-1.5 transition-all" onclick="toggleDutyState(this)" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>On-Duty</span>
+</button>
+</td>
+</tr>
+<!-- Expert Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center font-label-sm text-on-secondary-fixed font-bold">SM</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Dr. Shalini Mehta</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Entomology • CICR</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">Nagpur / Wardha</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">6 / 20</span>
+<span class="w-12 h-1.5 bg-surface-container rounded-full overflow-hidden inline-block">
+<span class="block h-full bg-tertiary-container" style="width: 30%;"></span>
+</span>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-medium">38 resolved</td>
+<td class="py-3 px-3">
+<button class="duty-toggle px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-semibold flex items-center gap-1.5 transition-all" onclick="toggleDutyState(this)" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Available for Triage</span>
+</button>
+</td>
+</tr>
+<!-- Expert Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-on-surface font-bold">VK</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Er. Vikramjit Kaur</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Irrigation • PAU</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">Bhatinda / Mansa</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">0 / 20</span>
+<span class="w-12 h-1.5 bg-surface-container rounded-full overflow-hidden inline-block">
+<span class="block h-full bg-outline-variant" style="width: 0%;"></span>
+</span>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-medium">19 resolved</td>
+<td class="py-3 px-3">
+<button class="duty-toggle px-3 py-1 rounded-full font-label-sm text-label-sm bg-error-container/40 text-on-error-container font-semibold flex items-center gap-1.5 transition-all" onclick="toggleDutyState(this)" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>On Leave</span>
+</button>
+</td>
+</tr>
+<!-- Expert Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center font-label-sm text-on-primary-fixed font-bold">AN</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Dr. Arvind Nambiar</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Pathology • KAU</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">Palakkad / Thrissur</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">18 / 20</span>
+<span class="w-12 h-1.5 bg-surface-container rounded-full overflow-hidden inline-block">
+<span class="block h-full bg-error" style="width: 90%;"></span>
+</span>
+</div>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-medium">51 resolved</td>
+<td class="py-3 px-3">
+<button class="duty-toggle px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-semibold flex items-center gap-1.5 transition-all" onclick="toggleDutyState(this)" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>On-Duty</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Routing Algorithm: Weighted Agro-Climatic Match + Active Latency ≤ 30m</span>
+<a class="text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+            Configure Dispatch Policies <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Right 4 Cols: Regional Zone Workload Analytics & Telemetry -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Zone Caseload Pressure</h2>
+<span class="material-symbols-outlined text-outline text-[20px]">public</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Live advisory queue saturation per agro-climatic quadrant.</p>
+<div class="flex flex-col gap-space-md">
+<!-- Zone 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">Zone IX: Western Plateau &amp; Hills</span>
+<span class="text-error font-semibold">88% Capacity (Critical)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 88%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>46 Active Agronomists</span>
+<span>312 Active Alerts</span>
+</div>
+</div>
+<!-- Zone 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">Zone VI: Trans-Gangetic Plain</span>
+<span class="text-primary font-semibold">54% Capacity (Nominal)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 54%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>32 Active Agronomists</span>
+<span>124 Active Alerts</span>
+</div>
+</div>
+<!-- Zone 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">Zone X: Southern Plateau (Kaveri)</span>
+<span class="text-tertiary font-semibold">68% Capacity (Moderate)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 68%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>28 Active Agronomists</span>
+<span>190 Active Alerts</span>
+</div>
+</div>
+<!-- Zone 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-medium">Zone XII: Western Coastal Plains</span>
+<span class="text-primary font-semibold">41% Capacity (Optimal)</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 41%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>22 Active Agronomists</span>
+<span>65 Active Alerts</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">lightbulb</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recommended: Approve 3 incoming applicants for Zone IX to relieve backlog.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal Container for Credential Issuance Confirmation -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="credentialModal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-xl flex flex-col gap-space-md transform transition-all">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="closeCredentialModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Issue Farmora Care Expert Credential</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          You are about to issue a cryptographically signed advisory credential to <span class="font-semibold text-on-surface" id="modalApplicantName">Applicant</span>.
+        </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Authority Level:</span>
+<span class="font-semibold text-on-surface">Level 2 Field Consultant</span>
+</div>
+<div class="flex justify-between">
+<span>Registry Key ID:</span>
+<span class="font-mono text-xs text-primary font-bold">FC-AGR-2025-0819X</span>
+</div>
+<div class="flex justify-between">
+<span>Prescription Authority:</span>
+<span class="text-primary font-semibold">Class I &amp; II Fungicides &amp; Biopesticides</span>
+</div>
+<div class="flex justify-between">
+<span>Verification Hash:</span>
+<span class="font-mono text-xs">sha256:4b91...88c2</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-2">
+<button class="px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="closeCredentialModal()" type="button">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5 shadow-sm" onclick="confirmCredentialIssue()" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Sign &amp; Dispatch Credential</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for micro-interactions -->
+<script>
+    function switchMainTab(btn, tabId) {
+      document.querySelectorAll('.tab-trigger').forEach(el => {
+        el.className = 'tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5';
+      });
+      btn.className = 'tab-trigger px-space-md py-2 rounded-lg font-label-md text-label-md transition-all bg-primary text-on-primary font-semibold flex items-center gap-1.5 shadow-sm';
+    }
+
+    function toggleDutyState(btn) {
+      const states = [
+        { label: 'On-Duty', bg: 'bg-primary-fixed', text: 'text-on-primary-fixed', dot: 'bg-primary' },
+        { label: 'Available for Triage', bg: 'bg-surface-container-high', text: 'text-on-surface-variant', dot: 'bg-outline' },
+        { label: 'On Leave', bg: 'bg-error-container/40', text: 'text-on-error-container', dot: 'bg-error' }
+      ];
+
+      const currentText = btn.querySelector('span:last-child').textContent.trim();
+      let currentIndex = states.findIndex(s => s.label === currentText);
+      let nextIndex = (currentIndex + 1) % states.length;
+      let nextState = states[nextIndex];
+
+      btn.className = `duty-toggle px-3 py-1 rounded-full font-label-sm text-label-sm ${nextState.bg} ${nextState.text} font-semibold flex items-center gap-1.5 transition-all`;
+      btn.innerHTML = `<span class="w-2 h-2 rounded-full ${nextState.dot}"></span><span>${nextState.label}</span>`;
+    }
+
+    function triggerCredentialIssue(name) {
+      document.getElementById('modalApplicantName').innerText = name;
+      const modal = document.getElementById('credentialModal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeCredentialModal() {
+      document.getElementById('credentialModal').classList.add('hidden');
+    }
+
+    function confirmCredentialIssue() {
+      const modal = document.getElementById('credentialModal');
+      modal.classList.add('hidden');
+      alert('Official Farmora Care digital agronomist credential has been registered on the institutional ledger and sent to the applicant.');
+    }
+
+    function requestMoreDocuments(name) {
+      alert(`Automated dossier deficiency notice dispatched to ${name}. Application moved to provisional holding status.`);
+    }
+  </script>
+</div></main></div></body></html>

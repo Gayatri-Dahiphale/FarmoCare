@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-container": "#71633f",
+          "on-secondary-fixed-variant": "#524524",
+          "primary-container": "#5c7d5c",
+          "on-secondary": "#ffffff",
+          "surface-bright": "#fcfae9",
+          "surface-container-highest": "#e4e3d3",
+          "accent-beige": "#D7CE93",
+          "on-primary": "#ffffff",
+          "error-container": "#ffdad6",
+          "surface": "#fcfae9",
+          "primary": "#446345",
+          "inverse-on-surface": "#f3f1e1",
+          "on-secondary-fixed": "#241a01",
+          "tertiary-fixed": "#ece772",
+          "surface-container-low": "#f6f4e4",
+          "tertiary": "#646100",
+          "surface-variant": "#e4e3d3",
+          "primary-fixed-dim": "#acd0aa",
+          "error": "#ba1a1a",
+          "on-primary-fixed-variant": "#2f4e31",
+          "surface-dim": "#dcdbcb",
+          "surface-container-lowest": "#ffffff",
+          "primary-fixed": "#c8ecc5",
+          "secondary-fixed-dim": "#d7c59a",
+          "on-background": "#1b1c12",
+          "secondary-container": "#f4e1b4",
+          "inverse-primary": "#acd0aa",
+          "on-tertiary": "#ffffff",
+          "on-surface-variant": "#424841",
+          "surface-tint": "#466647",
+          "border-subtle": "#E5E4DC",
+          "on-error": "#ffffff",
+          "on-tertiary-fixed": "#1e1d00",
+          "on-primary-container": "#f7fff2",
+          "surface-container": "#f0efde",
+          "background": "#fcfae9",
+          "tertiary-fixed-dim": "#cfcb59",
+          "inverse-surface": "#303126",
+          "canvas-bg": "#FBFBFB",
+          "surface-container-high": "#eae9d8",
+          "on-surface": "#1b1c12",
+          "secondary-fixed": "#f4e1b4",
+          "outline-variant": "#c2c8be",
+          "surface-muted": "#F3F2EB",
+          "tertiary-container": "#b3af41",
+          "on-tertiary-fixed-variant": "#4b4900",
+          "secondary": "#6b5d3a",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#032109",
+          "outline": "#737970",
+          "on-tertiary-container": "#434100"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.75rem",
+          "margin-mobile": "1.25rem",
+          "margin-tablet": "2rem",
+          "margin": "3rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.5rem"
+        },
+        "fontFamily": {
+          "headline-lg-mobile": [
+            "Manrope"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-md": [
+            "Manrope"
+          ],
+          "body-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "Manrope"
+          ],
+          "headline-lg": [
+            "Manrope"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "22px",
+            {
+              "lineHeight": "30px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-6 pb-6 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-6 mb-8 flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-2xl">potted_plant</span></div><div><div class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">Farmora</div><div class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mt-0.5">Care Expert Portal</div></div></div><div class="px-6 mb-4"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Advisory Navigation</span></div><nav class="flex-1 px-4 flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="expert-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Expert Dashboard</span></a><a class="flex items-center justify-between px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="case-queue" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assigned Cases</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed">12</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="formulations-and-database" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span>Formulations &amp; Database</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="historical-archives" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Historical Archives</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="expert-profile-and-certifications" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Expert Profile &amp; Certifications</span></a></nav><div class="px-4 pt-4 mt-auto border-t border-subtle"><div class="p-3 rounded-xl bg-surface-container flex items-center justify-between"><div class="flex items-center gap-2.5"><div class="w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-primary-fixed"></div><div><div class="font-label-md text-label-md text-on-surface leading-tight">Agronomy Network</div><div class="font-label-sm text-label-sm text-on-surface-variant">Duty Active</div></div></div><span class="material-symbols-outlined text-outline text-[18px]">wifi_tethering</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-4 flex-1 max-w-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-xl bg-surface-container-lowest border border-border-subtle font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search cases, telemetry, crop varieties..." type="text"/></div></div><div class="flex items-center gap-5"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><button class="p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-5 w-px bg-border-subtle"></div><div class="flex items-center gap-3"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface leading-tight">Dr. Elena Vance</div><div class="font-label-sm text-label-sm text-primary">Lead Agronomist</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface w-full px-8 min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Navigation & Context Hierarchy -->
+<div class="flex flex-col gap-2 pt-6 pb-8">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span>Account Stewardship</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Universal Security &amp; Profile Settings</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mt-2">
+<div class="max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Account Security, Credentials &amp; Preferences</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          Manage your authenticated agricultural profile, digital signature certificates, biometric two-factor authentication, and notification conduits.
+        </p>
+</div>
+<div class="flex items-center gap-3 self-start lg:self-end">
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>CIB&amp;RC Secure Node: Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Settings Layout Grid -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Left Navigation Settings Pillar (Sticky Sub-nav) -->
+<aside class="col-span-12 lg:col-span-4 xl:col-span-3 sticky top-24">
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col gap-1">
+<div class="px-4 py-2.5 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Control Dimensions</span>
+</div>
+<button class="group flex items-center justify-between w-full px-4 py-3 rounded-lg bg-surface-container-high text-primary font-semibold text-left transition-all" type="button">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">badge</span>
+<span class="font-body-md text-body-md truncate">Personal &amp; Professional Profile</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary opacity-80">arrow_right</span>
+</button>
+<button class="group flex items-center justify-between w-full px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface text-left transition-all" type="button">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline group-hover:text-primary transition-colors">fingerprint</span>
+<span class="font-body-md text-body-md truncate">Security &amp; Two-Factor</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">2FA ON</span>
+</button>
+<button class="group flex items-center justify-between w-full px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface text-left transition-all" type="button">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline group-hover:text-primary transition-colors">history_edu</span>
+<span class="font-body-md text-body-md truncate">Digital Signatures &amp; CIB&amp;RC</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+</button>
+<button class="group flex items-center justify-between w-full px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface text-left transition-all" type="button">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline group-hover:text-primary transition-colors">contactless</span>
+<span class="font-body-md text-body-md truncate">SMS, WhatsApp &amp; Audio</span>
+</div>
+</button>
+<button class="group flex items-center justify-between w-full px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface text-left transition-all" type="button">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline group-hover:text-primary transition-colors">devices</span>
+<span class="font-body-md text-body-md truncate">Connected Devices &amp; Tablets</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">2</span>
+</button>
+<button class="group flex items-center justify-between w-full px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface text-left transition-all" type="button">
+<div class="flex items-center gap-3 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-outline group-hover:text-primary transition-colors">security</span>
+<span class="font-body-md text-body-md truncate">Data Privacy &amp; Cadastral</span>
+</div>
+</button>
+</div>
+<!-- Compliance & Certification Snapshot Card -->
+<div class="mt-6 bg-surface-container rounded-xl p-5 shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between relative z-10">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Statutory Compliance</div>
+<div class="font-title-md text-title-md text-on-surface mt-1">ICAR Agri-ID Tier 3</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">Directly integrated with Krishi Vigyan advisory registry.</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">verified_user</span>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-container-highest/60 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Audit Cycle 2024-25</span>
+<span class="text-primary font-semibold">100% Certified</span>
+</div>
+</div>
+</aside>
+<!-- Main Configuration Stream -->
+<div class="col-span-12 lg:col-span-8 xl:col-span-9 flex flex-col gap-8">
+<!-- Panel 1: Profile & Affiliation -->
+<section class="bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm">
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">person_pin</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Profile &amp; Statutory Affiliation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Central agricultural identity verified under ICAR registry protocols.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold tracking-wide">
+            VERIFIED EXPERT
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<!-- Avatar Block -->
+<div class="md:col-span-4 flex flex-col items-center p-6 bg-surface-container-low rounded-xl text-center">
+<div class="relative w-28 h-28 rounded-full overflow-hidden shadow-md ring-4 ring-surface-container-lowest mb-4">
+<img class="w-full h-full object-cover" data-alt="Portrait photograph of Dr. Ramesh M. Kulkarni, a distinguished Indian agronomist in his late forties wearing an organic linen collared shirt with soft natural lighting and agricultural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoSI-VhFEoPNLPZDSm-NOyWZLQteIKFKIFedf_5XdZUBQSM7BTFM3n-W2a-brFMU28EhO8NBSrEm46k36B_4bddbrGRxAGt7MdN0cs99uUFYiMzqlsws2xzY0SGYMQmhxgPYiIcQbLNzJMqzZy4whELhMQ00wixKs3x0RQSJCyGVpuf_-bkUQs3IiLPGh5JepTniuNua9ytZPS3nEW4JnRe6J8oA_eKlqMTPYx6KxzlOUAtz4mVOuf"/>
+<div class="absolute inset-0 bg-inverse-surface/10"></div>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary transition-all font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Update Photo</span>
+</button>
+<div class="font-label-sm text-label-sm text-outline mt-2">JPG, PNG max 4MB. 600x600px</div>
+</div>
+<!-- Affiliation Details -->
+<div class="md:col-span-8 flex flex-col gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Full Legal Name</label>
+<div class="px-4 py-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface font-semibold">
+                  Dr. Ramesh M. Kulkarni
+                </div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Licensure Clearance Tier</label>
+<div class="px-4 py-3 rounded-lg bg-surface-container font-body-md text-body-md text-primary font-semibold flex items-center justify-between">
+<span>Level-3 Diagnostic Clearance</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Official Ministry / ICAR Email</label>
+<div class="flex items-center justify-between px-4 py-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface">
+<span>r.kulkarni@kvkniphad.icar.gov.in</span>
+<span class="material-symbols-outlined text-[18px] text-primary">mark_email_read</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Primary Mobile (Direct Telemetry)</label>
+<div class="flex items-center justify-between px-4 py-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface">
+<span class="font-medium">+91 98220-41829</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">Verified</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Primary Extension Station</label>
+<div class="px-4 py-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface truncate">
+                  Krishi Vigyan Kendra, Niphad
+                </div>
+</div>
+</div>
+<!-- Language Dialect Protocols -->
+<div class="flex flex-col gap-2 pt-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Prescription Language Pipeline</label>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">translate</span>
+<div>
+<div class="font-body-md text-body-md text-on-surface font-semibold">Marathi (Primary) • English (Statutory)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Automated dual-script output on farmer pesticide recommendation slips.</div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-label-sm font-label-sm hover:bg-secondary-container transition-colors" type="button">
+                  Modify Dialect
+                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Panel 2: Biometric & Security Controls -->
+<section class="bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm">
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Biometric &amp; Security Controls</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Defense-in-depth authorization protecting field records and formulation records.</p>
+</div>
+</div>
+<span class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            FIDO2 Enabled
+          </span>
+</div>
+<div class="space-y-6">
+<!-- Toggle 1: 2FA Hardware Key -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-4 max-w-xl">
+<div class="p-2.5 rounded-lg bg-surface-container text-primary mt-0.5">
+<span class="material-symbols-outlined text-[24px]">key</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Two-Factor Authentication (2FA)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-normal">
+                  Requires a physical security key (YubiKey/FIDO2) or TOTP authenticator application when submitting critical crop pest alerts.
+                </p>
+<div class="flex items-center gap-2 mt-2 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Active Hardware Key: YubiKey 5C NFC (Registered Aug 2024)</span>
+</div>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer self-end sm:self-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-surface-container-lowest after:border-surface-container-highest after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2: 15-Minute Kiosk Inactivity Logout -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-4 max-w-xl">
+<div class="p-2.5 rounded-lg bg-surface-container text-primary mt-0.5">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">15-Minute Automatic Inactivity Logout</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-normal">
+                  Mandatory protocol for community village kiosks and field station terminals to prevent unauthorized recommendation issuance.
+                </p>
+<span class="inline-block mt-2 font-label-sm text-label-sm text-on-secondary-container bg-secondary-container/60 px-2.5 py-0.5 rounded-full font-semibold">
+                  Required for Field Station Niphad
+                </span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer self-end sm:self-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-surface-container-lowest after:border-surface-container-highest after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Password Management Row -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-4">
+<div class="p-2.5 rounded-lg bg-surface-container text-primary mt-0.5">
+<span class="material-symbols-outlined text-[24px]">password</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Government Single Sign-On / Master Key</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Last updated 42 days ago • High cryptographic strength (24-char entropy)
+                </div>
+</div>
+</div>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors font-semibold self-end sm:self-center" type="button">
+              Change Password
+            </button>
+</div>
+</div>
+</section>
+<!-- Panel 3: Digital Prescriptions & Signature Seal -->
+<section class="bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm">
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">draw</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Digital Prescriptions &amp; Signature Seal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic eSign and official wet stamp imprint appended to all farmer advisory dossiers.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-semibold tracking-wide">
+            CIB&amp;RC LICENSED
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Physical Stamp / eSign Preview -->
+<div class="md:col-span-5 bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-3">Certified Wet Stamp &amp; Hash Seal</div>
+<!-- Stamp graphic card simulation -->
+<div class="relative bg-surface-container-lowest p-6 rounded-lg shadow-inner flex flex-col items-center justify-center text-center overflow-hidden">
+<div class="w-20 h-20 rounded-full border-2 border-primary/40 flex items-center justify-center mb-3 p-1">
+<div class="w-full h-full rounded-full border border-dashed border-primary/60 flex flex-col items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">agriculture</span>
+<span class="font-label-sm text-[8px] uppercase font-bold leading-none mt-1">ICAR • MH</span>
+</div>
+</div>
+<div class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">KVK NIPHAD</div>
+<div class="font-label-sm text-label-sm text-on-surface font-semibold mt-0.5">ICAR ACCREDITED ADVISORY</div>
+<div class="font-body-sm text-body-sm text-secondary font-medium">DR. RAMESH M. KULKARNI</div>
+<div class="mt-3 text-[10px] text-outline font-mono tracking-tighter uppercase">
+                  SHA256: 8f4e-28b9-c119-e4a0-77a8
+                </div>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+</div>
+</div>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 py-2 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors font-medium" type="button">
+                Upload New Seal
+              </button>
+<button class="px-3 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Regulatory Licensure Metadata -->
+<div class="md:col-span-7 flex flex-col justify-between gap-4">
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Central Insecticides Board Licensure</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                    Active Status
+                  </span>
+</div>
+<div class="font-title-md text-title-md text-on-surface font-mono font-bold mt-1">
+                  ICAR-MH-884920
+                </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Permits signing schedule IV &amp; V bio-rational and chemical compound pest mitigation regimes.
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3.5 rounded-lg bg-surface-container-low">
+<div class="font-label-sm text-label-sm text-outline">Licensure Validity</div>
+<div class="font-body-md text-body-md font-semibold text-on-surface mt-0.5">31 Dec 2027</div>
+<div class="font-label-sm text-label-sm text-primary mt-1">3 Years Remaining</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low">
+<div class="font-label-sm text-label-sm text-outline">DSC Cryptography Key</div>
+<div class="font-body-md text-body-md font-semibold text-on-surface mt-0.5">Class-3 e-Mudhra</div>
+<div class="font-label-sm text-label-sm text-outline mt-1">Hardware Token Valid</div>
+</div>
+</div>
+<!-- Agro-Telemetry Signature Audit -->
+<div class="p-4 rounded-lg bg-primary-container/10 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_stories</span>
+<div class="min-w-0 flex-1">
+<div class="font-label-md text-label-md font-semibold text-on-surface">348 Prescriptions Signed This Season</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Zero regulatory warnings or disputed contraindications logged.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Panel 4: Active Logins & Connected Hardware -->
+<section class="bg-surface-container-lowest rounded-xl p-6 lg:p-8 shadow-sm">
+<div class="flex items-center justify-between pb-6 mb-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">devices_wearables</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Logins &amp; Connected Hardware</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time session monitoring across desktop command consoles and ruggedized field tablets.</p>
+</div>
+</div>
+<button class="px-4 py-2 rounded-full bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+<span>Revoke All Remote Sessions</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Session 1: Current Desktop Session -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-xl bg-surface-container-low gap-4">
+<div class="flex items-start gap-4">
+<div class="w-11 h-11 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">desktop_mac</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Chrome on macOS • Pune Regional Hub</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-semibold">Active Now</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  IP: 14.139.122.4 • Signed via ICAR National Knowledge Network LAN • Niphad Agronomy Cluster
+                </div>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-outline self-end sm:self-center">Current Station</div>
+</div>
+<!-- Session 2: Rugged Field Tablet -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-xl bg-surface-container-low gap-4">
+<div class="flex items-start gap-4">
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">tablet_android</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Samsung Galaxy Tab Active4 Pro</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed">Field Sync</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Field Unit #04 • Station Niphad Soil Unit • Last synced 12 minutes ago from Vineyard Block B-7
+                </div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-error-container hover:text-on-error-container font-label-sm text-label-sm transition-colors self-end sm:self-center" type="button">
+              Revoke Node
+            </button>
+</div>
+</div>
+</section>
+<!-- Persistent Command & Save Action Bar -->
+<div class="sticky bottom-6 z-30 p-4 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<span>Modifications to CIB&amp;RC keys trigger cryptographic re-verification email.</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors font-medium" type="button">
+            Revert to Default Settings
+          </button>
+<button class="px-8 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-md font-semibold flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

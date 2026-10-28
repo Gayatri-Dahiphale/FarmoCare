@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#434100", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "surface-container-lowest": "#ffffff", "surface-container-highest": "#e4e3d3", "accent-beige": "#D7CE93", "on-primary-fixed-variant": "#2f4e31", "outline": "#737970", "primary-fixed": "#c8ecc5", "primary-container": "#5c7d5c", "on-tertiary": "#ffffff", "on-background": "#1b1c12", "canvas-bg": "#FBFBFB", "border-subtle": "#E5E4DC", "surface-variant": "#e4e3d3", "on-secondary-fixed-variant": "#524524", "on-surface-variant": "#424841", "surface-dim": "#dcdbcb", "surface": "#fcfae9", "on-tertiary-fixed": "#1e1d00", "surface-container-high": "#eae9d8", "inverse-surface": "#303126", "on-primary-container": "#f7fff2", "on-secondary": "#ffffff", "background": "#fcfae9", "primary-fixed-dim": "#acd0aa", "secondary": "#6b5d3a", "secondary-container": "#f4e1b4", "on-secondary-fixed": "#241a01", "surface-bright": "#fcfae9", "surface-container": "#f0efde", "inverse-on-surface": "#f3f1e1", "on-error-container": "#93000a", "error": "#ba1a1a", "secondary-fixed": "#f4e1b4", "surface-muted": "#F3F2EB", "on-surface": "#1b1c12", "on-primary": "#ffffff", "surface-tint": "#466647", "secondary-fixed-dim": "#d7c59a", "on-primary-fixed": "#032109", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#4b4900", "tertiary-fixed-dim": "#cfcb59", "inverse-primary": "#acd0aa", "tertiary-container": "#b3af41", "tertiary": "#646100", "primary": "#446345", "tertiary-fixed": "#ece772", "on-secondary-container": "#71633f", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "margin-tablet": "2rem", "margin": "3rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-sm": "0.75rem", "gutter-mobile": "1rem" }, "fontFamily": { "title-md": ["Manrope"], "label-sm": ["Manrope"], "headline-sm": ["Manrope"], "body-md": ["Manrope"], "headline-lg": ["Manrope"], "label-md": ["Manrope"], "headline-lg-mobile": ["Manrope"], "display-mobile": ["Manrope"], "display": ["Manrope"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "headline-md": ["Manrope"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="px-space-lg mb-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Farmora Care Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJlb4vuGlIwt7ZidnYBeSJQe-TABNr9DmHsRh0-dvoAnHixafX5RgyOjK4QcXU5aj9CuXVi5mPYPKdBTyoGOuQTMN4JaZ88_nYl8W_3WBvG0OeGUxB4kacKiXlIUfcrl7tSCULZH8dkiGA26AzQYbF2FH_jLo97ICYay14EfkufSTuqLfzi1pmyw62SjLvcDtglyuWA7I66r3ajSgVw4996xRkkfhqePWc4EFEaUKaRKaRQT5J0co"/><span class="font-title-md text-title-md text-on-surface tracking-tight">Farmora Care</span></div></div><div class="px-space-md mb-space-md"><div class="p-1.5 rounded-xl bg-surface-container flex items-center justify-between"><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]">Farmer</button><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Expert</button><button class="flex-1 py-1 rounded-lg font-label-sm text-label-sm text-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors">Admin</button></div></div><div class="flex-1 overflow-y-auto px-space-md flex flex-col gap-space-lg"><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Farmer Workspace</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-report-problem" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-label-md text-label-md">Report a Problem</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-my-reports" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-md text-label-md">My Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-similar-solved" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-label-md text-label-md">Similar Solved</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="farmer-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-md text-label-md">Profile</span></a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Agronomist Expert</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-assigned-cases" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-md text-label-md">Assigned Cases</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-unresolved-queue" href="#"><span class="material-symbols-outlined text-[20px]">pending_actions</span><span class="font-label-md text-label-md">Unresolved Queue</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" data-path="expert-similar-solved-cases" href="#"><span class="material-symbols-outlined text-[20px]">find_in_page</span><span class="font-label-md text-label-md">Similar Solved Cases</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="knowledge-base" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-md text-label-md">Knowledge Base</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="expert-my-profile" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-md text-label-md">My Profile</span></a></nav></div><div class="flex flex-col gap-1"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System Administration</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-system-overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-md text-label-md">System Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-unassigned-reports" href="#"><span class="material-symbols-outlined text-[20px]">mark_chat_unread</span><span class="font-label-md text-label-md">Unassigned Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-expert-assignment" href="#"><span class="material-symbols-outlined text-[20px]">engineering</span><span class="font-label-md text-label-md">Expert Assignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-user-management" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md">User Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="admin-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-label-md text-label-md">Analytics</span></a></nav></div></div><div class="px-space-md pt-space-xs mt-auto"><div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">support_agent</span><div><p class="font-label-sm text-label-sm font-semibold text-on-surface">Field Support</p><p class="font-label-sm text-label-sm text-outline">24/7 Soil Desk</p></div></div><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-8 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Agronomy Network Active</span></div><div class="hidden md:flex items-center relative w-72"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-full bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search case ID, crop, symptom..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTDRkpU_BDI5TEBZoVs1k1TxorzC4y-0KpPHAxRgkzBncfNvorkdbbD6CPi_XgoRd_YU-qejQnly66XegGLc149SRaNyjI-NwRq96S9Gq0ahpwmJxckE2Gv_udF_VWC2tW3_68ABRuwDEswnULltYVSCfshcdNizZ3pvzcYcJjPuT97V9qfr6FgW5rRn0LBt_Z48m2pnUeiKOLHMDfHuq2xK5PZUtF6gVofQyCa8lxwZ4GB2Uogo-G"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-primary font-medium leading-tight">Certified Agronomist</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-8 py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Navigation & Architectural Breadcrumb Meta -->
+<div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-md">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-space-xs text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Agronomic Diagnostic Matrix</span>
+<span class="text-xs">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Case #FC-9482 Reference</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Historical Case Retrieval &amp; Agronomic Knowledge Base
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Reference archive for <span class="font-semibold text-on-surface">Case #FC-9482</span>: Cotton (Flowering) — Bollworm / Lepidopteran Damage profile with verified empirical outcomes.
+      </p>
+</div>
+<!-- Active Vector Matching Score Indicator -->
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-sm rounded-xl shrink-0 self-start md:self-auto shadow-sm">
+<div class="relative w-10 h-10 flex items-center justify-center">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="96, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-label-sm font-bold text-on-surface">96%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Vector Proximity</span>
+<span class="font-body-sm text-body-sm text-outline">Top Match Confidence</span>
+</div>
+</div>
+</div>
+<!-- Prominent Scientific Disclaimer Banner (Warm Beige Container) -->
+<div class="mb-space-lg rounded-xl bg-secondary-container/40 p-space-md shadow-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-secondary-fixed">NOTICE: DECISION-SUPPORT TELEMETRY</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-container">ICAR-CICR Guidance Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed leading-relaxed">
+          Historical similarity is a calibrated reference model, not an autonomous field prescription. Agronomists must verify localized crop phenology, ambient evapotranspiration, and documented pyrethroid/diamide resistance vectors prior to finalizing remedial directives.
+        </p>
+</div>
+</div>
+</div>
+<!-- Search & Multi-Vector Constraint Filter Bar -->
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-lg">
+<!-- Search Query Bar -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">psychology</span>
+<input class="w-full pl-11 pr-10 py-2.5 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-low transition-colors" placeholder="Query semantic index..." type="text" value="Bollworm damage with square drop in cotton flowering stage"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sync_saved_locally</span>
+          Run Neural Match
+        </button>
+<button class="p-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Export Match Corpus">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Active Constraint Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-1">Active Constraints:</span>
+<button class="group flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-primary text-[14px]">check</span>
+<span>Strict Crop Match: <strong>Cotton (Gossypium hirsutum)</strong></span>
+<span class="material-symbols-outlined text-outline text-[14px] group-hover:text-error transition-colors">close</span>
+</button>
+<button class="group flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-primary text-[14px]">check</span>
+<span>Agro-Climatic Zone: <strong>Maharashtra (Zone 7)</strong></span>
+<span class="material-symbols-outlined text-outline text-[14px] group-hover:text-error transition-colors">close</span>
+</button>
+<button class="group flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-dim transition-colors">
+<span class="material-symbols-outlined text-primary text-[14px]">check</span>
+<span>Season: <strong>Kharif 2023–2024</strong></span>
+<span class="material-symbols-outlined text-outline text-[14px] group-hover:text-error transition-colors">close</span>
+</button>
+<button class="group flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/20 text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+<span>Resolution Verified: <strong>University Board (PDKV / CICR)</strong></span>
+</button>
+<button class="text-primary font-label-sm text-label-sm font-semibold underline underline-offset-2 ml-auto hover:text-on-primary-fixed-variant transition-colors">
+        Reset All (4)
+      </button>
+</div>
+</div>
+<!-- Primary Asymmetric Grid: Historical Solved Cases (Left 8 Cols) & Live Analytical Benchmark (Right 4 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Column: Case Cards Stream (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Card 1: 96% Match Benchmark (Featured Golden Standard) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<!-- Header Metadata -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">
+              96% Proximity
+            </span>
+<span class="font-title-md text-title-md text-on-surface">Case #FC-8120</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Cotton (Flowering Stage)</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-outline">Wardha District (Kharif 2023)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> ICAR-CICR Board Validated
+          </span>
+</div>
+<!-- Semantic Match Explanation Tag -->
+<div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<p class="font-body-sm text-body-sm">
+<strong class="font-semibold text-on-surface">Semantic Match Rationale:</strong> Same hybrid seed cultivar, 68-day phenological flowering stage, and identical larval bore morphology on central squares.
+          </p>
+</div>
+<!-- Image & Diagnostic Evidence Layout -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-md">
+<div class="sm:col-span-4 rounded-lg overflow-hidden bg-surface-container relative group h-44">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Agronomic macro photograph of a green cotton plant flowering square exhibiting young bollworm larval bore puncture with small brown frass granular deposits on the calyx and stem axis, clear natural daylight, highly technical botanical documentation style, crisp focus on damaged floral bracts, warm earth tones and rich sage leaf textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt5XdnSsGQrL0eYB6g4kOAUP5d_wHpagVLV3XdCSaG8TthY9OFCljcOolobqR1FVE3kdtZFF2QLUY_dgSkCZ86sL_FACldQaVnN5Uos7t1xxBPqkt4d-JPFdO7RWZc3BBSjMI-L-oQ6w4evjfUWlQfFsYKSOWbgvkMseIiwFO9AsxVbwSfdyrdAoFoj_5cyXuARwUmNIi-wCEGLoTcBNrld61tM_Mg-vcw3PIL5ur1JVT_U3tVitGF"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm text-on-surface">
+              Archived Telemetry Image
+            </div>
+</div>
+<div class="sm:col-span-8 flex flex-col justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Farmer Field Symptom Log</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                “Severe young square drop (flaring of bracteoles) accompanied by visible moist frass deposits along the central stem junction. 14% square shed rate registered over 48 hours.”
+              </p>
+</div>
+<!-- Approved Advisory Container -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">clinical_notes</span>
+                  Verified Prescription
+                </span>
+<span class="font-label-sm text-label-sm text-outline">Dr. S. Bhave, CICR Agronomist</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-semibold">
+                Chlorantraniliprole 18.5% SC @ 0.3 mL/L water via hollow-cone nozzle.
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Secondary application: Neem oil (1500 ppm) @ 2.5 mL/L at day 10. Resulted in 92% boll retention within 6 days post-application.
+              </p>
+</div>
+</div>
+</div>
+<!-- Empirical Resolution Outcome & Primary CTA Triggers -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pt-space-xs gap-space-sm bg-surface-container-high/40 -mx-space-lg -mb-space-lg p-space-md mt-1">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">trending_up</span>
+<span class="font-body-sm text-body-sm">
+<strong class="font-semibold">Harvest Validation:</strong> Yield retained at 21.4 q/ha (+14% relative to non-intervened neighboring acreage). Audited October 2023.
+            </span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface transition-colors shadow-sm">
+              Inspect Full Case
+            </button>
+<button class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+              Adopt Protocol
+            </button>
+</div>
+</div>
+</article>
+<!-- Card 2: 88% Match (Biological & Pheromone Pre-Emptive Protocol) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md">
+<!-- Header Metadata -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-bold">
+              88% Proximity
+            </span>
+<span class="font-title-md text-title-md text-on-surface">Case #FC-7894</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Cotton (Early Square Formation)</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-outline">Jalna District (Kharif 2023)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">eco</span> Bio-Integrated Strategy
+          </span>
+</div>
+<!-- Semantic Match Explanation Tag -->
+<div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">alt_route</span>
+<p class="font-body-sm text-body-sm">
+<strong class="font-semibold text-on-surface">Semantic Match Rationale:</strong> Analogous Helicoverpa armigera moth flight indices with low early-square damage thresholds (ETL &lt; 5%).
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-md">
+<div class="sm:col-span-4 rounded-lg overflow-hidden bg-surface-container relative group h-44">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Agronomic scientific photograph of a field trap with yellow pheromone lure surrounded by lush green cotton foliage in Jalna district, early morning diffused sunlight, clean agricultural research capture showing minimal initial foliar damage and precision pest monitoring equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Elebd1Pz0BQAAZh9CjWGMXal4Agq7kScMWpfnN7xoAWXq2mr0RlZSNedQnSDn-pjjapdmU9YGQAiAbcEcjT8jQ_hB2xu_TAvVDMOEZu4Fp2wzY_iF8EHwY606XOn5InmWeQ4VY1z_mvciSGrTs_CO-dt5cTVcHe8_l-hqfxyVhJf4yg-1DR9p6juX-A0TOkntZF5Jx8mlTNpiiJZB4Zxy9mLSTvJtlSHCZyq35zpWaMtq-9nCX8Q"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm text-on-surface">
+              Monitoring Station Jalna-B
+            </div>
+</div>
+<div class="sm:col-span-8 flex flex-col justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Farmer Field Symptom Log</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                “Noticeable flared squares on perimeter rows. Moth sightings elevated after sustained overcast spell. Initial larval presence detected on 3 out of 20 scouted plants.”
+              </p>
+</div>
+<!-- Approved Advisory Container -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">verified_user</span>
+                  Approved Expert Advisory
+                </span>
+<span class="font-label-sm text-label-sm text-outline">Dr. V. Deshmukh, Soil &amp; IPM Specialist</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary font-semibold">
+                Installation of funnel pheromone traps @ 5 units/acre + Bacillus thuringiensis (Bt var. kurstaki) spray @ 2g/L.
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Infestation halted before chemical diamide thresholds were triggered. Preserved field beneficial predator count (chrysoperla &amp; predatory wasps).
+              </p>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pt-space-xs gap-space-sm bg-surface-container-high/40 -mx-space-lg -mb-space-lg p-space-md mt-1">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm">
+<strong class="font-semibold">Resolution Notes:</strong> Zero synthetic spray overhead incurred. Input savings totaled ₹1,850/acre. Verified November 2023.
+            </span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface transition-colors shadow-sm">
+              Inspect Full Case
+            </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+              Save to Dossier
+            </button>
+</div>
+</div>
+</article>
+<!-- Card 3: 82% Match (Late Complex with Secondary Pathogen) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md">
+<!-- Header Metadata -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-bold">
+              82% Proximity
+            </span>
+<span class="font-title-md text-title-md text-on-surface">Case #FC-6540</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Cotton (Late Boll Development)</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-outline">Yavatmal District (Kharif 2022)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">history_edu</span> Dual Pathogen Case
+          </span>
+</div>
+<!-- Semantic Match Explanation Tag -->
+<div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">grain</span>
+<p class="font-body-sm text-body-sm">
+<strong class="font-semibold text-on-surface">Semantic Match Rationale:</strong> Secondary fungal entry via larval bore tunnels in high relative humidity (&gt;85%).
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-md">
+<div class="sm:col-span-4 rounded-lg overflow-hidden bg-surface-container relative group h-44">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Agronomic scientific photograph of a maturing cotton boll exhibiting dual infection: caterpillar larval entry hole accompanied by dark water-soaked bacterial boll rot lesions, high contrast studio lighting on botanical sample, sharp textural detail of damaged cotton fiber and carpel wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoGV_7iLRDefxJme8B4_fIBSgWwSxB8IZSjHsB9mGilCanLLfLk4OhE4qVYpEux_IcYg7bLepxLySJhBkEk4PfDUmR6tBE7SCz-gr4XjBMZ7MiIw-YsKumuQYdMiQEq1I7e5PAa6xPhAmHJDYLecIeWQepH2VO4rzNr6gK-pGk2cGHe_ymOtrJKbn2sZ1OEx6D_QZA0xdoi4O1-kU-vwYj0YwhuaH3kYdonHhYBUqBolDjW15UQ2t4"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm text-on-surface">
+              Pathology Archive Y-654
+            </div>
+</div>
+<div class="sm:col-span-8 flex flex-col justify-between gap-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Farmer Field Symptom Log</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                “Bolls developing dark lesions around caterpillar entry holes. Locules decaying internally with moist foul-smelling rotting after 4 days of continuous monsoon precipitation.”
+              </p>
+</div>
+<!-- Approved Advisory Container -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">healing</span>
+                  Combination Therapy Advisory
+                </span>
+<span class="font-label-sm text-label-sm text-outline">State Agronomy Advisory Panel</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold">
+                Copper Oxychloride 50 WP (2.5g/L) tank-mixed with Profenofos 50% EC (2 mL/L).
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                Arrested secondary Xanthomonas/Fusarium spread across unaffected bolls. Harvest loss mitigated to &lt;8% total quadrant impact.
+              </p>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pt-space-xs gap-space-sm bg-surface-container-high/40 -mx-space-lg -mb-space-lg p-space-md mt-1">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm">
+<strong class="font-semibold">Post-Harvest Metric:</strong> Quality index preserved at Staple Grade A. Validated January 2023.
+            </span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface transition-colors shadow-sm">
+              Inspect Full Case
+            </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+              Compare Protocol
+            </button>
+</div>
+</div>
+</article>
+<!-- Elegant Refined Criteria Empty State Module -->
+<section class="bg-surface-container-low/60 rounded-xl p-space-xl flex flex-col items-center text-center shadow-sm relative overflow-hidden">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-outline mb-space-sm shadow-inner">
+<span class="material-symbols-outlined text-[32px]">filter_list_off</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold tracking-tight mb-1">
+          No 100% Identical Micro-Soil Matches
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-space-md">
+          No cases match this exact combination of deep vertisol clay, specific micro-irrigation flow, and prior organophosphate resistance. Expand regional radius to index wider Western Zone benchmarks.
+        </p>
+<div class="flex flex-wrap items-center justify-center gap-space-sm">
+<button class="px-space-md py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+            Reset Strict Constraints
+          </button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">public</span>
+            Expand Radius (+150 km)
+          </button>
+</div>
+</section>
+</div>
+<!-- Right Column: Comparative Diagnostic Panel & Phenological Vector Insights (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Current Case vs Historical Archive Telemetry Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase tracking-wide">Comparative Baseline</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Live Case FC-9482</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Soil Moisture / Metric Comparison -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Soil Moisture Concordance</span>
+<span class="font-bold text-on-surface">94% Aligned</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Phenology Stage Window -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Flowering Window (Days 60–75)</span>
+<span class="font-bold text-on-surface">Exact Fit (Day 68)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Pest Pressure Velocity -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Square Flaring Velocity</span>
+<span class="font-bold text-secondary">Moderate-High (14%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Agronomic Consistency Vector</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Historical outcomes demonstrate that intervention with Chlorantraniliprole within <strong class="text-on-surface">72 hours</strong> preserves an average of <strong class="text-primary font-semibold">89.4%</strong> of subsequent floral flushes across vertisol zones.
+          </p>
+</div>
+</div>
+<!-- Quick Treatment Adoption Template Preview -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Quick Adopt Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Populate current Case #FC-9482 dispatch with the verified intervention formula from top-ranked Case #FC-8120.
+        </p>
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center justify-between text-xs text-outline">
+<span>Formulation</span>
+<span class="text-primary font-bold">Standard Dilution</span>
+</div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">
+            Chlorantraniliprole 18.5% SC
+          </div>
+<div class="flex items-center justify-between text-xs text-outline pt-1">
+<span>Dosage Rate: <strong>60 mL/acre</strong></span>
+<span>Water Volume: <strong>200 L</strong></span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">send</span>
+          Apply Recommendation to Draft
+        </button>
+</div>
+<!-- Agronomist Peer Review Registry -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Advisory Board Sign-Offs</span>
+<div class="flex items-center gap-space-sm py-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-primary font-bold text-xs">
+            SB
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dr. S. Bhave</span>
+<span class="font-label-sm text-label-sm text-outline">Principal Scientist, Entomological Sciences</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px] ml-auto">verified</span>
+</div>
+<div class="flex items-center gap-space-sm py-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-secondary font-bold text-xs">
+            VD
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dr. V. Deshmukh</span>
+<span class="font-label-sm text-label-sm text-outline">PDKV Agronomic Research Dean</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px] ml-auto">verified</span>
+</div>
+<div class="pt-space-xs text-center">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">
+            View Institutional Validation Registry →
+          </a>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

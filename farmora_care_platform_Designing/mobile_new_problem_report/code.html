@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#1b1c12", "surface": "#fcfae9", "primary-container": "#5c7d5c", "primary-fixed": "#c8ecc5", "surface-bright": "#fcfae9", "on-background": "#1b1c12", "secondary-container": "#f4e1b4", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#d7c59a", "tertiary-fixed-dim": "#cfcb59", "background": "#fcfae9", "on-primary": "#ffffff", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "outline": "#737970", "on-primary-container": "#f7fff2", "tertiary-container": "#b3af41", "inverse-surface": "#303126", "on-secondary-fixed-variant": "#524524", "on-primary-fixed": "#032109", "on-secondary": "#ffffff", "primary-fixed-dim": "#acd0aa", "surface-dim": "#dcdbcb", "inverse-on-surface": "#f3f1e1", "error-container": "#ffdad6", "on-tertiary-fixed": "#1e1d00", "secondary-fixed": "#f4e1b4", "on-error": "#ffffff", "on-primary-fixed-variant": "#2f4e31", "on-secondary-container": "#71633f", "inverse-primary": "#acd0aa", "primary": "#446345", "tertiary": "#646100", "on-tertiary-fixed-variant": "#4b4900", "on-secondary-fixed": "#241a01", "canvas-bg": "#FBFBFB", "surface-muted": "#F3F2EB", "accent-beige": "#D7CE93", "surface-container": "#f0efde", "surface-container-high": "#eae9d8", "surface-container-highest": "#e4e3d3", "surface-variant": "#e4e3d3", "on-surface-variant": "#424841", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "surface-tint": "#466647", "secondary": "#6b5d3a", "border-subtle": "#E5E4DC", "tertiary-fixed": "#ece772" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-tablet": "2rem" }, fontFamily: { "headline-sm": ["Manrope"], "headline-lg": ["Manrope"], "display": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "title-md": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Manrope"], "display-mobile": ["Manrope"] }, fontSize: { "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }], "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">potted_plant</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Farmora Care</span><h1 class="font-title-md text-title-md text-on-surface leading-tight">Submit Report</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-20 pb-safe"><div class="flex flex-col w-full pb-6">
+<!-- Top Stepper Header Card -->
+<div class="px-margin-mobile pt-3 pb-2">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Agronomic Diagnosis</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-semibold">Step 1 of 3</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">Specimen &amp; Crop Context</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">33% completed</span>
+</div>
+<!-- Progress Track -->
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full w-1/3 rounded-full transition-all duration-300"></div>
+</div>
+</div>
+</div>
+<!-- GPS Parcel Lock Banner -->
+<div class="px-margin-mobile py-1.5">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">share_location</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Plot B-4 • Greenacres Holding</p>
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Dindori Taluka, Nashik</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-full flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">±3m GPS</span>
+</div>
+</div>
+</div>
+<!-- Interactive Camera Viewfinder Section -->
+<div class="px-margin-mobile py-2.5">
+<div class="relative bg-inverse-surface rounded-xl overflow-hidden aspect-[4/3] flex flex-col justify-between p-3.5 shadow-md">
+<!-- Ambient Live Camera Feed Texture Mock -->
+<div class="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="High quality close up agricultural camera view of a green tomato plant leaf with mild chlorosis, macro view, natural diffused daylight, professional botanical photography, earth tone palette" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwQTf_vsI6iCLpGNUR7KQ7snnJSLW-jUZvGfBz0wd1MjwduPiW-1KSKxspS8ZOaC715xiw6gk2_yGfhWg3yBnWyvIC6N5yD_y-YG9sllMFXRz73pU-NE1ZKUknQjZuFQm5VJln-SvThcW3URzCZddIQizsShzuOQK4yoB8l-YSeA1PMxU9_-WT_uwOabamvoBsPfbr48ZPbGFAxpDZ7aDg4q-bBtiNnTTZv6k_NaknsH8EFi4V8NrV')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-inverse-surface/80"></div>
+<!-- Top Camera Controls Overlay -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-inverse-surface/70 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">smart_toy</span>
+<span class="font-label-sm text-label-sm tracking-wide">Leaf Bio-Scanner</span>
+</div>
+<div class="flex items-center gap-2">
+<!-- Torch Toggle -->
+<button aria-label="Toggle Torch" class="w-9 h-9 rounded-full bg-inverse-surface/75 backdrop-blur-md text-inverse-on-surface flex items-center justify-center transition-colors active:scale-95" id="torch-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">flash_on</span>
+</button>
+<!-- Macro Mode Toggle -->
+<button aria-label="Toggle Macro Mode" class="h-9 px-3 rounded-full bg-primary text-on-primary flex items-center gap-1 font-label-sm text-label-sm font-semibold shadow-sm active:scale-95" id="macro-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+<span>Macro</span>
+</button>
+</div>
+</div>
+<!-- Center Viewfinder Frame Overlay -->
+<div class="relative z-10 flex-1 flex flex-col items-center justify-center my-1 pointer-events-none">
+<div class="w-48 h-36 relative flex items-center justify-center">
+<!-- Corner brackets SVG -->
+<svg class="absolute inset-0 w-full h-full text-surface-bright/70" fill="none" viewbox="0 0 192 144" xmlns="http://www.w3.org/2000/svg">
+<path d="M 28 4 L 4 4 L 4 28" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 164 4 L 188 4 L 188 28" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 4 116 L 4 140 L 28 140" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 188 116 L 188 140 L 164 140" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Pulsing Center Crosshair -->
+<circle class="animate-ping opacity-75" cx="96" cy="72" fill="#cfcb59" r="3"></circle>
+<circle cx="96" cy="72" fill="#cfcb59" r="2"></circle>
+</svg>
+<div class="bg-inverse-surface/70 backdrop-blur-md px-3 py-1 rounded-full text-center">
+<p class="font-label-sm text-label-sm text-inverse-on-surface">Position affected leaf or fruit within frame</p>
+</div>
+</div>
+</div>
+<!-- Bottom Viewfinder Action Controls -->
+<div class="relative z-10 flex items-center justify-between pt-1">
+<!-- Photo Library Button -->
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-full bg-inverse-surface/70 backdrop-blur-md text-inverse-on-surface hover:bg-inverse-surface transition-colors" id="gallery-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_library</span>
+<span class="font-label-sm text-label-sm">Gallery</span>
+</button>
+<!-- Shutter Button Trigger -->
+<button aria-label="Capture Specimen" class="w-14 h-14 rounded-full bg-surface-bright p-1 shadow-lg active:scale-90 transition-transform" id="shutter-btn" type="button">
+<div class="w-full h-full rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">camera</span>
+</div>
+</button>
+<!-- AI Guidance Hint -->
+<div class="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-primary-container/80 text-on-primary-container backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+<span class="font-label-sm text-label-sm">Good Light</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time AI Specimen Quality Strip -->
+<div class="px-margin-mobile py-1">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3">
+<!-- Thumbnail Preview -->
+<div class="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Clear high resolution thumbnail of a tomato leaf showing targeted early blight spot specimen, vibrant natural light, sharp focus, botanical specimen photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDATgSypyROecE-hVwrAOGLpiSewn4qnyESCrH-xhJmuVrC_u9_D8J-icieGUEJI9M8wApqsiFv_CLWyzi7ZapD_Wat5e9vB2_C6bs6EJbFZxI4fT6dJ7itfGGtCvSn5M6Ph39k7tpWzJwper3YwYwN9ipu-V77VbXMO6GVnwPxA4RKvxdn_T9uAsmSW9JTie_L7LOZA5d5v2twEWpB4m2LQFLS9Djt3Al8XZ8o2sfehwP5GyWlSAKy"/>
+<div class="absolute bottom-0 inset-x-0 bg-primary/80 py-0.2 flex justify-center">
+<span class="material-symbols-outlined text-on-primary text-[10px]">check</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<p class="font-label-md text-label-md text-on-surface font-semibold">98% Focus • Diagnostic Ready</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clear vein resolution • 2.4 MB RAW captured</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+</div>
+</div>
+<!-- Quick Crop Selector Pills -->
+<div class="pt-3 pb-1">
+<div class="px-margin-mobile flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">spa</span>
+<h3 class="font-title-md text-title-md text-on-surface">Target Crop</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-detected: Tomato</span>
+</div>
+<!-- Scrollable Pills Container -->
+<div class="flex items-center gap-2 overflow-x-auto px-margin-mobile pb-1 no-scrollbar" id="crop-selector">
+<!-- Tomato (Selected) -->
+<button class="crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-crop="Tomato" type="button">
+<span class="material-symbols-outlined text-[18px]">nutrition</span>
+<span>Tomato</span>
+</button>
+<!-- Cotton -->
+<button class="crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" data-crop="Cotton" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud</span>
+<span>Cotton</span>
+</button>
+<!-- Soybean -->
+<button class="crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" data-crop="Soybean" type="button">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+<span>Soybean</span>
+</button>
+<!-- Onion -->
+<button class="crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" data-crop="Onion" type="button">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+<span>Onion</span>
+</button>
+<!-- Sugarcane -->
+<button class="crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" data-crop="Sugarcane" type="button">
+<span class="material-symbols-outlined text-[18px]">park</span>
+<span>Sugarcane</span>
+</button>
+<!-- Pomegranate -->
+<button class="crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all" data-crop="Pomegranate" type="button">
+<span class="material-symbols-outlined text-[18px]">nest_eco_leaf</span>
+<span>Pomegranate</span>
+</button>
+</div>
+</div>
+<!-- Primary Symptom Quick Buttons -->
+<div class="px-margin-mobile pt-3 pb-3">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">coronavirus</span>
+<h3 class="font-title-md text-title-md text-on-surface">Observed Symptoms</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Select multiple if needed</span>
+</div>
+<!-- 2-column Compact Bento of Symptom Cards -->
+<div class="grid grid-cols-2 gap-2.5" id="symptoms-group">
+<!-- Leaf Yellowing / Spots (Active State) -->
+<button class="symptom-card text-left p-3 rounded-xl bg-secondary-container text-on-secondary-container shadow-sm transition-all flex flex-col justify-between h-24" data-symptom="spots" type="button">
+<div class="flex items-start justify-between w-full">
+<div class="w-7 h-7 rounded-full bg-surface-bright/70 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">flare</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold leading-tight">Leaf Yellowing / Spots</p>
+<p class="font-label-sm text-label-sm text-on-secondary-container/80 mt-0.5">Chlorosis, necrotic rings</p>
+</div>
+</button>
+<!-- Chewing / Bore holes -->
+<button class="symptom-card text-left p-3 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between h-24" data-symptom="holes" type="button">
+<div class="flex items-start justify-between w-full">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">pest_control</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline-variant">radio_button_unchecked</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold leading-tight">Chewing • Bore Holes</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Caterpillar or borer trace</p>
+</div>
+</button>
+<!-- Wilt / Root Rot -->
+<button class="symptom-card text-left p-3 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between h-24" data-symptom="wilt" type="button">
+<div class="flex items-start justify-between w-full">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">water_loss</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline-variant">radio_button_unchecked</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold leading-tight">Wilt / Root Rot</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Vascular droop, soggy stem</p>
+</div>
+</button>
+<!-- Pest Clusters -->
+<button class="symptom-card text-left p-3 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container shadow-sm transition-all flex flex-col justify-between h-24" data-symptom="clusters" type="button">
+<div class="flex items-start justify-between w-full">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">bug_report</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline-variant">radio_button_unchecked</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold leading-tight">Pest Clusters</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Aphids, whiteflies, mites</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Field Notes / Quick Voice Micro-Interaction -->
+<div class="px-margin-mobile pt-1 pb-4">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">mic</span>
+<span class="font-body-sm text-body-sm">Tap to dictate agronomist notes...</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant">Optional</span>
+</div>
+</div>
+<!-- Sticky Mobile Action Footer -->
+<div class="sticky bottom-0 z-30 bg-surface/95 backdrop-blur-md px-margin-mobile py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-3">
+<!-- Save Draft Secondary Button -->
+<button class="w-1/3 py-3 px-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors active:scale-95 flex items-center justify-center gap-1.5" id="save-draft-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Draft</span>
+</button>
+<!-- Primary High-Contrast Continue CTA -->
+<button class="w-2/3 py-3 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md text-center font-semibold hover:bg-primary/90 transition-all active:scale-95 flex items-center justify-center gap-1.5 shadow-sm" id="continue-btn" type="button">
+<span>Continue to Symptoms</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Tab Activation for App Shell Navigation
+  (function initTabHighlight() {
+    const bottomNavLinks = document.querySelectorAll('nav[data-active-classes] a');
+    bottomNavLinks.forEach(link => {
+      const path = link.getAttribute('data-path');
+      if (path === 'submit-report') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary', 'font-semibold');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.style.fontVariationSettings = "'FILL' 1";
+        }
+      }
+    });
+  })();
+
+  // Interactive Crop Pills Selector
+  const cropPills = document.querySelectorAll('.crop-pill');
+  cropPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      cropPills.forEach(p => {
+        p.className = 'crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all';
+      });
+      pill.className = 'crop-pill flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all';
+    });
+  });
+
+  // Interactive Symptom Toggle Selector
+  const symptomCards = document.querySelectorAll('.symptom-card');
+  symptomCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const isSelected = card.classList.contains('bg-secondary-container');
+      const icon = card.querySelector('.material-symbols-outlined:last-child');
+      
+      if (isSelected) {
+        card.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        card.classList.add('bg-surface-container-low', 'text-on-surface');
+        if (icon) {
+          icon.textContent = 'radio_button_unchecked';
+          icon.classList.remove('text-primary');
+          icon.classList.add('text-outline-variant');
+        }
+      } else {
+        card.classList.remove('bg-surface-container-low', 'text-on-surface');
+        card.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        if (icon) {
+          icon.textContent = 'check_circle';
+          icon.classList.remove('text-outline-variant');
+          icon.classList.add('text-primary');
+        }
+      }
+    });
+  });
+
+  // Torch Toggle Delight Micro-interaction
+  const torchBtn = document.getElementById('torch-btn');
+  let torchActive = false;
+  torchBtn.addEventListener('click', () => {
+    torchActive = !torchActive;
+    if (torchActive) {
+      torchBtn.classList.remove('bg-inverse-surface/75', 'text-inverse-on-surface');
+      torchBtn.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+    } else {
+      torchBtn.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+      torchBtn.classList.add('bg-inverse-surface/75', 'text-inverse-on-surface');
+    }
+  });
+
+  // Macro Switch Micro-interaction
+  const macroBtn = document.getElementById('macro-btn');
+  let macroActive = true;
+  macroBtn.addEventListener('click', () => {
+    macroActive = !macroActive;
+    if (macroActive) {
+      macroBtn.classList.remove('bg-inverse-surface/75', 'text-inverse-on-surface');
+      macroBtn.classList.add('bg-primary', 'text-on-primary');
+    } else {
+      macroBtn.classList.remove('bg-primary', 'text-on-primary');
+      macroBtn.classList.add('bg-inverse-surface/75', 'text-inverse-on-surface');
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">space_dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-full transition-colors text-primary font-semibold" data-path="submit-report" href="#"><span class="material-symbols-outlined text-[22px]">add_circle</span><span class="font-label-sm text-label-sm mt-0.5">Report</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-cases" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm mt-0.5">Cases</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="advisory-alerts" href="#"><span class="material-symbols-outlined text-[22px]">warning_amber</span><span class="font-label-sm text-label-sm mt-0.5">Alerts</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="grower-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>

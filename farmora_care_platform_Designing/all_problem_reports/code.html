@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#dcdbcb", "on-background": "#1b1c12", "on-primary": "#ffffff", "surface-container-highest": "#e4e3d3", "on-secondary-fixed-variant": "#524524", "on-surface-variant": "#424841", "secondary": "#6b5d3a", "on-tertiary-fixed": "#1e1d00", "border-subtle": "#E5E4DC", "on-tertiary-fixed-variant": "#4b4900", "surface-container-lowest": "#ffffff", "secondary-container": "#f4e1b4", "primary-container": "#5c7d5c", "error-container": "#ffdad6", "tertiary": "#646100", "on-error": "#ffffff", "surface-container-low": "#f6f4e4", "on-primary-container": "#f7fff2", "on-tertiary": "#ffffff", "canvas-bg": "#FBFBFB", "tertiary-fixed-dim": "#cfcb59", "on-secondary-container": "#71633f", "on-primary-fixed-variant": "#2f4e31", "outline": "#737970", "secondary-fixed": "#f4e1b4", "primary-fixed-dim": "#acd0aa", "on-surface": "#1b1c12", "outline-variant": "#c2c8be", "inverse-surface": "#303126", "tertiary-fixed": "#ece772", "surface-container-high": "#eae9d8", "inverse-primary": "#acd0aa", "on-secondary": "#ffffff", "accent-beige": "#D7CE93", "on-secondary-fixed": "#241a01", "error": "#ba1a1a", "tertiary-container": "#b3af41", "surface-container": "#f0efde", "inverse-on-surface": "#f3f1e1", "surface-muted": "#F3F2EB", "background": "#fcfae9", "primary-fixed": "#c8ecc5", "on-error-container": "#93000a", "surface-tint": "#466647", "surface-variant": "#e4e3d3", "surface-bright": "#fcfae9", "on-tertiary-container": "#434100", "surface": "#fcfae9", "secondary-fixed-dim": "#d7c59a", "on-primary-fixed": "#032109", "primary": "#446345" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.75rem", "space-md": "1rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xs": "0.5rem", "gutter-mobile": "1rem", "margin-tablet": "2rem" }, "fontFamily": { "headline-lg-mobile": [ "Manrope" ], "title-md": [ "Manrope" ], "body-md": [ "Manrope" ], "display": [ "Manrope" ], "label-sm": [ "Manrope" ], "headline-md": [ "Manrope" ], "headline-sm": [ "Manrope" ], "display-mobile": [ "Manrope" ], "headline-lg": [ "Manrope" ], "body-sm": [ "Manrope" ], "body-lg": [ "Manrope" ], "label-md": [ "Manrope" ] }, "fontSize": { "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "display": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-canvas-bg font-body-md text-on-surface antialiased" style="background-color: rgb(241, 248, 238); color: rgb(24, 53, 34);"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]" style="background-color: rgb(232, 245, 233); border-right: 1px solid rgb(165, 214, 160);"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">eco</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Farmora Care</span></div></div><div class="px-space-md py-space-xs"><div class="bg-surface-muted/60 rounded-xl px-space-sm py-space-xs flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Node Scope</span><span class="font-body-sm text-body-sm font-title-md text-on-surface truncate max-w-[170px]">National Hub</span></div><span class="material-symbols-outlined text-outline text-[16px]">shield</span></div></div><div class="px-space-md mt-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="all-reports" href="#" style="background-color: rgb(23, 74, 42); color: rgb(255, 255, 255);"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">All Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="triage-and-assignment" href="#"><span class="material-symbols-outlined text-[20px]">low_priority</span><span class="font-body-md text-body-md">Triage &amp; Assignment</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="directory" href="#"><span class="material-symbols-outlined text-[20px]">contacts</span><span class="font-body-md text-body-md">Directory</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="agronomy-catalog" href="#"><span class="material-symbols-outlined text-[20px]">psychiatry</span><span class="font-body-md text-body-md">Agronomy Catalog</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Analytics &amp; Telemetry</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="system-and-audit" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">System &amp; Audit</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-muted/50 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Grid Telemetry Sync</span></div><span class="font-label-sm text-label-sm text-outline">Latency 28ms • All Nodes Green</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40" style="background-color: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgb(200, 230, 201);"><div class="w-full h-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-label-md">National Directorate / Admin Console</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-muted text-on-surface cursor-pointer hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[16px] text-outline">near_me</span><span class="font-body-sm text-body-sm">All Zones / Maharashtra Central</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-muted text-outline focus-within:ring-2 focus-within:ring-primary/20 focus-within:text-on-surface"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-56" placeholder="Search telemetry, ledger or crops..." type="text"><div class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant">⌘K</div></div><button class="relative p-2 rounded-full hover:bg-surface-muted text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-canvas-bg min-h-screen" style="background-color: rgb(241, 248, 238);"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Bar / Ambient Beacon -->
+<div class="px-margin pt-space-lg pb-space-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant">Agronomic Incident Directory • Phase IV Live Sync</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Master Incident &amp; Problem Reports Ledger</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Enterprise audit trail of 1,842 farmer crop distress submissions across all operational agro-climatic zones.
+      </p>
+</div>
+<!-- Actions Group -->
+<div class="flex items-center flex-wrap gap-space-xs self-start lg:self-center">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-all shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span class="">Advanced Query</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-all shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-secondary">picture_as_pdf</span>
+<span class="">Print Ledger PDF</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all shadow-sm font-label-md text-label-md" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span class="">Export Filtered CSV / Excel</span>
+</button>
+</div>
+</div>
+<!-- Metric Badges Row -->
+<div class="px-margin py-space-sm">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-sm" style="--card-bg: #FFFFFF;">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Submissions</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">1,842</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active / Open</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">128</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container/60 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">pending</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Under Review / Rx</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">342</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Resolved / Closed</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">1,372</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">task_alt</span>
+</div>
+</div>
+<!-- Stat 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Escalated / Critical</span>
+<span class="font-headline-sm text-headline-sm text-error mt-1">14</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Filter Interactive Toolbar -->
+<div class="px-margin py-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 230, 201);">
+<!-- Search & Selects Bar -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search field -->
+<div class="md:col-span-4 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[18px] text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface-muted text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:shadow-sm transition-all" placeholder="Search by Report ID, Farmer Name, Crop, or Village..." type="text" value="">
+</div>
+<!-- District Dropdown -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full appearance-none pl-3.5 pr-8 py-2.5 rounded-full bg-surface-muted text-on-surface font-body-sm text-body-sm outline-none cursor-pointer focus:bg-surface-container-lowest focus:shadow-sm transition-all">
+<option value="">District: All (Maharashtra)</option>
+<option value="nashik">Nashik Region</option>
+<option value="pune">Pune District</option>
+<option value="vidarbha">Vidarbha East</option>
+<option value="solapur">Solapur Central</option>
+<option value="ahmednagar">Ahmednagar West</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Crop Dropdown -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full appearance-none pl-3.5 pr-8 py-2.5 rounded-full bg-surface-muted text-on-surface font-body-sm text-body-sm outline-none cursor-pointer focus:bg-surface-container-lowest focus:shadow-sm transition-all">
+<option value="">Crop: All Flora</option>
+<option value="cotton">Cotton (Kharif)</option>
+<option value="soybean">Soybean (Oilseed)</option>
+<option value="pomegranate">Pomegranate (Horticulture)</option>
+<option value="tomato">Tomato (Nightshade)</option>
+<option value="grapes">Grapes (Export Vineyard)</option>
+<option value="sugarcane">Sugarcane (Perennial)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Severity Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full appearance-none pl-3.5 pr-8 py-2.5 rounded-full bg-surface-muted text-on-surface font-body-sm text-body-sm outline-none cursor-pointer focus:bg-surface-container-lowest focus:shadow-sm transition-all">
+<option value="">Severity: Any Tier</option>
+<option value="critical">Bio-Hazard / Critical</option>
+<option value="high">High Severity</option>
+<option value="moderate">Moderate Warning</option>
+<option value="low">Low / Observational</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Date Range Filter -->
+<div class="md:col-span-2">
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-full bg-surface-muted hover:bg-surface-container-high transition-colors font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+<span class="truncate">Oct 1 - Oct 31, 2025</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+</button>
+</div>
+</div>
+<!-- Quick Status Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-2 shrink-0">Status Views:</span>
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0 shadow-sm transition-all" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+          All Reports (1,842)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md shrink-0 transition-all flex items-center gap-1.5">
+<span class="">Unassigned</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="text-error font-semibold">24</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md shrink-0 transition-all">
+          In Triage (104)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md shrink-0 transition-all">
+          Prescribed (342)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md shrink-0 transition-all">
+          Closed (1,372)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-error-container/50 text-on-error-container hover:bg-error-container font-label-md text-label-md shrink-0 transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+<span class="">Flagged / Bio-Security (14)</span>
+</button>
+<div class="ml-auto pl-2 shrink-0">
+<button class="text-outline hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span class="">Reset Filters</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Data Table Section -->
+<div class="px-margin py-space-sm">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(165, 214, 160);">
+<div class="overflow-x-auto">
+<style>tbody tr { transition: all 0.2s ease-in-out; cursor: pointer; } tbody tr:hover { background-color: rgba(101, 134, 101, 0.08) !important; box-shadow: inset 3px 0 0 0 #446345; }</style><table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-muted text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider select-none" style="background-color: rgb(225, 240, 223); color: rgb(24, 53, 34); font-weight: 700;">
+<th class="py-3 px-space-md whitespace-nowrap">Incident ID &amp; Zone</th>
+<th class="py-3 px-space-md whitespace-nowrap">Farmer &amp; Holding</th>
+<th class="py-3 px-space-md whitespace-nowrap">Crop &amp; Cultivar</th>
+<th class="py-3 px-space-md whitespace-nowrap">Detected Symptom</th>
+<th class="py-3 px-space-md whitespace-nowrap">Severity</th>
+<th class="py-3 px-space-md whitespace-nowrap">Assigned Agronomist</th>
+<th class="py-3 px-space-md whitespace-nowrap">SLA &amp; Lifecycle</th>
+<th class="py-3 px-space-md whitespace-nowrap text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm">
+<!-- Row 1: Critical Fall Armyworm -->
+<tr class="hover:bg-surface-muted/50 transition-colors group cursor-pointer" style="transition: all 0.2s ease-in-out; cursor: pointer;">
+<!-- ID -->
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface font-label-md text-label-md">#FC-8902</span>
+<span class="material-symbols-outlined text-error text-[14px]" title="Autonomous Quarantine Flag">priority_high</span>
+</div>
+<span class="text-outline font-label-sm text-label-sm mt-0.5">Today • 08:42 IST</span>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm text-[10px] w-fit">
+                    Vidarbha • Wardha Basin
+                  </span>
+</div>
+</td>
+<!-- Farmer & Plot -->
+<td class="py-4 px-space-md align-top">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-xs shrink-0 mt-0.5">
+                    RP
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Rajesh Patil</span>
+<span class="text-outline font-label-sm text-label-sm">KCC: MH-WRD-48910</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">4.2 Ha</span>
+<span class="">•</span>
+<span class="">Deoli Village</span>
+</div>
+</div>
+</div>
+</td>
+<!-- Crop & Cultivar -->
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">psychiatry</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Cotton</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Bt-II Bollgard Hybrid</span>
+</div>
+</div>
+</td>
+<!-- Pathology / AI Symptom -->
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-error font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="">Fall Armyworm (Spodoptera)</span>
+</div>
+<span class="text-outline text-[11px] mt-0.5">AI Conf: 96.8% • Foliar Shearing</span>
+</div>
+</td>
+<!-- Severity -->
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Bio-Hazard / Critical
+                </span>
+</td>
+<!-- Agronomist -->
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dr. Ramesh Kulkarni</span>
+<span class="text-outline text-[11px]">Entomology Senior Fellow</span>
+</div>
+</td>
+<!-- SLA -->
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">alarm_on</span>
+                    Overdue (+15m)
+                  </span>
+<span class="text-outline text-[11px] mt-0.5">SLA Limit: 30m</span>
+</div>
+</td>
+<!-- Actions -->
+<td class="py-4 px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Inspect Dossier">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors" title="Reassign Agronomist">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors" title="Download Rx PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Bacterial Blight (Pomegranate) -->
+<tr class="hover:bg-surface-muted/50 transition-colors group cursor-pointer" style="transition: all 0.2s ease-in-out; cursor: pointer;">
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md text-label-md">#FC-8898</span>
+<span class="text-outline font-label-sm text-label-sm mt-0.5">Today • 07:15 IST</span>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm text-[10px] w-fit">
+                    Solapur • Sangola Taluka
+                  </span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-xs shrink-0 mt-0.5">
+                    SB
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Sunita Bhonsle</span>
+<span class="text-outline font-label-sm text-label-sm">KCC: MH-SLP-99231</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">2.8 Ha</span>
+<span class="">•</span>
+<span class="">Mahud Bk</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-secondary-container/50 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[16px]">nature</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Pomegranate</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Bhagwa Premium Export</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Bacterial Blight (Telya)</span>
+</div>
+<span class="text-outline text-[11px] mt-0.5">Xanthomonas axonopodis • Fruit Spotting</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  High Severity
+                </span>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dr. Anita Deshmukh</span>
+<span class="text-outline text-[11px]">Horticulture Pathologist</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Prescribed (1.4h)
+                  </span>
+<span class="text-outline text-[11px] mt-0.5">Rx: Streptocycline 50g</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Inspect Dossier">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors" title="Reassign Agronomist">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors" title="Download Rx PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Powdery Mildew in Grapes (Unassigned Alert) -->
+<tr class="hover:bg-surface-muted/50 transition-colors group cursor-pointer" style="transition: all 0.2s ease-in-out; cursor: pointer;">
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md text-label-md">#FC-8884</span>
+<span class="text-outline font-label-sm text-label-sm mt-0.5">Today • 06:40 IST</span>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm text-[10px] w-fit">
+                    Nashik • Dindori Valley
+                  </span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-xs shrink-0 mt-0.5">
+                    DG
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Dattatray Gaikwad</span>
+<span class="text-outline font-label-sm text-label-sm">KCC: MH-NSK-11029</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">6.5 Ha</span>
+<span class="">•</span>
+<span class="">Janori</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">wine_bar</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Table Grapes</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Thompson Seedless</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-secondary font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="">Powdery Mildew (Uncinula necator)</span>
+</div>
+<span class="text-outline text-[11px] mt-0.5">Canopy Microclimate Saturation</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/80 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  High Severity
+                </span>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container/60 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">person_off</span>
+                  Unassigned [Needs Action]
+                </span>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">timelapse</span>
+                    In Triage (22m left)
+                  </span>
+<span class="text-outline text-[11px] mt-0.5">First Contact Pending</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm hover:bg-primary-container transition-all" style="background-color: rgb(40, 122, 62); color: rgb(255, 255, 255);">
+                    Assign Now
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Tomato Early Blight -->
+<tr class="hover:bg-surface-muted/50 transition-colors group cursor-pointer" style="transition: all 0.2s ease-in-out; cursor: pointer;">
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md text-label-md">#FC-8871</span>
+<span class="text-outline font-label-sm text-label-sm mt-0.5">Oct 30 • 16:20 IST</span>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm text-[10px] w-fit">
+                    Pune • Junnar Belt
+                  </span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-xs shrink-0 mt-0.5">
+                    VC
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Vikas Chavan</span>
+<span class="text-outline font-label-sm text-label-sm">KCC: MH-PUN-02941</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">1.5 Ha</span>
+<span class="">•</span>
+<span class="">Otur</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-error-container/40 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[16px]">nutrition</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Tomato</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Abhinav Syngenta Hybrid</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="">Early Blight (Alternaria solani)</span>
+</div>
+<span class="text-outline text-[11px] mt-0.5">Target concentric ring lesions</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Moderate Warning
+                </span>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Pooja Salunkhe, M.Sc</span>
+<span class="text-outline text-[11px]">Field Extension Officer</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                    Closed / Resolved
+                  </span>
+<span class="text-outline text-[11px] mt-0.5">Resolution Time: 48m</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Inspect Dossier">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors" title="Download Rx PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Sugarcane Early Shoot Borer -->
+<tr class="hover:bg-surface-muted/50 transition-colors group cursor-pointer" style="transition: all 0.2s ease-in-out; cursor: pointer;">
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md text-label-md">#FC-8869</span>
+<span class="text-outline font-label-sm text-label-sm mt-0.5">Oct 30 • 14:02 IST</span>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm text-[10px] w-fit">
+                    Kolhapur • Panchganga River
+                  </span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-xs shrink-0 mt-0.5">
+                    MK
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Mahadev Kadam</span>
+<span class="text-outline font-label-sm text-label-sm">KCC: MH-KHP-88123</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">5.0 Ha</span>
+<span class="">•</span>
+<span class="">Shirol</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">grass</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Sugarcane</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Co-86032 High Recovery</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Early Shoot Borer (Chilo infuscatellus)</span>
+</div>
+<span class="text-outline text-[11px] mt-0.5">Dead heart formation in central whorl</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/80 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  High Severity
+                </span>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dr. Ramesh Kulkarni</span>
+<span class="text-outline text-[11px]">Entomology Senior Fellow</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Prescribed (1.1h)
+                  </span>
+<span class="text-outline text-[11px] mt-0.5">Trichogramma egg parasitoids</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Inspect Dossier">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors" title="Download Rx PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Soybean Pod Borer & Yellow Mosaic -->
+<tr class="hover:bg-surface-muted/50 transition-colors group cursor-pointer" style="transition: all 0.2s ease-in-out; cursor: pointer;">
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface font-label-md text-label-md">#FC-8854</span>
+<span class="text-outline font-label-sm text-label-sm mt-0.5">Oct 30 • 11:34 IST</span>
+<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-muted text-on-surface-variant font-label-sm text-[10px] w-fit">
+                    Amravati • Chandur Rly
+                  </span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-xs shrink-0 mt-0.5">
+                    GS
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md font-semibold text-on-surface">Ganesh Shinde</span>
+<span class="text-outline font-label-sm text-label-sm">KCC: MH-AMR-55419</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
+<span class="">3.4 Ha</span>
+<span class="">•</span>
+<span class="">Malkhed</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">grain</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Soybean</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">JS-335 Commercial</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="">Yellow Mosaic Virus (YMV)</span>
+</div>
+<span class="text-outline text-[11px] mt-0.5">Whitefly vector transmission vector</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Low / Observational
+                </span>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dr. Anita Deshmukh</span>
+<span class="text-outline text-[11px]">Horticulture Pathologist</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                    Closed / Resolved
+                  </span>
+<span class="text-outline text-[11px] mt-0.5">Resolution Time: 52m</span>
+</div>
+</td>
+<td class="py-4 px-space-md align-top text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" title="Inspect Dossier">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors" title="Download Rx PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Table Controls Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm border-t border-surface-container">
+<!-- Results count -->
+<div class="flex items-center gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">6</span> of <span class="font-semibold text-on-surface">1,842</span> results
+          </span>
+<div class="h-4 w-[1px] bg-outline-variant hidden sm:block"></div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">Per page:</span>
+<select class="bg-surface-muted rounded-lg px-2 py-1 font-label-md text-label-md text-on-surface outline-none cursor-pointer">
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+</div>
+</div>
+<!-- Navigation Controls -->
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded-full hover:bg-surface-container text-outline disabled:opacity-30 disabled:pointer-events-none" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-outline disabled:opacity-30 disabled:pointer-events-none" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center shadow-sm">1</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors">2</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors">3</button>
+<span class="px-1 text-outline font-label-sm text-label-sm">...</span>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors">74</button>
+</div>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+<div class="ml-2 flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Go to:</span>
+<input class="w-10 text-center py-1 rounded bg-surface-muted text-on-surface outline-none" type="text" value="1">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Telemetry & Quick Summary Bar -->
+<div class="px-margin pt-space-sm pb-space-xl">
+<div class="bg-surface-container rounded-xl p-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md" style="background-color: rgb(232, 245, 233); border: 1px solid rgb(165, 214, 160);">
+<!-- SLA Compliance Indicator -->
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center text-primary shrink-0">
+<svg class="w-8 h-8 -rotate-90" viewBox="0 0 36 36">
+<path class="text-surface-muted" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="97.4, 100" stroke-width="3"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SLA Benchmark Compliance</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">97.4%</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Under 2.0h Threshold</span>
+</div>
+<span class="font-body-sm text-[12px] text-outline">Mean resolution turnaround: 42.6 minutes</span>
+</div>
+</div>
+<!-- Active Drone Interventions -->
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container/70 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">flight_takeoff</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Drone Spray Squads</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">4 Active Clusters</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<span class="font-body-sm text-[12px] text-outline">Covering 142.6 Ha across Wardha &amp; Junnar today</span>
+</div>
+</div>
+<!-- Automated Bio-Quarantine Flags -->
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-error-container/60 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[24px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Bio-Security Protocols</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-error">2 Geo-Fences Active</span>
+</div>
+<span class="font-body-sm text-[12px] text-outline">Wardha Fall Armyworm containment zone locked</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Lightweight interactivity for table row inspection and state highlights
+    document.addEventListener('DOMContentLoaded', () => {
+      const tableRows = document.querySelectorAll('tbody tr');
+      tableRows.forEach(row => {
+        row.addEventListener('click', (e) => {
+          // If clicked directly on interactive controls, don't trigger row focus
+          if (e.target.closest('button') || e.target.closest('input')) return;
+          tableRows.forEach(r => r.classList.remove('bg-surface-container-high/40'));
+          row.classList.add('bg-surface-container-high/40');
+        });
+      });
+    });
+  </script>
+</div></main></div>
+
+
+
+</body></html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#1b1c12", "surface": "#fcfae9", "primary-container": "#5c7d5c", "primary-fixed": "#c8ecc5", "surface-bright": "#fcfae9", "on-background": "#1b1c12", "secondary-container": "#f4e1b4", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#d7c59a", "tertiary-fixed-dim": "#cfcb59", "background": "#fcfae9", "on-primary": "#ffffff", "surface-container-low": "#f6f4e4", "outline-variant": "#c2c8be", "outline": "#737970", "on-primary-container": "#f7fff2", "tertiary-container": "#b3af41", "inverse-surface": "#303126", "on-secondary-fixed-variant": "#524524", "on-primary-fixed": "#032109", "on-secondary": "#ffffff", "primary-fixed-dim": "#acd0aa", "surface-dim": "#dcdbcb", "inverse-on-surface": "#f3f1e1", "error-container": "#ffdad6", "on-tertiary-fixed": "#1e1d00", "secondary-fixed": "#f4e1b4", "on-error": "#ffffff", "on-primary-fixed-variant": "#2f4e31", "on-secondary-container": "#71633f", "inverse-primary": "#acd0aa", "primary": "#446345", "tertiary": "#646100", "on-tertiary-fixed-variant": "#4b4900", "on-secondary-fixed": "#241a01", "canvas-bg": "#FBFBFB", "surface-muted": "#F3F2EB", "accent-beige": "#D7CE93", "surface-container": "#f0efde", "surface-container-high": "#eae9d8", "surface-container-highest": "#e4e3d3", "surface-variant": "#e4e3d3", "on-surface-variant": "#424841", "on-tertiary-container": "#434100", "on-tertiary": "#ffffff", "surface-tint": "#466647", "secondary": "#6b5d3a", "border-subtle": "#E5E4DC", "tertiary-fixed": "#ece772" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.75rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-tablet": "2rem" }, fontFamily: { "headline-sm": ["Manrope"], "headline-lg": ["Manrope"], "display": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "title-md": ["Manrope"], "label-md": ["Manrope"], "headline-md": ["Manrope"], "label-sm": ["Manrope"], "headline-lg-mobile": ["Manrope"], "body-lg": ["Manrope"], "display-mobile": ["Manrope"] }, fontSize: { "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }], "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "500" }], "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.005em", fontWeight: "400" }], "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">potted_plant</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Farmora Care</span><h1 class="font-title-md text-title-md text-on-surface leading-tight">Advisory Alerts</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-20 pb-safe"><div class="flex flex-col w-full pb-6 space-y-4">
+<!-- Sub-header Alert Status & WhatsApp Action Bar -->
+<div class="px-margin-mobile pt-2 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Live Field Microclimate</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors active:scale-95 shadow-sm" id="whatsapp-share-btn" type="button">
+<span class="material-symbols-outlined text-[17px] text-primary" style="font-variation-settings: 'FILL' 1;">send</span>
+<span class="font-label-sm text-label-sm">Push to WhatsApp</span>
+</button>
+</div>
+<!-- Microclimate Spray Window Hero Card -->
+<div class="mx-margin-mobile rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-28 h-28 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between mb-3">
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container/15 text-primary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-sm text-label-sm font-semibold">Microclimate Window</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Optimal Foliar Spray Window</h2>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Valid Until</span>
+<span class="font-title-md text-title-md text-primary font-bold">09:30 AM</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+      Low atmospheric drift detected. Best window for micro-nutrient assimilation and preventive bio-fungicide coverage across Plot 3B.
+    </p>
+<!-- Gauge & Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs mb-3">
+<!-- Humidity Gauge Block -->
+<div class="bg-surface-container-low rounded-lg p-3 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Rel. Humidity</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">68%</span>
+<span class="font-label-sm text-label-sm text-primary block mt-0.5">Ideal (60-70%)</span>
+</div>
+<!-- Circular Radial Gauge Chart -->
+<div class="relative w-11 h-11 flex items-center justify-center">
+<svg class="w-11 h-11 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="68, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined absolute text-[16px] text-primary">water_drop</span>
+</div>
+</div>
+<!-- Wind Speed Block -->
+<div class="bg-surface-container-low rounded-lg p-3 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Wind Drift</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">5 <span class="text-body-sm font-normal">km/h</span></span>
+<span class="font-label-sm text-label-sm text-primary block mt-0.5">Calm / South-East</span>
+</div>
+<div class="w-11 h-11 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px] -rotate-45">air</span>
+</div>
+</div>
+</div>
+<!-- Quick action inside card -->
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">wb_sunny</span>
+        Dew point: 18.2°C • Temp: 24.5°C
+      </span>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline" type="button">
+        View hourly curve →
+      </button>
+</div>
+</div>
+<!-- Regional Pest Outbreak Alert Banner -->
+<div class="mx-margin-mobile rounded-xl bg-error-container/40 p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-2">
+<div class="w-7 h-7 rounded-full bg-error flex items-center justify-center text-on-error shrink-0">
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-error-container uppercase tracking-wider font-bold">Regional Threat Alert</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error text-on-error">High Risk</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Fall Armyworm (लष्करी अळी) Warning</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+      Confirmed infestation clusters reported within <strong>15km of Dindori tehsil</strong> on young maize and sweetcorn tracts. Trap catches exceeding 12 moths/night.
+    </p>
+<!-- Mini-Map & Outbreak Specimen Preview -->
+<div class="grid grid-cols-2 gap-space-xs mb-3">
+<!-- Mini Map Thumbnail with Static Geo Target -->
+<div class="relative h-28 rounded-lg overflow-hidden bg-cover bg-center shadow-sm" data-location="Dindori, Maharashtra, India" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white">
+<span class="material-symbols-outlined text-[15px] text-error">radar</span>
+<span class="font-label-sm text-label-sm">Dindori Zone</span>
+</div>
+</div>
+<!-- Specimen Detail Thumbnail Placeholder -->
+<div class="relative h-28 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Close up biological photograph of Fall armyworm caterpillar feeding on fresh agricultural maize leaf, showing characteristic inverted Y pattern on head capsule, warm natural morning field lighting, natural soil tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPc1gJzVVoAkTHJ2HcMDLRioMyNspm4OqQA177W5GSaj0iYvtQUZ9W4V1jHixvLh-K7_RXWaF7wYa7iHbYeS3c2nJV5LP34sFhHesrzMW6_-MWfw-fLaENYcOvhCNGyRDl9CPULSPD9d0ny7X5H4IuAxMaXjpWSZqnpe3ePbhsanDgfksKOZn80vjMeAl_QPxqzv9JmE6y6OWHjIdSY_JCC-HIPbaocwuawWD5kcGzrcAp3C2qe_Sd"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/75 backdrop-blur-sm px-2 py-0.5 rounded text-surface font-label-sm text-label-sm">
+          Field ID: 4th Instar
+        </div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<button class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm font-semibold hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[17px]">shield</span>
+        Apply Pheromone Traps Protocol
+      </button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Updated 22m ago</span>
+</div>
+</div>
+<!-- Agronomist Audio Notes Section -->
+<div class="mx-margin-mobile space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">mic</span>
+<h3 class="font-title-md text-title-md text-on-surface">Agronomist Field Audio</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Regional Languages</span>
+</div>
+<!-- Audio Note Card 1 (Marathi) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait photo of a friendly South Asian agricultural scientist wearing an organic cotton field shirt and brimmed sun hat in a lush green vineyard in Maharashtra, smiling warmly with scientific confidence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATcUgNzyFnnINflmniz_yixb6ZcIROuuts4dAccaxK-KcW7LrYHeMUaXnPeVabGww9x6tvFGFSEu4K7DOXjExwNy-HbT67uEmPkv4h2vabwzDPx9e7l5C3Sec1ATsBLYhmdlE8o3E8wzTfprk49kayQ5lsguvlYxY_hVyLXmNkgvzmomdzJ-byc2XmBztPHwxVxYJ0mKB7q0gSNRoH4yQQ567qadAcLSzpV_WlM6l8EwnDe6EWhDkG"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Dr. Ramesh Gaikwad</span>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Senior Grape Specialist • Nashik Division</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">
+          मराठी
+        </span>
+</div>
+<!-- Playback Scrubber & Dynamic Audio Controls -->
+<div class="bg-surface-container-low rounded-lg p-3 space-y-2">
+<div class="flex items-center gap-3">
+<button class="audio-play-toggle w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-transform active:scale-90 shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="current-time">0:42</span>
+<span>1:38</span>
+</div>
+<!-- Interactive Scrubber Track -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden cursor-pointer relative">
+<div class="bg-primary h-full w-[43%] rounded-full"></div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">speed</span>
+</button>
+</div>
+<!-- Transcript Snippet -->
+<div class="pt-2 border-none">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+            “दिंडोरी परिसरातील शेतकऱ्यांनी सकाळच्या सत्रातच फवारणी पूर्ण करावी. लष्करी अळीसाठी निंबोळी अर्क ५% किंवा फेरोमोन ट्रॅप्स हेक्टरी ५ लावावेत...”
+          </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">
+            Translation: Complete spraying early morning. Set 5 pheromone traps per hectare immediately.
+          </span>
+</div>
+</div>
+</div>
+<!-- Audio Note Card 2 (Hindi) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Professional headshot of a smiling female Indian entomologist agronomist holding a clipboard in an organic vegetable polyhouse, wearing field overalls and glasses with warm daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrHaZX1aqWGNIDRPOx6V87yQHN7ARpm0cWVfZHTBIaFOHiEtp-KUAZ3YFsUWh0Q_NbsfawbSlYHMRVuWqg5JtMP9nEEdJirey3U-uyv3mKPHtrLgnY9uzNfvM-q6nP5qyQWhZbl7Ttf3pGCqdz-7gsYWLMUJ338z-XkMqCBskH2XzLx50V_8zGu-cpZPSl6hJLjDDkixP1_ZUq9LRnCndgkrd2JR1HkFbNKJrO-l9be8fh5AAqpB9B"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface leading-tight">Sunita Deshmukh, MSc</span>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bio-Defense Advisor • ICAR Associate</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold">
+          हिन्दी
+        </span>
+</div>
+<!-- Playback Scrubber & Dynamic Audio Controls -->
+<div class="bg-surface-container-low rounded-lg p-3 space-y-2">
+<div class="flex items-center gap-3">
+<button class="audio-play-toggle w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-transform active:scale-90 shrink-0" type="button">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</button>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="current-time">0:00</span>
+<span>2:15</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden cursor-pointer relative">
+<div class="bg-primary h-full w-[0%] rounded-full"></div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">speed</span>
+</button>
+</div>
+<!-- Transcript Snippet -->
+<div class="pt-2">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+            “नमी 65 प्रतिशत से अधिक होने के कारण फफूंद जनित रोगों का जोखिम बढ़ रहा है। कॉपर युक्त दवाओं का संतुलित छिड़काव ही कारगर होगा...”
+          </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">
+            Translation: High humidity raises fungal spore risk. Ensure calibrated copper-based preventive cover.
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert Channel Preference Summary & Toggles -->
+<div class="mx-margin-mobile rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Emergency Broadcast Sync</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant dispatch to farmer mobile numbers</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">cell_tower</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- WhatsApp Alerts Toggle Item -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">WhatsApp Bulletins</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audio notes &amp; spray cards to +91 98231 ••••</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="whatsapp-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- SMS Fallback Alerts Toggle Item -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Critical SMS Flares</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Offline fallback when 4G data is down</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="sms-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Interactive Toast Feedback for WhatsApp Dispatch -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-on-surface text-surface py-2.5 px-4 rounded-full shadow-xl flex items-center justify-between opacity-0 pointer-events-none transition-opacity duration-200 z-50" id="share-toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">check_circle</span>
+<span class="font-label-sm text-label-sm">Spray advisory sent to WhatsApp Group</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-surface-variant">close</span>
+</div>
+</div>
+<script>
+  // Highlighting active Alerts icon in global navigation
+  document.addEventListener('DOMContentLoaded', () => {
+    const alertsNav = document.querySelector('nav a[data-path="advisory-alerts"]');
+    if (alertsNav) {
+      alertsNav.classList.remove('text-on-surface-variant');
+      alertsNav.classList.add('text-primary', 'font-semibold');
+      const icon = alertsNav.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.style.fontVariationSettings = "'FILL' 1";
+      }
+    }
+  });
+
+  // Audio Play/Pause micro-interaction
+  const playButtons = document.querySelectorAll('.audio-play-toggle');
+  playButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isPlaying = icon.textContent === 'pause';
+      
+      // Reset all buttons
+      playButtons.forEach(b => b.querySelector('.material-symbols-outlined').textContent = 'play_arrow');
+      
+      if (!isPlaying) {
+        icon.textContent = 'pause';
+        btn.classList.add('scale-105');
+      } else {
+        icon.textContent = 'play_arrow';
+        btn.classList.remove('scale-105');
+      }
+    });
+  });
+
+  // Push to WhatsApp visual feedback toast
+  const shareBtn = document.getElementById('whatsapp-share-btn');
+  const toast = document.getElementById('share-toast');
+  if (shareBtn && toast) {
+    shareBtn.addEventListener('click', () => {
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 3000);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-space-xs flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">space_dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="submit-report" href="#"><span class="material-symbols-outlined text-[22px]">add_circle</span><span class="font-label-sm text-label-sm mt-0.5">Report</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-cases" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm mt-0.5">Cases</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-full transition-colors text-primary font-semibold" data-path="advisory-alerts" href="#"><span class="material-symbols-outlined text-[22px]">warning_amber</span><span class="font-label-sm text-label-sm mt-0.5">Alerts</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="grower-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>
