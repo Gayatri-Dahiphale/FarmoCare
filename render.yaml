@@ -3,7 +3,6 @@ services:
   - type: web
     name: farmora-care-server
     runtime: node
-    plan: free
     rootDir: server
     buildCommand: npm install
     startCommand: npm start
@@ -25,7 +24,6 @@ services:
   - type: web
     name: farmora-care-client
     runtime: static
-    plan: free
     rootDir: client
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
